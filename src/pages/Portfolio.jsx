@@ -23,11 +23,11 @@ export default class CV extends Component {
               <h2 className="text-center text-4xl font-bold">
                 Projets recents
               </h2>
-              <div className="w-full flex justify-start items-center space-x-4 mt-12">
-                <label className="text-lg text-my-gray-color" for="select-filter-projects">
+              <div className="w-full flex flex-wrap md:flex-nowrap justify-start items-center mt-12">
+                <label className="text-lg text-my-gray-color mx-2" for="select-filter-projects">
                   Filter les projets
                 </label>
-                <select className="form-select bg-black border border-solid border-my-gray-color text-white transition ease-in-out bg-clip-padding bg-no-repeat py-2 px-4" id="select-filter-projects">
+                <select className="max-w-full mx-2 form-select bg-black border border-solid border-my-gray-color text-white transition ease-in-out bg-clip-padding bg-no-repeat py-2 px-4" id="select-filter-projects">
                   <option selected value="Web" className="">
                     Web
                   </option>

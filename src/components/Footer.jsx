@@ -10,7 +10,7 @@ const Footer = () => {
                 <img className="w-auto h-10 object-contain" src={twitterLogo} alt="Twitter"/>
                 </div>
                 <div className="w-full flex justify-center mt-8">
-                <h3 className="font-bold">
+                <h3 className="font-bold text-center">
                     Copyright &copy; 2022, Abouar Prosper
                 </h3>
                 </div>
