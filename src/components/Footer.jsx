@@ -6,8 +6,12 @@ const Footer = () => {
         <footer className="w-full mt-20 bg-my-footer-color py-20">
             <div className="w-full max-w-screen-xl mx-auto px-4">
                 <div className="w-full flex justify-center space-x-8">
-                <img className="w-auto h-10 object-contain" src={linkedInLogo} alt="LinkedIn"/>
-                <img className="w-auto h-10 object-contain" src={twitterLogo} alt="Twitter"/>
+                    <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">
+                    <img className="object-contain w-10" src={linkedInLogo} alt="LinkedIn"/>
+                    </a>
+                    <a href="https://twitter.com/4kprosZ" className="" target="_blank" rel="noreferrer" >
+                    <img className="object-contain w-10" src={twitterLogo} alt="Twitter"/>
+                    </a>
                 </div>
                 <div className="w-full flex justify-center mt-8">
                 <h3 className="font-bold text-center">

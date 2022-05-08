@@ -10,10 +10,10 @@ import twitterLogo from '../images/bxl-twitter.svg'
 const Home = () => {
   return (
       <>
-        <div className="w-full bg-black text-white">
+        <div className="w-full text-white">
           <section className="w-full">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-              <Navbar/>
+              <Navbar selectedNavItem='Home'/>
               <div className="flex flex-col items-center lg:flex-row lg:space-x-8 pt-12">
                 <div className="bg-transparent w-3/4 h-3/4">
                   <img className="w-full h-full object-contain m-0 p-0" src={abouarprosper} alt="Prosper Abouar"/>
@@ -31,10 +31,10 @@ const Home = () => {
                       prosper.abouar@gmail.com
                     </p>
                     <div className="flex justify-center lg:justify-start mt-8 space-x-8">
-                      <a href="/" className="" target="_blank">
+                      <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">
                         <img className="object-contain w-10" src={linkedInLogo} alt="LinkedIn"/>
                       </a>
-                      <a href="/" className="" target="_blank">
+                      <a href="https://twitter.com/4kprosZ" className="" target="_blank" rel="noreferrer" >
                         <img className="object-contain w-10" src={twitterLogo} alt="Twitter"/>
                       </a>
                     </div>
@@ -60,25 +60,25 @@ const Home = () => {
               </h2>
               <div className="w-full mt-12 flex flex-col items-center">
                 <div className="w-full lg:w-1/2 flex flex-col">
-                  <label className="w-full uppercase text-my-gray-color" for="input-name">
+                  <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Nom complet
                   </label>
                   <input className="w-full mt-2 h-12 px-5 text-black text-xl" type="name" id="input-name" placeholder="Votre nom"/>
                 </div>
                 <div className="w-full lg:w-1/2  flex flex-col items-center mt-8">
-                  <label className="w-full uppercase text-my-gray-color" for="input-name">
+                  <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Email
                   </label>
                   <input className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-name" placeholder="Votre adresse mail"/>
                 </div>
                 <div className="w-full lg:w-1/2  flex flex-col items-center mt-8">
-                  <label className="w-full uppercase text-my-gray-color" for="input-name">
+                  <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Message
                   </label>
                   <textarea className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-name" placeholder="Votre message"/>
                 </div>
                 <div className="w-full flex flex-col items-center mt-12">
-                  <button type="button" class="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
+                  <button type="button" className="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
                     Envoyer
                   </button>
                 </div>

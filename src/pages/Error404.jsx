@@ -7,7 +7,7 @@ class Error404 extends Component {
     render() {
         return (
             <>
-                <div className="w-full bg-black text-white">
+                <div className="w-full text-white">
                     <section className="w-full">
                         <div className="w-full max-w-screen-xl mx-auto px-4">
                         <Navbar/>

@@ -12,10 +12,10 @@ export default class CV extends Component {
   render() {
     return (
       <>
-        <div className="w-full bg-black text-white">
+        <div className="w-full text-white">
           <section className="w-full">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-              <Navbar/>
+              <Navbar selectedNavItem='Portfolio'/>
             </div>
           </section>
           <section className="w-full pt-20 min-h-screen">
@@ -24,11 +24,11 @@ export default class CV extends Component {
                 Projets recents
               </h2>
               <div className="w-full flex flex-wrap md:flex-nowrap justify-start items-center mt-12">
-                <label className="text-lg text-my-gray-color mx-2" for="select-filter-projects">
+                <label className="text-lg text-my-gray-color mx-2" htmlFor="select-filter-projects">
                   Filter les projets
                 </label>
                 <select className="max-w-full mx-2 form-select bg-black border border-solid border-my-gray-color text-white transition ease-in-out bg-clip-padding bg-no-repeat py-2 px-4" id="select-filter-projects">
-                  <option selected value="Web" className="">
+                  <option defaultValue value="Web" className="">
                     Web
                   </option>
                   <option value="Mobile" className="">
@@ -40,16 +40,16 @@ export default class CV extends Component {
                 </select>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                <div className="w-full shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
+                <div className="w-full transition-all ease-in-out hover:scale-105 hover:shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
                   <img className="w-full h-auto object-cover" src={project1} alt="project-1"/>
                 </div>
-                <div className="w-full shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
+                <div className="w-full transition-all ease-in-out hover:scale-105 hover:shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
                   <img className="w-full h-auto object-cover" src={project2} alt="project-2"/>
                 </div>
-                <div className="w-ful shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
+                <div className="w-ful transition-all ease-in-out hover:scale-105 hover:shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
                   <img className="w-full h-auto object-cover" src={project3} alt="project-3"/>
                 </div>
-                <div className="w-full shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
+                <div className="w-full transition-all ease-in-out hover:scale-105 hover:shadow-[rgba(255,255,255,0.25)_0px_0px_16px]">
                   <img className="w-full h-auto object-cover" src={project4} alt="project-4"/>
                 </div>
               </div>

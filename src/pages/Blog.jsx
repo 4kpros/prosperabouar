@@ -9,18 +9,19 @@ class Blog extends Component {
     render() {
         return (
             <>
-                <div className="w-full bg-black text-white">
+                <div className="w-full text-white">
                     <section className="w-full">
                         <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <Navbar/>
+                        <Navbar selectedNavItem='Blog'/>
                         </div>
                     </section>
                     <section className="w-full">
                         <div className="w-full max-w-screen-xl mx-auto px-4">
                             <div className="w-full flex justify-center items-center">
-                                <h1 class="font-bold text-7xl lg:text-9xl my-10 lg:my-20">LE BLOG</h1>
+                                <h1 className="font-bold text-7xl lg:text-9xl my-10 lg:my-20">LE BLOG</h1>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-4 lg:mt-20">
+                                <BlogItemInline/>
                                 <BlogItem/>
                                 <BlogItem/>
                                 <BlogItem/>
