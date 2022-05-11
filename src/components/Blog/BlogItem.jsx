@@ -1,6 +1,6 @@
 import React from 'react';
 
-import blogBackground from '../../images/blog-background.jpg'
+import blogBackground from '../../images/backgrounds/blog-background_small.jpg'
 
 const BlogItem = (props) => {
 

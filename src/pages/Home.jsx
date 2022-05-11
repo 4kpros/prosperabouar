@@ -3,9 +3,10 @@ import { useState } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Nabar'
 
-import abouarprosper from '../images/prosperabouar.png'
-import linkedInLogo from '../images/bxl-linkedin-square.svg'
-import twitterLogo from '../images/bxl-twitter.svg'
+import abouarprosper from '../images/profile/prosperabouar.png'
+import linkedInLogo from '../images/svg/bxl-linkedin-square.svg'
+import twitterLogo from '../images/svg/bxl-twitter.svg'
+import githubLogo from '../images/svg/bxl-github.svg'
 
 const Home = () => {
   return (
@@ -22,10 +23,16 @@ const Home = () => {
                   <div className="">
                     <h1 className="text-3xl md:text-4xl font-bold text-center lg:text-left">
                       Salut, Je suis <span className="font-extrabold text-my-orage-color text-4xl md:text-5xl ml-2">ABOUAR PROSPER</span>
-                      <br/>Développeur full-stack
+                      <br/>Développeur web
                     </h1>
                     <p className="text-2xl mt-8 text-center lg:text-justify">
-                      Grace à mes compétences en développement d’applications web et mobile, je vous aide à avoir une marque de présence en ligne et à développer votre business jusqu’à l’international. J’aide les entreprises à créer les solutions logicielles innovantes et à améliorer l’expérience utilisateur.
+                      Adepte de l’amélioration de l’expérience utilisateur et des performances dans le domaine du développement d'applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
+                    </p>
+                    <p className="text-2xl mt-2 text-center lg:text-justify">
+                      Je suis principalement développeur front-end ayant de grosses connaissances en développement backend et mobile.
+                    </p>
+                    <p className="text-2xl mt-2 text-center lg:text-justify">
+                      Contactez moi pour une collaboration.
                     </p>
                     <p className="text-my-orage-color break-all text-2xl mt-8 text-center lg:text-left">
                       prosper.abouar@gmail.com
@@ -37,6 +44,9 @@ const Home = () => {
                       <a href="https://twitter.com/4kprosZ" className="" target="_blank" rel="noreferrer" >
                         <img className="object-contain w-10" src={twitterLogo} alt="Twitter"/>
                       </a>
+                      <a href="https://github.com/4kpros" className="" target="_blank" rel="noreferrer" >
+                        <img className="object-contain w-10" src={githubLogo} alt="Twitter"/>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -45,17 +55,24 @@ const Home = () => {
           </section>
           <section className="w-full pt-20">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-              <h2 className="text-center text-4xl font-bold">
-                Mini - a propos
+              <h2 className="text-center text-4xl font-bold underline underline-offset-8">
+                Liens utiles
               </h2>
-              <p className="text-center lg:text-justify text-2xl mt-12">
-                Je m’appelle Abouar Prosper, developpeur web et mobile. Actuellement en alternance et ayant suivis un cursus universitaire jusqu’en licence informatique. Etant passionne par les technologies, mon interet pour l’informatique et en particulier le developpement d’applications s’est vu grandir a vitesse grand V. Je developpe ainsi les applications depuis des annees, et ma qualite premiere est un travail de qualite. Je suis passionne par l’optimisation des performances des applications et leur coherence visuel. 
+              <p className="text-center text-2xl mt-12">
+                Pour en savoir plus sur moi, veillez cliquer sur <a href="/about" className="text-my-orage-color underline">ce lien.</a>
+              </p>
+              <p className="text-center text-2xl mt-4">
+                Une page qui contient mes projets récents est disponible à <a href="/portfolio" className="text-my-orage-color underline">cette adresse.</a>
+              </p>
+              <p className="text-center text-2xl mt-4">
+                J'ai également un mini blog qui contient mes publications concernant le développement d’applications et l'entreprenariat. Pour voir mes publications, 
+                 Veillez cliquer sur <a href="/blog" className="text-my-orage-color underline">ce lien.</a>
               </p>
             </div>
           </section>
           <section className="w-full pt-20">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-              <h2 className="text-center text-4xl font-bold">
+              <h2 className="text-center text-4xl font-bold underline underline-offset-8">
                 Contact
               </h2>
               <div className="w-full mt-12 flex flex-col items-center">

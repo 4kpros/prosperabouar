@@ -11,7 +11,7 @@ module.exports = {
         poppinsSans: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
-        'my-logo': "url('/public/img/logo192.png')",
+        'default-background': "url('/public/img/blog-background.jpg')",
       },
     },
   },
