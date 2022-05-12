@@ -2,16 +2,23 @@ import { useState, useRef, createRef } from 'react'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 import { isEmail, isEmpty } from 'validator'
+import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 
-import Footer from '../components/Footer'
-import Navbar from '../components/Nabar'
+import 'react-toastify/dist/ReactToastify.css';
 
-import abouarprosper from '../images/profile/prosperabouar.png'
-import linkedInLogo from '../images/svg/bxl-linkedin-square.svg'
-import twitterLogo from '../images/svg/bxl-twitter.svg'
-import githubLogo from '../images/svg/bxl-github.svg'
+import Footer from '../components/Footer';
+import Navbar from '../components/Nabar';
+
+import abouarprosper from '../images/profile/prosperabouar.png';
+import linkedInLogo from '../images/svg/bxl-linkedin-square.svg';
+import twitterLogo from '../images/svg/bxl-twitter.svg';
+import githubLogo from '../images/svg/bxl-github.svg';
+
 
 const Home = () => {
+  let navigate = useNavigate();
+
   const recaptchaRef = createRef();
   
   const [name, setName] = useState();
@@ -21,11 +28,21 @@ const Home = () => {
   const [nameError, setNameError] = useState();
   const [emailError, setEmailError] = useState();
   const [messageError, setMessageError] = useState();
+  const [loadingContact, setLoadingContact] = useState(false);
+
+  const notifySuccess = () => {
+    toast.success('Message envoyé.');
+  };
+  
+  const notifyError = () => {
+    toast.success('Erreur d\'envoie !');
+  };
 
   var recaptcha = false;
   const form = useRef();
 
   const checkInputs = () => {
+    setLoadingContact(true)
     var result = false
     if(name && !isEmpty(name) && name.length > 3){
       setNameError()
@@ -53,23 +70,30 @@ const Home = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if(checkInputs()){
-      if(recaptcha === true){
-        alert('sending')
+    if(recaptcha === true){
+      if(checkInputs()){
         emailjs.sendForm(
-            'service_iarvjl4', // Service ID
-            'template_1r27jdp', // Template ID
+            process.env.REACT_MAILJS_SERVICE_ID, // Service ID
+            process.env.REACT_MAILJS_TEMPLATE_ID, // Template ID
             form.current, 
-            'rWa0uyWeirk140L3d' // Public Key
+            process.env.REACT_MAILJS_PUBLIC_KEY // Public Key
           )
           .then((result) => {
-              console.log(result.text)
+              // console.log(result.text)
               recaptcha = false
-              recaptchaRef.current.reset()
+              if(recaptchaRef && recaptchaRef.current)
+                recaptchaRef.current.reset()
+              notifySuccess()
+              setLoadingContact(false)
+              navigate('/')
           }, (error) => {
-              console.log(error.text)
+              // console.log(error.text)
               recaptcha = false
-              recaptchaRef.current.reset()
+              if(recaptchaRef && recaptchaRef.current)
+                recaptchaRef.current.reset()
+              notifyError()
+              setLoadingContact(false)
+              navigate('/')
           });
       }
     }
@@ -82,8 +106,20 @@ const Home = () => {
       recaptcha = false;
     }
   }
+
+
   return (
       <>
+      <ToastContainer
+        theme="colored"
+        position="top-center"
+        autoClose="2000"
+        hideProgressBar="false"
+        closeOnClick= "true"
+        pauseOnHover= "true"
+        draggable="false"
+        progress="undefined"
+        />
         <div className="w-full text-white">
           <section className="w-full">
             <div className="w-full max-w-screen-xl mx-auto px-4">
@@ -187,16 +223,26 @@ const Home = () => {
                   <div className="w-full flex flex-col items-center my-8">
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey="6LcmdOIfAAAAAImN5W4byxDHIj1OKuUICG0nKdOJ"
+                      sitekey={`${process.env.REACT_RECAPTCHA_SITE_KEY}`}
                       onChange={onChange}
                     />
                     <div className="w-full mt-2 text-center">
                       Veillez valider le recaptcha !
                     </div>
                   </div>
-                  <button type="submit" value="Send" className="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
-                    Envoyer
-                  </button>
+                  {
+                    loadingContact ?
+                      <div className="w-full flex justify-center px-8 py-2.5">
+                        <svg role="status" className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-my-orage-color" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                        </svg>
+                      </div>
+                    :
+                      <button type="submit" value="Send" className="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
+                        Envoyer
+                      </button>
+                  }
                 </div>
               </form>
             </div>
