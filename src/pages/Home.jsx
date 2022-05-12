@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState, useRef, createRef } from 'react'
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+import { isEmail, isEmpty } from 'validator'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Nabar'
@@ -9,6 +12,76 @@ import twitterLogo from '../images/svg/bxl-twitter.svg'
 import githubLogo from '../images/svg/bxl-github.svg'
 
 const Home = () => {
+  const recaptchaRef = createRef();
+  
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
+  const [nameError, setNameError] = useState();
+  const [emailError, setEmailError] = useState();
+  const [messageError, setMessageError] = useState();
+
+  var recaptcha = false;
+  const form = useRef();
+
+  const checkInputs = () => {
+    var result = false
+    if(name && !isEmpty(name) && name.length > 3){
+      setNameError()
+      result = true
+    }else{
+      setNameError("Veillez saisir un nom de 3 caractères minimum !")
+      result = false
+    }
+    if(email && !isEmpty(email) && isEmail(email)){
+      setEmailError()
+      result = true
+    }else{
+      setEmailError("Veillez saisir un email correct !")
+      result = false
+    }
+    if(message && message.length > 20){
+      setMessageError()
+      result = true
+    }else{
+      setMessageError("Veillez saisir un message de 20 caractères minimum !")
+      result = false
+    }
+    return result
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if(checkInputs()){
+      if(recaptcha === true){
+        alert('sending')
+        emailjs.sendForm(
+            'service_iarvjl4', // Service ID
+            'template_1r27jdp', // Template ID
+            form.current, 
+            'rWa0uyWeirk140L3d' // Public Key
+          )
+          .then((result) => {
+              console.log(result.text)
+              recaptcha = false
+              recaptchaRef.current.reset()
+          }, (error) => {
+              console.log(error.text)
+              recaptcha = false
+              recaptchaRef.current.reset()
+          });
+      }
+    }
+  };
+
+  function onChange(value) {
+    if(value !== null){
+      recaptcha = true;
+    }else{
+      recaptcha = false;
+    }
+  }
   return (
       <>
         <div className="w-full text-white">
@@ -75,31 +148,57 @@ const Home = () => {
               <h2 className="text-center text-4xl font-bold underline underline-offset-8">
                 Contact
               </h2>
-              <div className="w-full mt-12 flex flex-col items-center">
-                <div className="w-full lg:w-1/2 flex flex-col">
-                  <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
-                    Nom complet
-                  </label>
-                  <input className="w-full mt-2 h-12 px-5 text-black text-xl" type="name" id="input-name" placeholder="Votre nom"/>
-                </div>
-                <div className="w-full lg:w-1/2  flex flex-col items-center mt-8">
+              <form ref={form} onSubmit={sendEmail} className="w-full mt-12 flex flex-col items-center">
+                
+                <div className="w-full lg:w-1/2  flex flex-col items-center mt-4">
                   <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Email
                   </label>
-                  <input className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-name" placeholder="Votre adresse mail"/>
+                  <input onChange={(e) => setEmail(e.target.value)} name="user_email" className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-name" placeholder="Votre adresse mail"/>
+                  <div className="w-full mt-2 text-red-600">
+                    {
+                      emailError
+                    }
+                  </div>
                 </div>
-                <div className="w-full lg:w-1/2  flex flex-col items-center mt-8">
+                <div className="w-full lg:w-1/2 flex flex-col mt-4">
+                  <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
+                    Nom complet
+                  </label>
+                  <input onChange={(e) => setName(e.target.value)} name="user_name" className="w-full mt-2 h-12 px-5 text-black text-xl" type="name" id="input-name" placeholder="Votre nom"/>
+                  <div className="w-full mt-2 text-red-600">
+                    {
+                      nameError
+                    }
+                  </div>
+                </div>
+                <div className="w-full lg:w-1/2  flex flex-col items-center mt-4">
                   <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Message
                   </label>
-                  <textarea className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-name" placeholder="Votre message"/>
+                  <textarea onChange={(e) => setMessage(e.target.value)} name="message" className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-name" placeholder="Votre message"/>
+                  <div className="w-full mt-2 text-red-600">
+                    {
+                      messageError
+                    }
+                  </div>
                 </div>
-                <div className="w-full flex flex-col items-center mt-12">
-                  <button type="button" className="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
+                <div className="w-full flex flex-col items-center">
+                  <div className="w-full flex flex-col items-center my-8">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey="6LcmdOIfAAAAAImN5W4byxDHIj1OKuUICG0nKdOJ"
+                      onChange={onChange}
+                    />
+                    <div className="w-full mt-2 text-center">
+                      Veillez valider le recaptcha !
+                    </div>
+                  </div>
+                  <button type="submit" value="Send" className="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
                     Envoyer
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
           </section>
           <Footer/>

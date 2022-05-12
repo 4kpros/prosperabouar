@@ -15,7 +15,7 @@ TopBarProgress.config({
 const Error404 = lazyLoading(
   () => {
     return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages/Error404")), 100);
+      setTimeout(() => resolve(import("./pages/Error404")), 0);
     });
   },
   {
@@ -25,7 +25,7 @@ const Error404 = lazyLoading(
 const Home = lazyLoading(
   () => {
     return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages/Home")), 100);
+      setTimeout(() => resolve(import("./pages/Home")), 0);
     });
   },
   {
@@ -35,7 +35,7 @@ const Home = lazyLoading(
 const Portfolio = lazyLoading(
   () => {
     return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages/Portfolio")), 100);
+      setTimeout(() => resolve(import("./pages/Portfolio")), 0);
     });
   },
   {
@@ -45,7 +45,7 @@ const Portfolio = lazyLoading(
 const Blog = lazyLoading(
   () => {
     return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages/Blog")), 100);
+      setTimeout(() => resolve(import("./pages/Blog")), 0);
     });
   },
   {
@@ -55,7 +55,7 @@ const Blog = lazyLoading(
 const About = lazyLoading(
   () => {
     return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages/About")), 100);
+      setTimeout(() => resolve(import("./pages/About")), 0);
     });
   },
   {
