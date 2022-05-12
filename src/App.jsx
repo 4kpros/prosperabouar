@@ -5,6 +5,8 @@ import TopBarProgress from "react-topbar-progress-indicator";
 
 import lazyLoading from './components/LazyLoading';
 
+import { ToastContainer } from 'react-toastify';
+
 TopBarProgress.config({
   barColors: {
     "0": "#fff",
@@ -62,16 +64,37 @@ const About = lazyLoading(
     fallback: <TopBarProgress />
   }
 );
+const Congratulations = lazyLoading(
+  () => {
+    return new Promise(resolve => {
+      setTimeout(() => resolve(import("./pages/Congratulations")), 0);
+    });
+  },
+  {
+    fallback: <TopBarProgress />
+  }
+);
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer
+        theme="colored"
+        position="top-center"
+        autoClose="2000"
+        hideProgressBar="false"
+        closeOnClick= "true"
+        pauseOnHover= "true"
+        draggable="false"
+        progress="undefined"
+        />
         <Routes>
             <Route path='*' element={<Error404/>} />
             <Route path='/' element={<Home/>} />
             <Route path='/portfolio' element={<Portfolio/>} />
             <Route path='/blog' element={<Blog/>} />
             <Route path='/about' element={<About/>} />
+            <Route path='/congratulations' element={<Congratulations/>} />
         </Routes>
     </BrowserRouter>
   );

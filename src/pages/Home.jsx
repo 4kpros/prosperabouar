@@ -1,9 +1,9 @@
 import { useState, useRef, createRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 import { isEmail, isEmpty } from 'validator'
-import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -28,6 +28,8 @@ const Home = () => {
   const [nameError, setNameError] = useState();
   const [emailError, setEmailError] = useState();
   const [messageError, setMessageError] = useState();
+  const [recaptchaError, setRecaptchaError] = useState("Veillez valider le recaptcha !");
+
   const [loadingContact, setLoadingContact] = useState(false);
 
   const notifySuccess = () => {
@@ -35,10 +37,8 @@ const Home = () => {
   };
   
   const notifyError = () => {
-    toast.success('Erreur d\'envoie !');
+    toast.error('Erreur d\'envoie !');
   };
-
-  var recaptcha = false;
   const form = useRef();
 
   const checkInputs = () => {
@@ -70,30 +70,28 @@ const Home = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if(recaptcha === true){
+    if(!recaptchaError){
       if(checkInputs()){
         emailjs.sendForm(
-            process.env.REACT_MAILJS_SERVICE_ID, // Service ID
-            process.env.REACT_MAILJS_TEMPLATE_ID, // Template ID
+            process.env.REACT_APP_MAILJS_SERVICE_ID, // Service ID
+            process.env.REACT_APP_MAILJS_TEMPLATE_ID, // Template ID
             form.current, 
-            process.env.REACT_MAILJS_PUBLIC_KEY // Public Key
+            process.env.REACT_APP_MAILJS_PUBLIC_KEY // Public Key
           )
           .then((result) => {
               // console.log(result.text)
-              recaptcha = false
-              if(recaptchaRef && recaptchaRef.current)
-                recaptchaRef.current.reset()
               notifySuccess()
               setLoadingContact(false)
-              navigate('/')
-          }, (error) => {
-              // console.log(error.text)
-              recaptcha = false
               if(recaptchaRef && recaptchaRef.current)
                 recaptchaRef.current.reset()
+              navigate('/congratulations')
+          }, (error) => {
+              // console.log(error.text)
               notifyError()
               setLoadingContact(false)
-              navigate('/')
+              if(recaptchaRef && recaptchaRef.current)
+                recaptchaRef.current.reset()
+                navigate('/#')
           });
       }
     }
@@ -101,25 +99,15 @@ const Home = () => {
 
   function onChange(value) {
     if(value !== null){
-      recaptcha = true;
+      setRecaptchaError()
     }else{
-      recaptcha = false;
+      setRecaptchaError("Veillez valider le recaptcha !")
     }
   }
 
 
   return (
       <>
-      <ToastContainer
-        theme="colored"
-        position="top-center"
-        autoClose="2000"
-        hideProgressBar="false"
-        closeOnClick= "true"
-        pauseOnHover= "true"
-        draggable="false"
-        progress="undefined"
-        />
         <div className="w-full text-white">
           <section className="w-full">
             <div className="w-full max-w-screen-xl mx-auto px-4">
@@ -191,7 +179,7 @@ const Home = () => {
                     Email
                   </label>
                   <input onChange={(e) => setEmail(e.target.value)} name="user_email" className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-name" placeholder="Votre adresse mail"/>
-                  <div className="w-full mt-2 text-red-600">
+                  <div className="w-full mt-2 text-red-400">
                     {
                       emailError
                     }
@@ -202,7 +190,7 @@ const Home = () => {
                     Nom complet
                   </label>
                   <input onChange={(e) => setName(e.target.value)} name="user_name" className="w-full mt-2 h-12 px-5 text-black text-xl" type="name" id="input-name" placeholder="Votre nom"/>
-                  <div className="w-full mt-2 text-red-600">
+                  <div className="w-full mt-2 text-red-400">
                     {
                       nameError
                     }
@@ -213,7 +201,7 @@ const Home = () => {
                     Message
                   </label>
                   <textarea onChange={(e) => setMessage(e.target.value)} name="message" className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-name" placeholder="Votre message"/>
-                  <div className="w-full mt-2 text-red-600">
+                  <div className="w-full mt-2 text-red-400">
                     {
                       messageError
                     }
@@ -223,11 +211,13 @@ const Home = () => {
                   <div className="w-full flex flex-col items-center my-8">
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey={`${process.env.REACT_RECAPTCHA_SITE_KEY}`}
+                      sitekey={`${process.env.REACT_APP_RECAPTCHA_SITE_KEY}`}
                       onChange={onChange}
                     />
-                    <div className="w-full mt-2 text-center">
-                      Veillez valider le recaptcha !
+                    <div className="w-full mt-2 text-center text-red-400">
+                      {
+                        recaptchaError
+                      }
                     </div>
                   </div>
                   {
