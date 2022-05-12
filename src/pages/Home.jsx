@@ -42,7 +42,6 @@ const Home = () => {
   const form = useRef();
 
   const checkInputs = () => {
-    setLoadingContact(true)
     var result = false
     if(name && !isEmpty(name) && name.length > 3){
       setNameError()
@@ -65,6 +64,7 @@ const Home = () => {
       setMessageError("Veillez saisir un message de 20 caractères minimum !")
       result = false
     }
+    setLoadingContact(result)
     return result
   }
 
@@ -93,6 +93,8 @@ const Home = () => {
                 recaptchaRef.current.reset()
                 navigate('/#')
           });
+      }else{
+
       }
     }
   };
