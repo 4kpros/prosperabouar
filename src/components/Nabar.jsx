@@ -10,7 +10,7 @@ const Nabar = (props) => {
             <div className="w-full hidden md:flex md:flex-wrap justify-end space-x-12">
                 <a href="/" className={selectedNavItem && selectedNavItem === 'Home' ? 'text-2xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-2xl hover:border-b-2 pb-1 border-white'} >Accueil</a>
                 <a href="/portfolio" className={selectedNavItem && selectedNavItem === 'Portfolio' ? 'text-2xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-2xl hover:border-b-2 pb-1 border-white'} >Portfolio</a>
-                <a href="/blog" className={selectedNavItem && selectedNavItem === 'Blog' ? 'text-2xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-2xl hover:border-b-2 pb-1 border-white'} >Blog</a>
+                {/* <a href="/blog" className={selectedNavItem && selectedNavItem === 'Blog' ? 'text-2xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-2xl hover:border-b-2 pb-1 border-white'} >Blog</a> */}
                 <a href="/about" className={selectedNavItem && selectedNavItem === 'About' ? 'text-2xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-2xl hover:border-b-2 pb-1 border-white'} >A propos</a>
             </div>
             <div className="md:hidden">

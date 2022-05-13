@@ -92,7 +92,7 @@ function App() {
             <Route path='*' element={<Error404/>} />
             <Route path='/' element={<Home/>} />
             <Route path='/portfolio' element={<Portfolio/>} />
-            <Route path='/blog' element={<Blog/>} />
+            {/* <Route path='/blog' element={<Blog/>} /> */}
             <Route path='/about' element={<About/>} />
             <Route path='/congratulations' element={<Congratulations/>} />
         </Routes>

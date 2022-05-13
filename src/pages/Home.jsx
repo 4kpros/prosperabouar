@@ -163,7 +163,7 @@ const Home = () => {
               <p className="text-center text-2xl mt-4">
                 Une page qui contient mes projets récents est disponible à <a href="/portfolio" className="text-my-orage-color underline">cette adresse.</a>
               </p>
-              <p className="text-center text-2xl mt-4">
+              <p className="text-center hidden text-2xl mt-4">
                 J'ai également un mini blog qui contient mes publications concernant le développement d’applications et l'entreprenariat. Pour voir mes publications, 
                  Veillez cliquer sur <a href="/blog" className="text-my-orage-color underline">ce lien.</a>
               </p>
