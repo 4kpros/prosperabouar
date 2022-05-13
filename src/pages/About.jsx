@@ -42,19 +42,19 @@ class About extends Component {
                             <div className="w-full flex flex-col mt-12">
                                 <p className="text-2xl font-bold text-justify">
                                     Nom complet : 
-                                    <span className="text-xl font-normal"> Abouar Prosper</span>
+                                    <span className="font-normal"> Abouar Prosper</span>
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Bio : 
-                                    <span className="text-xl font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.</span>
+                                    <span className="font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.</span>
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Etudes : 
-                                    <span className="text-xl font-normal"> Licence Informatique en genie logiciel</span>
+                                    <span className="font-normal"> Licence Informatique en genie logiciel</span>
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Compétences : 
-                                    <span className="text-xl font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.</span>
+                                    <span className="font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.</span>
                                 </p>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ class About extends Component {
                                     <h3 className="text-justify text-3xl font-semibold my-2">
                                         Design web
                                     </h3>
-                                    <p className="text-xl text-justify">
+                                    <p className="text-2xl text-justify">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.
                                     </p>
                                 </div>
@@ -106,7 +106,7 @@ class About extends Component {
                                     <h3 className="text-justify text-3xl font-semibold my-2">
                                         Developpement web
                                     </h3>
-                                    <p className="text-xl text-justify">
+                                    <p className="text-2xl text-justify">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.
                                     </p>
                                 </div>
@@ -117,7 +117,7 @@ class About extends Component {
                                     <h3 className="text-justify text-3xl font-semibold my-2">
                                         Developpement mobile
                                     </h3>
-                                    <p className="text-justify text-xl">
+                                    <p className="text-justify text-2xl">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.
                                     </p>
                                 </div>
@@ -129,15 +129,15 @@ class About extends Component {
                             <h2 className="text-center text-4xl font-bold underline underline-offset-8">
                                 Centres d'intérêts
                             </h2>
-                            <div className="w-full mt-12 flex flex-col items-center">
-                                <h3 className="text-xl">
-                                    Jeux videos : Candy crush
+                            <div className="w-full max-w-2xl mx-auto mt-12 flex flex-col items-center">
+                                <h3 className="text-2xl text-center">
+                                    Jeux vidéo : je joue de temps en temps. Mes jeux préférés du moment : Candy Crush, PCM (Pro Cycling Manager) et ORI and the blind forest.
                                 </h3>
-                                <h3 className="text-xl mt-2">
-                                    Dessins (pixel art) :
+                                <h3 className="text-2xl text-center mt-4">
+                                    Dessins (pixel art).
                                 </h3>
-                                <h3 className="text-xl mt-2">
-                                    Lecture (Quora) :
+                                <h3 className="text-2xl text-center mt-4">
+                                    Lecture sur Quora.
                                 </h3>
                             </div>
                         </div>
