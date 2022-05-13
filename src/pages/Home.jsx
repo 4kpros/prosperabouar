@@ -28,7 +28,7 @@ const Home = () => {
   const [nameError, setNameError] = useState();
   const [emailError, setEmailError] = useState();
   const [messageError, setMessageError] = useState();
-  const [recaptchaError, setRecaptchaError] = useState("Veillez valider le recaptcha !");
+  const [recaptchaError, setRecaptchaError] = useState();
 
   const [loadingContact, setLoadingContact] = useState(false);
 
@@ -64,14 +64,15 @@ const Home = () => {
       setMessageError("Veillez saisir un message de 20 caractères minimum !")
       result = false
     }
-    setLoadingContact(result)
     return result
   }
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if(!recaptchaError){
-      if(checkInputs()){
+    if(checkInputs()){
+      if(recaptchaRef.current.getValue()){
+        setRecaptchaError()
+        setLoadingContact(true)
         emailjs.sendForm(
             process.env.REACT_APP_MAILJS_SERVICE_ID, // Service ID
             process.env.REACT_APP_MAILJS_TEMPLATE_ID, // Template ID
@@ -94,7 +95,8 @@ const Home = () => {
                 navigate('/#')
           });
       }else{
-
+        setRecaptchaError("Veillez valider le recaptcha !")
+        setLoadingContact(false)
       }
     }
   };
