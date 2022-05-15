@@ -41,10 +41,10 @@ const Portfolio = () => {
   for (var i = 0; i < 12; i++) {
     loadingItems.push(
       <div className="w-full relative animate-pulse">
-        <div className="w-full h-96 bg-[#ffffff03]">
+        <div className="w-full h-72 bg-[#ffffff03]">
         </div>
         <div className="absolute bottom-0 z-10 w-full p-4 bg-[#ffffff03]">
-            <div className="w-full h-24">
+            <div className="w-full h-16">
             </div>
         </div>
       </div>
