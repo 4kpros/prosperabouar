@@ -1,5 +1,11 @@
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  corePlugins: {
+    preflight: true,
+  },
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       colors: {
@@ -16,6 +22,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/line-clamp'),
+    require('flowbite/plugin'),
+    require('@tailwindcss/typography'),
   ],
 }

@@ -4,6 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import './styles/index.scss';
+import 'flowbite';
 
 function AppWithCallbackAfterRender() {
   return <App/>

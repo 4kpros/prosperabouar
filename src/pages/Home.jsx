@@ -1,4 +1,5 @@
-import { useState, useRef, createRef } from 'react'
+import { useState, useEffect, useRef, createRef } from 'react'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -9,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Nabar';
+import LoadingSpinner from '../components/others/LoadingSpinner'
 
 import abouarprosper from '../images/profile/prosperabouar.png';
 import linkedInLogo from '../images/svg/bxl-linkedin-square.svg';
@@ -108,7 +110,10 @@ const Home = () => {
       setRecaptchaError("Veillez valider le recaptcha !")
     }
   }
-
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
       <>
@@ -122,20 +127,20 @@ const Home = () => {
                 </div>
                 <div className="w-full flex items-center mt-10 lg:mt-0">
                   <div className="">
-                    <h1 className="text-3xl md:text-4xl font-bold text-center lg:text-left">
-                      Salut, Je suis <span className="font-extrabold text-my-orage-color text-4xl md:text-5xl ml-2">ABOUAR PROSPER</span>
+                    <h1 className="text-2xl md:text-3xl font-bold text-center lg:text-left">
+                      Salut, Je suis <span className="font-extrabold text-my-orage-color text-3xl md:text-5xl ml-2">ABOUAR PROSPER</span>
                       <br/>Développeur web
                     </h1>
-                    <p className="text-2xl mt-8 text-center lg:text-justify">
+                    <p className="text-xl mt-8 text-center lg:text-justify">
                       Adepte de l’amélioration de l’expérience utilisateur et des performances dans le domaine du développement d'applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
                     </p>
-                    <p className="text-2xl mt-2 text-center lg:text-justify">
+                    <p className="text-xl mt-2 text-center lg:text-justify">
                       Je suis principalement développeur front-end ayant de grosses connaissances en développement backend et mobile.
                     </p>
-                    <p className="text-2xl mt-2 text-center lg:text-justify">
+                    <p className="text-xl mt-2 text-center lg:text-justify">
                       Contactez moi pour une collaboration.
                     </p>
-                    <p className="text-my-orage-color break-all text-2xl mt-8 text-center lg:text-left">
+                    <p className="text-my-orage-color break-all text-xl mt-8 text-center lg:text-left">
                       <a href="mailto: prosper.abouar@gmail.com" className="">
                           prosper.abouar@gmail.com
                       </a>
@@ -158,24 +163,24 @@ const Home = () => {
           </section>
           <section className="w-full pt-20">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-              <h2 className="text-center text-4xl font-bold underline underline-offset-8">
+              <h2 className="text-center text-3xl font-bold underline underline-offset-8">
                 Liens utiles
               </h2>
-              <p className="text-center text-2xl mt-12">
-                Pour en savoir plus sur moi, veillez cliquer sur <a href="/about" className="text-my-orage-color underline">ce lien.</a>
+              <p className="text-center text-xl mt-12">
+                Pour en savoir plus sur moi, veillez cliquer sur <Link to={`/about`} className="text-my-orage-color underline">ce lien.</Link>
               </p>
-              <p className="text-center text-2xl mt-4">
-                Une page qui contient mes projets récents est disponible à <a href="/portfolio" className="text-my-orage-color underline">cette adresse.</a>
+              <p className="text-center text-xl mt-4">
+                Une page qui contient mes projets récents est disponible à <Link to={`/portfolio`} className="text-my-orage-color underline">cette adresse.</Link>
               </p>
-              <p className="text-center hidden text-2xl mt-4">
+              <p className="text-center hidden text-xl mt-4">
                 J'ai également un mini blog qui contient mes publications concernant le développement d’applications et l'entreprenariat. Pour voir mes publications, 
-                 Veillez cliquer sur <a href="/blog" className="text-my-orage-color underline">ce lien.</a>
+                 Veillez cliquer sur <Link to={`/blog`} className="text-my-orage-color underline">ce lien.</Link>
               </p>
             </div>
           </section>
           <section className="w-full pt-20">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-              <h2 className="text-center text-4xl font-bold underline underline-offset-8">
+              <h2 className="text-center text-3xl font-bold underline underline-offset-8">
                 Contact
               </h2>
               <form ref={form} onSubmit={sendEmail} className="w-full mt-12 flex flex-col items-center">
@@ -228,14 +233,9 @@ const Home = () => {
                   </div>
                   {
                     loadingContact ?
-                      <div className="w-full flex justify-center px-8 py-2.5">
-                        <svg role="status" className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-my-orage-color" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
-                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
-                        </svg>
-                      </div>
+                      <LoadingSpinner/>
                     :
-                      <button type="submit" value="Send" className="text-xl text-black font-bold bg-my-orage-color px-8 py-2.5 text-center focus:outline-none">
+                      <button type="submit" value="Send" className="text-lg text-black font-bold bg-my-orage-color px-6 py-2 text-center focus:outline-none">
                         Envoyer
                       </button>
                   }

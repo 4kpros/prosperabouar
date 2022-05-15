@@ -74,6 +74,26 @@ const Congratulations = lazyLoading(
     fallback: <TopBarProgress />
   }
 );
+const ProjectAdd = lazyLoading(
+  () => {
+    return new Promise(resolve => {
+      setTimeout(() => resolve(import("./pages/ProjectAdd")), 0);
+    });
+  },
+  {
+    fallback: <TopBarProgress />
+  }
+);
+const ProjectDetails = lazyLoading(
+  () => {
+    return new Promise(resolve => {
+      setTimeout(() => resolve(import("./pages//ProjectDetails")), 0);
+    });
+  },
+  {
+    fallback: <TopBarProgress />
+  }
+);
 
 function App() {
   return (
@@ -92,6 +112,7 @@ function App() {
             <Route path='*' element={<Error404/>} />
             <Route path='/' element={<Home/>} />
             <Route path='/portfolio' element={<Portfolio/>} />
+            <Route path='/portfolio/projects/:id' element={<ProjectDetails/>} />
             {/* <Route path='/blog' element={<Blog/>} /> */}
             <Route path='/about' element={<About/>} />
             <Route path='/congratulations' element={<Congratulations/>} />
