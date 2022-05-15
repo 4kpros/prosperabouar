@@ -87,7 +87,7 @@ const ProjectAdd = lazyLoading(
 const ProjectDetails = lazyLoading(
   () => {
     return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages//ProjectDetails")), 0);
+      setTimeout(() => resolve(import("./pages/ProjectDetails")), 0);
     });
   },
   {
