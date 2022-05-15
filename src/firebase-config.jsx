@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDmjdOT1GbF6Ri-eNXRYMxwbJWJG3qNS0s",
-    authDomain: "prosperabouar-b9a50.firebaseapp.com",
-    projectId: "prosperabouar-b9a50",
-    storageBucket: "prosperabouar-b9a50.appspot.com",
-    messagingSenderId: "316363026924",
-    appId: "1:316363026924:web:2955ca34c00faf691310c9",
-    measurementId: "G-BG8REL81CZ"
+    apiKey: process.env.REACT_APP_FIRESTORE_API_KEY,
+    authDomain: process.env.REACT_APP_FIRESTORE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIRESTORE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIRESTORE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIRESTORE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIRESTORE_APP_ID,
+    measurementId: process.env.REACT_APP_FIRESTORE_MEASUREMENT_ID
   };
 
   const app = initializeApp(firebaseConfig);

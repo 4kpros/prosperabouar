@@ -5,6 +5,8 @@ import congratulationsimg from '../images/animated/congratulations.gif'
 
 const Congratulations = () => {
     
+    document.title = 'Votre message a été envoyé';
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])

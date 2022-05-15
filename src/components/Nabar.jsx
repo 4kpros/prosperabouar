@@ -6,7 +6,9 @@ const Nabar = (props) => {
     const {selectedNavItem} = props
     return (
         <nav className="w-full md:space-x-8 flex flex-wrap md:flex-nowrap justify-between items-center">
-            <img className="h-20 object-contain object-left-top" src={sitelogo} alt="site logo"/>
+            <Link to={`/`}>
+                <img className="w-auto h-24 object-contain object-left-top" src={sitelogo} alt="site logo"/>
+            </Link>
             <div className="w-full hidden md:flex md:flex-wrap justify-end space-x-12">
                 <Link to={`/`} className={selectedNavItem && selectedNavItem === 'Home' ? 'text-xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-xl hover:border-b-2 pb-1 border-white'} >Accueil</Link>
                 <Link to={`/portfolio`} className={selectedNavItem && selectedNavItem === 'Portfolio' ? 'text-xl border-b-2 pb-1 border-my-orage-color text-my-orage-color' : 'text-xl hover:border-b-2 pb-1 border-white'} >Portfolio</Link>

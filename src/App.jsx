@@ -74,16 +74,6 @@ const Congratulations = lazyLoading(
     fallback: <TopBarProgress />
   }
 );
-const ProjectAdd = lazyLoading(
-  () => {
-    return new Promise(resolve => {
-      setTimeout(() => resolve(import("./pages/ProjectAdd")), 0);
-    });
-  },
-  {
-    fallback: <TopBarProgress />
-  }
-);
 const ProjectDetails = lazyLoading(
   () => {
     return new Promise(resolve => {

@@ -19,6 +19,9 @@ import githubLogo from '../images/svg/bxl-github.svg';
 
 
 const Home = () => {
+
+  document.title = 'Abouar Prosper, développeur web & mobile';
+
   let navigate = useNavigate();
 
   const recaptchaRef = createRef();

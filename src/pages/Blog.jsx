@@ -9,6 +9,8 @@ import React from 'react';
 
 const Blog = () => {
 
+    document.title = 'Blog';
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])

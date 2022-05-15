@@ -9,6 +9,8 @@ import ProjectItem from '../components/Portfolio/ProjectItem'
 
 const Portfolio = () => {
 
+  document.title = 'Portfolio';
+
   const [isLoading, setIsLoading] = useState(true);
   const [projects, setProjects] = useState([]);
   const projectsCollectionRef = collection(db, "projects");

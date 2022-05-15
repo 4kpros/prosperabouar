@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from "react-router-dom";
 import { db } from '../firebase-config'
-import { doc, getDoc, where } from 'firebase/firestore/lite';
+import { doc, getDoc } from 'firebase/firestore/lite';
 import isEmpty from 'validator'
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Nabar';
+import ImageSwiper from '../components/Portfolio/ImageSwiper'
 
 import defaultBackground from '../images/backgrounds/blog-background_small.jpg'
 
 const ProjectDetails = () => {
+
+    document.title = 'Projet ';
 
     const {id} = useParams();
 
@@ -24,16 +27,15 @@ const ProjectDetails = () => {
             const docRef = doc(db, "projects", id);
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
-                console.log("Document data:", docSnap.data());
                 setProject(docSnap.data())
-            } else {
-                console.log("No such document!");
+                document.title = 'Projet ' + docSnap.data().name;
             }
             setIsLoading(false)
         }
         
         if(id)
             getProductDetails()
+        
     }, [])
 
     return (
@@ -70,33 +72,27 @@ const ProjectDetails = () => {
                                         <h1>
                                             {project.name}
                                         </h1>
-                                        <img className="w-full h-96 object-cover" src={project.cover_art && !isEmpty(project.cover_art) ? project.cover_art : defaultBackground} alt={project.name} />
+                                        <img className="w-auto max-h-96 object-contain" src={project.cover_art ? project.cover_art : defaultBackground} alt={project.name} />
                                         <h3 className="">
                                             {project.description1}
                                         </h3>
-                                        <div className="w-full grid grid-cols-2 gap-4 not-prose py-4">
-                                            {
-                                                project.images ?
-                                                    project.images.map((image, i) => {
-                                                        return(
-                                                            <div className="w-full">
-                                                                <img src={image && !isEmpty(image) ? image : defaultBackground} className="w-full object-cover" alt={project.name + ` ` +i}/>
-                                                            </div>
-                                                        )
-                                                    })
-                                                :
-                                                    null
-                                            }
+                                        <div className="w-full not-prose py-4">
+                                            <ImageSwiper images={project.images} />
                                         </div>
                                         <h3 className="">
                                             {project.description2}
                                         </h3>
-                                        <div className="flex items-center">
-                                            <p className="mr-2">Le lien : </p>
-                                            <a href={project.link} target="_blank" rel="noreferrer">
-                                                {project.name}
-                                            </a>
-                                        </div>
+                                        {
+                                            project && project.link ?
+                                                <div className="flex items-center">
+                                                    <p className="mr-2">Lien vers le projet : </p>
+                                                    <a href={project.link} target="_blank" rel="noreferrer">
+                                                        {project.name}
+                                                    </a>
+                                                </div>
+                                            :
+                                                null
+                                        }
                                     </article>
                                 </div>
                             :

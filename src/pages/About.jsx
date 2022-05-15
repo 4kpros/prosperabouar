@@ -20,6 +20,8 @@ import React from 'react';
 
 const About = () => {
 
+    document.title = 'A propos';
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -43,19 +45,19 @@ const About = () => {
                             Profil
                         </h2>
                         <div className="w-full flex flex-col mt-12">
-                            <p className="text-xl font-bold text-justify">
+                            <p className="text-xl font-bold">
                                 Nom complet : 
                                 <span className="font-normal"> Abouar Prosper</span>
                             </p>
-                            <p className="text-xl font-bold mt-4 text-justify">
+                            <p className="text-xl font-bold mt-4">
                                 Bio : 
                                 <span className="font-normal"> Camerounais et passionné de geek, j'ai toujours rêvé de créer des solutions dans le domaine du développement logiciel.</span>
                             </p>
-                            <p className="text-xl font-bold mt-4 text-justify">
+                            <p className="text-xl font-bold mt-4">
                                 Etudes : 
                                 <span className="font-normal"> Licence Informatique en genie logiciel.</span>
                             </p>
-                            <p className="text-xl font-bold mt-4 text-justify">
+                            <p className="text-xl font-bold mt-4">
                                 Compétences : 
                                 <span className="font-normal"> Ayant de solides compétences en développement mobile Android et web(Reactjs, node.js, Django et autres technos tout au tour), je dispose des savoir en gestion d’équipes virtuelles et de projets agiles, en communication et de connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
                             </p>
@@ -95,7 +97,7 @@ const About = () => {
                                 <h3 className="text-justify text-2xl font-semibold my-2">
                                     Design web
                                 </h3>
-                                <p className="text-xl text-justify">
+                                <p className="text-xl text-center">
                                     Réalisation de logos, de designs d'applications web et mobile en utilisant les outils tels que Figma, Adobe Illustrator, Adobe Photoshop.
                                 </p>
                             </div>
@@ -106,7 +108,7 @@ const About = () => {
                                 <h3 className="text-justify text-2xl font-semibold my-2">
                                     Developpement web
                                 </h3>
-                                <p className="text-xl text-justify">
+                                <p className="text-xl text-center">
                                     Développement front-end et backend de site web avec les technos tels que ReactJS, Node.js, Django, MongoDB, Firebase.
                                 </p>
                             </div>
