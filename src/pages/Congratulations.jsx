@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import congratulationsimg from '../images/animated/congratulations.gif'
-
 const Congratulations = () => {
     
     document.title = 'Votre message a été envoyé';
@@ -16,7 +14,8 @@ const Congratulations = () => {
             <div className="w-full max-w-screen-xl h-screen mx-auto px-4">
               <div className="w-full min-h-screen flex justify-center items-center lg:space-y-8">
                 <div className="w-full md:w-1/2 flex flex-col justify-center items-center border-2 border-neutral-800 px-12 py-20  transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
-                    <img className="w-auto h-24 md:h-32 m-auto object-contain mb-4" src={congratulationsimg} alt="congratulations-anim"/>
+                    {/* <img className="w-auto h-24 md:h-32 m-auto object-contain mb-4" src={congratulationsimg} alt="congratulations-anim"/> */}
+                    <iframe className="w-auto h-24 md:h-32 m-auto object-contain mb-4" src="https://embed.lottiefiles.com/animation/91001"></iframe>
                     <h3 className="text-center text-3xl font-semibold">
                         Message envoyé avec succès
                     </h3>

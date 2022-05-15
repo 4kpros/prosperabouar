@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import congratulationsimg from '../images/animated/congratulations.gif'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Nabar'
@@ -27,7 +26,6 @@ const Error404 = () => {
                     <div className="w-full max-w-screen-xl mx-auto px-4">
                         <div className="w-full md:w-1/2 min-h-[80vh] mx-auto mt-20">
                             <div className="w-full flex flex-col items-center border-2 border-neutral-800 px-12 py-20  transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
-                                {/* <img className="w-auto h-24 md:h-32 m-auto object-contain mb-4" src={congratulationsimg} alt="congratulations-anim"/> */}
                                 <iframe src="https://embed.lottiefiles.com/animation/90569" title="error-lottie-animation"></iframe>
                                 <h3 className="text-center text-3xl font-semibold">
                                     ERREUR 404 !
