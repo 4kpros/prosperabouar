@@ -17,8 +17,15 @@ const Footer = () => {
                     <img className="object-contain w-10" src={githubLogo} alt="Twitter"/>
                     </a>
                 </div>
-                <div className="w-full flex justify-center mt-8">
-                <h3 className="font-bold text-center">
+                <div className="w-full flex justify-center mt-4">
+                    <p className="text-my-orage-color break-all text-2xl text-center lg:text-left">
+                      <a href="mailto: prosper.abouar@gmail.com" className="">
+                          prosper.abouar@gmail.com
+                      </a>
+                    </p>
+                </div>
+                <div className="w-full flex justify-center mt-12">
+                <h3 className="font-normal text-center">
                     Copyright &copy; 2022, Abouar Prosper
                 </h3>
                 </div>

@@ -51,7 +51,7 @@ class About extends Component {
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Compétences : 
-                                    <span className="font-normal"> Ayant de solides compétences en développement mobile Android et web, je dispose également de savoir en gestion d’équipes virtuelles de projets agiles, en communication. J’ai également des connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
+                                    <span className="font-normal"> Ayant de solides compétences en développement mobile Android et web(Reactjs, node.js, Django et autres technos tout au tour), je dispose des savoir en gestion d’équipes virtuelles et de projets agiles, en communication et de connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
                                 </p>
                             </div>
                         </div>
