@@ -136,7 +136,9 @@ const Home = () => {
                       Contactez moi pour une collaboration.
                     </p>
                     <p className="text-my-orage-color break-all text-2xl mt-8 text-center lg:text-left">
-                      prosper.abouar@gmail.com
+                      <a href="mailto: prosper.abouar@gmail.com" className="">
+                          prosper.abouar@gmail.com
+                      </a>
                     </p>
                     <div className="flex justify-center lg:justify-start mt-8 space-x-8">
                       <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">

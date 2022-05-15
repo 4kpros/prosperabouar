@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Nabar'
 
-import background_big from '../images/backgrounds/blog-background_big.jpg'
+import mySetup from '../images/profile/setup.jpg'
 
 import reactjsTech from '../images/svg/tech/react-2.svg'
 import nodejsTech from '../images/svg/tech/nodejs-1.svg'
@@ -14,9 +14,6 @@ import javaTech from '../images/svg/tech/java.svg'
 import firebaseTech from '../images/svg/tech/firebase-2.svg'
 import mysqlTech from '../images/svg/tech/mysql-6.svg'
 import mongodbTech from '../images/svg/tech/mongodb-icon-1.svg'
-import htmlTech from '../images/svg/tech/html-1.svg'
-import cssTech from '../images/svg/tech/css-3.svg'
-import javascriptTech from '../images/svg/tech/javascript-1.svg'
 import figmaTech from '../images/svg/tech/figma-1.svg'
 
 class About extends Component {
@@ -31,7 +28,7 @@ class About extends Component {
                     </section>
                     <section className="w-full mt-12">
                         <div className="w-full max-w-screen-xl mx-auto px-4">
-                            <img src={background_big} className="w-full h-[500px] object-cover" alt="empty"/>
+                            <img src={mySetup} className="w-full h-auto object-cover" alt="empty"/>
                         </div>
                     </section>
                     <section className="w-full pt-20">
@@ -46,15 +43,15 @@ class About extends Component {
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Bio : 
-                                    <span className="font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.</span>
+                                    <span className="font-normal"> Camerounais et passionné de geek, j'ai toujours rêvé de créer des solutions dans le domaine du développement logiciel.</span>
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Etudes : 
-                                    <span className="font-normal"> Licence Informatique en genie logiciel</span>
+                                    <span className="font-normal"> Licence Informatique en genie logiciel.</span>
                                 </p>
                                 <p className="text-2xl font-bold mt-4 text-justify">
                                     Compétences : 
-                                    <span className="font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.</span>
+                                    <span className="font-normal"> Ayant de solides compétences en développement mobile Android et web, je dispose également de savoir en gestion d’équipes virtuelles de projets agiles, en communication. J’ai également des connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
                                 </p>
                             </div>
                         </div>
@@ -74,9 +71,6 @@ class About extends Component {
                                 <img src={firebaseTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
                                 <img src={mysqlTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
                                 <img src={mongodbTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                                <img src={htmlTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                                <img src={cssTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                                <img src={javascriptTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
                                 <img src={figmaTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
                             </div>
                         </div>
@@ -96,7 +90,7 @@ class About extends Component {
                                         Design web
                                     </h3>
                                     <p className="text-2xl text-justify">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.
+                                        Réalisation de logos, de designs d'applications web et mobile en utilisant les outils tels que Figma, Adobe Illustrator, Adobe Photoshop.
                                     </p>
                                 </div>
                                 <div className="w-full border-2 border-neutral-800 px-8 py-10 flex flex-col items-center transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
@@ -107,7 +101,7 @@ class About extends Component {
                                         Developpement web
                                     </h3>
                                     <p className="text-2xl text-justify">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.
+                                        Développement front-end et backend de site web avec les technos tels que ReactJS, Node.js, Django, MongoDB, Firebase.
                                     </p>
                                 </div>
                                 <div className="w-full border-2 border-neutral-800 px-8 py-10 flex flex-col items-center transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
@@ -118,7 +112,7 @@ class About extends Component {
                                         Developpement mobile
                                     </h3>
                                     <p className="text-justify text-2xl">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, velit sit amet mollis accumsan, est nibh pulvinar velit, ac vestibulum mauris nisl ut massa.
+                                        Développement Android natif en Java et Kotlin en respectant les normes et bonnes pratiques.
                                     </p>
                                 </div>
                             </div>
@@ -138,6 +132,9 @@ class About extends Component {
                                 </h3>
                                 <h3 className="text-2xl text-center mt-4">
                                     Lecture sur Quora.
+                                </h3>
+                                <h3 className="text-2xl text-center mt-4">
+                                    Football.
                                 </h3>
                             </div>
                         </div>
