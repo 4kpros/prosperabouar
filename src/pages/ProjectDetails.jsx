@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from "react-router-dom";
 import { db } from '../firebase-config'
 import { doc, getDoc } from 'firebase/firestore/lite';
-import isEmpty from 'validator'
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Nabar';
