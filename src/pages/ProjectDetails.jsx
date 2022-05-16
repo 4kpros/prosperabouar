@@ -71,7 +71,7 @@ const ProjectDetails = () => {
                                         <h1>
                                             {project.name}
                                         </h1>
-                                        <img className="w-auto max-h-96 object-contain" src={project.cover_art ? project.cover_art : defaultBackground} alt={project.name} />
+                                        <img className="w-auto max-h-96 object-contain" width="300" height="300" src={project.cover_art ? project.cover_art : defaultBackground} alt={project.name} />
                                         <h3 className="">
                                             {project.description1}
                                         </h3>

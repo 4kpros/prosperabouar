@@ -20,7 +20,7 @@ const ImageSwiper = (props) => {
                                 target="_blank"
                                 rel="noreferrer"
                                 >
-                                <img className="w-full object-cover" src={image ? image : defaultBackground} alt={galleryID + ` ` +index} />
+                                <img className="w-full object-cover" width="200" height="200" src={image ? image : defaultBackground} alt={galleryID + ` ` +index} />
                             </a>
                         )
                         // return(

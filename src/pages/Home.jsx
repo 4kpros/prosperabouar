@@ -126,7 +126,7 @@ const Home = () => {
               <Navbar selectedNavItem='Home'/>
               <div className="flex flex-col items-center lg:flex-row lg:space-x-8 pt-12">
                 <div className="bg-transparent w-3/4 h-3/4">
-                  <img className="w-full h-full object-contain m-0 p-0" src={abouarprosper} alt="Prosper Abouar"/>
+                  <img className="w-full h-full object-contain m-0 p-0" width="500" height="500" src={abouarprosper} alt="Prosper Abouar"/>
                 </div>
                 <div className="w-full flex items-center mt-10 lg:mt-0">
                   <div className="">
@@ -150,13 +150,13 @@ const Home = () => {
                     </p>
                     <div className="flex justify-center lg:justify-start mt-8 space-x-8">
                       <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">
-                        <img className="object-contain w-10" src={linkedInLogo} alt="LinkedIn"/>
+                        <img className="object-contain w-10" width="80" height="80" src={linkedInLogo} alt="LinkedIn"/>
                       </a>
                       <a href="https://twitter.com/4kprosZ" className="" target="_blank" rel="noreferrer" >
-                        <img className="object-contain w-10" src={twitterLogo} alt="Twitter"/>
+                        <img className="object-contain w-10" width="80" height="80" src={twitterLogo} alt="Twitter"/>
                       </a>
                       <a href="https://github.com/4kpros" className="" target="_blank" rel="noreferrer" >
-                        <img className="object-contain w-10" src={githubLogo} alt="Twitter"/>
+                        <img className="object-contain w-10" width="80" height="80" src={githubLogo} alt="Twitter"/>
                       </a>
                     </div>
                   </div>

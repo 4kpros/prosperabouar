@@ -8,7 +8,7 @@ const BlogItem = (props) => {
 
     return (
         <div className="w-full flex flex-col">
-            <img className="w-full h-72 object-cover" src={blogPost && blogPost.img ? blogPost.img : defaultBackground} alt={blogPost && blogPost.title ? blogPost.title : 'Blog post default image'} />
+            <img className="w-full h-72 object-cover" width="300" height="300" src={blogPost && blogPost.img ? blogPost.img : defaultBackground} alt={blogPost && blogPost.title ? blogPost.title : 'Blog post default image'} />
             <div className="w-full flex flex-col my-2">
                 <p className="lg:mt-2 line-clamp-1 lg:text-2xl text-my-gray-color">
                     {

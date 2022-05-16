@@ -36,7 +36,7 @@ const About = () => {
                 </section>
                 <section className="w-full mt-12">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <img src={mySetup} className="w-full h-auto object-cover" alt="empty"/>
+                        <img src={mySetup} width="700" height="700" className="w-full h-auto object-cover" alt="empty"/>
                     </div>
                 </section>
                 <section className="w-full pt-20">
@@ -70,16 +70,16 @@ const About = () => {
                             Technologies
                         </h2>
                         <div className="w-full flex flex-wrap justify-center mt-12">
-                            <img src={reactjsTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={nodejsTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={djangoTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={androidTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={kotlinTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={javaTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={firebaseTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={mysqlTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={mongodbTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
-                            <img src={figmaTech} className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={reactjsTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={nodejsTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={djangoTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={androidTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={kotlinTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={javaTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={firebaseTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={mysqlTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={mongodbTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
+                            <img src={figmaTech} width="80" height="80" className="h-16 object-contain mx-4 mb-6 rounded-lg" alt=""/>
                         </div>
                     </div>
                 </section>
