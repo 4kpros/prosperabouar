@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Nabar'
 
-import mySetup from '../images/profile/setup.jpg'
+import mySetup from '../images/profile/setup.webp'
 
 import reactjsTech from '../images/svg/tech/react-2.svg'
 import nodejsTech from '../images/svg/tech/nodejs-1.svg'

@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 
-import blogBackground from '../../images/backgrounds/blog-background_small.jpg'
+import defaultBackground from '../../images/backgrounds/default-background_small.webp'
 
 const ProjectItem = (props) => {
 
@@ -12,11 +12,11 @@ const ProjectItem = (props) => {
             {
                 project ?
                     <div className="w-full">
-                        <img className="w-full h-72 object-cover" src={project.cover_art ? project.cover_art : blogBackground} alt={project.name ? project.name : `default-project-name`}/>
+                        <img className="w-full h-72 object-cover" src={project.cover_art ? project.cover_art : defaultBackground} alt={project.name ? project.name : `default-project-name`}/>
                     </div>
                 :
                     <div className="w-full">
-                        <img className="w-full h-72 object-cover" src={blogBackground} alt="default-project-background"/>
+                        <img className="w-full h-72 object-cover" src={defaultBackground} alt="default-project-background"/>
                     </div>
             }
             <div className="absolute bottom-0 z-10 w-full p-4 bg-[#000000a1]">

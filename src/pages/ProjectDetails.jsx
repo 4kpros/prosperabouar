@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Nabar';
 import ImageSwiper from '../components/Portfolio/ImageSwiper'
 
-import defaultBackground from '../images/backgrounds/blog-background_small.jpg'
+import defaultBackground from '../images/backgrounds/default-background_small.webp'
 
 const ProjectDetails = () => {
 

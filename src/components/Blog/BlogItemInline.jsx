@@ -1,6 +1,6 @@
 import React from 'react';
 
-import blogBackground from '../../images/backgrounds/blog-background_big.jpg'
+import defaultBackground from '../../images/backgrounds/default-background_small.webp'
 
 const BlogItem = (props) => {
 
@@ -8,7 +8,7 @@ const BlogItem = (props) => {
 
     return (
         <div className="w-full grid grid-cols-2 col-span-1 md:col-span-2 lg:col-span-3">
-            <img className="w-full h-40 my-auto md:h-96 object-cover" src={blogPost && blogPost.img ? blogPost.img : blogBackground} alt={blogPost && blogPost.title ? blogPost.title : 'Blog post default image'} />
+            <img className="w-full h-40 my-auto md:h-96 object-cover" src={blogPost && blogPost.img ? blogPost.img : defaultBackground} alt={blogPost && blogPost.title ? blogPost.title : 'Blog post default image'} />
             <div className="w-full flex flex-col ml-4">
                 <p className="line-clamp-1 md:text-2xl text-my-gray-color">
                     {

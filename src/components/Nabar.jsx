@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom'
-import sitelogo from '../images/site-logo.png'
+import sitelogo from '../images/site-logo.webp'
 
 const Nabar = (props) => {
     const {selectedNavItem} = props

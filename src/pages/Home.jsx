@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Nabar';
 import LoadingSpinner from '../components/others/LoadingSpinner'
 
-import abouarprosper from '../images/profile/prosperabouar.png';
+import abouarprosper from '../images/profile/prosperabouar.webp';
 import linkedInLogo from '../images/svg/bxl-linkedin-square.svg';
 import twitterLogo from '../images/svg/bxl-twitter.svg';
 import githubLogo from '../images/svg/bxl-github.svg';
