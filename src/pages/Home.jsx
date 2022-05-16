@@ -192,7 +192,7 @@ const Home = () => {
                   <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Email
                   </label>
-                  <input onChange={(e) => setEmail(e.target.value)} name="user_email" className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-name" placeholder="Votre adresse mail"/>
+                  <input onChange={(e) => setEmail(e.target.value)} name="user_email" className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-email" placeholder="Votre adresse mail"/>
                   <div className="w-full mt-2 text-red-400">
                     {
                       emailError
@@ -214,7 +214,7 @@ const Home = () => {
                   <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
                     Message
                   </label>
-                  <textarea onChange={(e) => setMessage(e.target.value)} name="message" className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-name" placeholder="Votre message"/>
+                  <textarea onChange={(e) => setMessage(e.target.value)} name="message" className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-message" placeholder="Votre message"/>
                   <div className="w-full mt-2 text-red-400">
                     {
                       messageError
