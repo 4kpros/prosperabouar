@@ -6,7 +6,7 @@ import { collection, doc, getDoc, getDocs } from 'firebase/firestore/lite';
 import { db } from '../../components/configs/firebase.config'
 
 import Layout from '../../components/Layout'
-import ImageSwiper from '../../components/Portfolio/ImageSwiper'
+import ImageSwiper from '../../components/portfolio/ImageSwiper'
 
 const projectsCollectionRef = collection(db, "projects");
 const title = 'Details du projet'

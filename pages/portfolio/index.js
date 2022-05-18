@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { collection, getDocs, query, where } from 'firebase/firestore/lite'
 
 import { db } from '../../components/configs/firebase.config'
-import ProjectItem from '../../components/Portfolio/ProjectItem'
+import ProjectItem from '../../components/portfolio/ProjectItem'
 import Layout from '../../components/Layout'
 
 import 'react-toastify/dist/ReactToastify.css'
