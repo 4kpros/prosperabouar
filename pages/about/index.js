@@ -39,7 +39,7 @@ export default function About({ router }){
                                 <span className="font-normal"> Ayant de solides compétences en développement mobile Android et web(Reactjs, node.js, Django et autres technos tout au tour), je dispose des savoir en gestion d’équipes virtuelles et de projets agiles, en communication et de connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
                             </p>
                         </div>
-                    </div>placeholder="blur" blurdataurl
+                    </div>
                 </section>
                 <section className="w-full pt-20">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
