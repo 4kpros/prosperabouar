@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPWA = require('next-pwa')
+
+const nextConfig = withPWA({
   reactStrictMode: true,
   env: {
     NEXT_PUBLIC_MAILJS_SERVICE_ID: "service_iarvjl4",
@@ -23,7 +25,10 @@ const nextConfig = {
    locales: ["fr-FR"],
    //  default locale used when the non-locale paths are visited
    defaultLocale: "fr-FR",
- },
-}
+  },
+  pwa: {
+    dest: 'public'
+  }, 
+})
 
 module.exports = nextConfig
