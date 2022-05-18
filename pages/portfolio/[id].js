@@ -19,18 +19,20 @@ export default function Portfolio ({param}) {
 
     useEffect(() => {
         const getProductDetails = async () => {
-            setIsLoading(true)
-            const docRef = doc(db, "projects", param.id);
-            const docSnap = await getDoc(docRef);
-            if (docSnap.exists()) {
-                setProject(docSnap.data())
-                document.title = 'Projet ' + docSnap.data().name;
+            if(param.id){
+                setIsLoading(true)
+                const docRef = doc(db, "projects", param.id);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    setProject(docSnap.data())
+                    document.title = 'Projet ' + docSnap.data().name;
+                }
+                setIsLoading(false)
             }
-            setIsLoading(false)
         }
         
-        if(param.id)
-            getProductDetails()
+        
+        getProductDetails()
         
     }, [])
 
