@@ -12,42 +12,29 @@ const projectsCollectionRef = collection(db, "projects");
 const title = 'Portfolio'
 const subtitle = "Une sélection des projets récents sur lesquels j'ai travaillé."
 
-export default function Portfolio(props){
+export default function Portfolio({projects}){
     
-    const [isLoading, setIsLoading] = useState(true);
-    const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [reloadedProjects, setReloadedProjects] = useState();
     const [errors, setErrors] = useState();
-
-    useEffect(() => {
-        const getProjects = async () => {
-            setErrors()
-            const q = query(projectsCollectionRef, where("platform", "==", "Web"));
-            const data = await getDocs(q)
-                .catch(function (error) {
-                    setErrors("Une erreur est survenue ! Veillez actualiser la page.")
-                });
-            if(data)
-                setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-            setIsLoading(false)
-        }
-
-        getProjects()
-    }, []);
+    const [projectUnvalidated, setProjectUnvalidated] = useState(false);;
     
-
     const getProjects = async (platform) => {
         setIsLoading(true)
-        setProjects([])
+        setReloadedProjects()
         setErrors()
+        setProjectUnvalidated(true)
         const q = query(projectsCollectionRef, where("platform", "==", platform));
         const data = await getDocs(q)
-            .catch(function (error) {
-                setErrors("Une erreur est survenue ! Veillez actualiser la page.")
-            });
-        if(data)
-            setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        .catch(function (error) {
+            setErrors("Une erreur est survenue ! Veillez actualiser la page.")
+        });
+        const tempProjects = data.docs.map((doc) => ({...doc.data(), id: doc.id}));
+        if(tempProjects && tempProjects.length > 0)
+            setReloadedProjects(tempProjects)
         setIsLoading(false)
     }
+
     let loadingItems = [];
     for (var i = 0; i < 6; i++) {
         loadingItems.push(
@@ -93,17 +80,28 @@ export default function Portfolio(props){
                                     {loadingItems}
                                 </div>
                             :
-                                projects && projects.length > 0 ?
+                                reloadedProjects && reloadedProjects.length > 0?
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
-                                    {
-                                        projects.map((project, index) => {
-                                        return(
-                                            <ProjectItem project={project} key={index}/>
-                                        )
-                                        })
-                                    }
+                                        {
+                                            reloadedProjects.map((project, index) => {
+                                                return(
+                                                    <ProjectItem project={project} key={index}/>
+                                                )
+                                            })
+                                        }
                                     </div>
                                 :
+                                    !projectUnvalidated && projects && projects.length > 0 ?
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
+                                            {
+                                                projects.map((project, index) => {
+                                                    return(
+                                                        <ProjectItem project={project} key={index}/>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    :
                                         errors ?
                                             <p className="text-xl text-my-gray-color">
                                                 {errors}
@@ -112,7 +110,7 @@ export default function Portfolio(props){
                                             <p className="text-xl text-my-gray-color">
                                                 Aucun projet pour cette plateforme !
                                             </p>
-                        }
+                    }
                         </div>
                     </div>
                 </section>
@@ -120,3 +118,17 @@ export default function Portfolio(props){
         </Layout>
     );
 };
+
+export async function getStaticProps () {
+    const q = query(projectsCollectionRef, where("platform", "==", "Web"));
+    const data = await getDocs(q)
+    let projects
+    if(data)
+        projects = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
+    return {
+        props: {
+            projects
+        },
+        revalidate: 86400
+    }
+}
