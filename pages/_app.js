@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <Head>
           <link rel="icon" href="/favicon.ico" type="image/png" />
+          <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <DefaultSeo
           titleTemplate="%s - Abouar Prosper"
@@ -28,13 +29,13 @@ function MyApp({ Component, pageProps, router }) {
           canonical={url}
       />
       <Navbar />
-      {/* <AnimatePresence
+      <AnimatePresence
         exitBeforeEnter
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
-        > */}
+        >
           <Component {...pageProps} canonical={url} key={url} />
-      {/* </AnimatePresence> */}
+      </AnimatePresence>
       <Footer />
     </>
   )
