@@ -25,22 +25,11 @@ function MyApp({ Component, pageProps, router }) {
               url,
               description: 'Le site web d\'Abouar Prosper, developpeur web et mobile',
               site_name: 'prosperabouar.vercel.app',
-              images: '/images/profile/prosperabouar.webp',
-              imageWidth: 1818,
-              imageHeight: 2518
+              images: []
           }}
           twitter={{
             handle: '@4kprosZ',
             cardType: 'summary_large_image'
-          }}
-          robotsProps={{
-            nosnippet: true,
-            notranslate: true,
-            noimageindex: true,
-            noarchive: true,
-            maxSnippet: -1,
-            maxImagePreview: 'none',
-            maxVideoPreview: -1,
           }}
           additionalLinkTags={[
             {
@@ -55,13 +44,6 @@ function MyApp({ Component, pageProps, router }) {
             {
               rel: 'manifest',
               href: '/manifest.json'
-            },
-            {
-              rel: 'preload',
-              href: 'https://www.test.ie/font/sample-font.woof2',
-              as: 'font',
-              type: 'font/woff2',
-              crossOrigin: 'anonymous'
             }
           ]}
           canonical={url}
