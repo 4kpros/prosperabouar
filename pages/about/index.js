@@ -13,7 +13,7 @@ export default function About({ router }){
             <div className="w-full text-white">
                 <section className="w-full mt-12">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <Image width={2016} height={1512} layout="responsive" placeholder="blur" priority blurDataURL="/images/profile/setup.webp" src="/images/profile/setup.webp" className="w-full h-auto object-cover" alt="my-setup"/>
+                        <Image width={2016} height={1512} layout="responsive" placeholder="blur" priority blurDataURL="/images/profile/setup_preload.webp" src="/images/profile/setup.webp" className="w-full h-auto object-cover" alt="my-setup"/>
                     </div>
                 </section>
                 <section className="w-full pt-20">

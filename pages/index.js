@@ -96,7 +96,7 @@ export default function Home({ router }) {
                     className="border border-my-orage-color"
                     whileHover={{scale:1.025}}
                   >
-                    <Image className="w-full h-full object-contain m-0 p-0" width={1818} height={2518} objectFit="cover" layout="responsive" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
+                    <Image className="w-full h-full object-contain m-0 p-0" width={1818} height={2518} objectFit="cover" layout="responsive" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
                   </m.div>
                 </LazyMotion>
               </div>
