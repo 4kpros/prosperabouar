@@ -9,7 +9,7 @@ import Navbar from '../components/Nabar';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps, router }) {
-  const url = `localhost:3000/${router.route}`
+  const url = `https://prosperabouar.vercel.app/${router.route}`
   return (
     <>
       <Head>
@@ -28,13 +28,13 @@ function MyApp({ Component, pageProps, router }) {
           canonical={url}
       />
       <Navbar />
-      <AnimatePresence
+      {/* <AnimatePresence
         exitBeforeEnter
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
-        >
+        > */}
           <Component {...pageProps} canonical={url} key={url} />
-      </AnimatePresence>
+      {/* </AnimatePresence> */}
       <Footer />
     </>
   )
