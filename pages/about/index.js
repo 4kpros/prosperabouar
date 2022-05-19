@@ -48,43 +48,43 @@ export default function About({ router }){
                         </h2>
                         <div className="w-full flex flex-wrap justify-center mt-12">
                             <div className="rw-auto block m-4">
-                                <Image src="/images/svg/tech/react.svg" width={96} height={120} objectFit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/react.svg" alt=""/>
+                                <Image src="/images/svg/tech/react.svg" width={96} height={120} objectFit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/next-js.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/next-js.svg" alt=""/>
+                                <Image src="/images/svg/tech/next-js.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/nodejs.svg" width={120} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/nodejs.svg" alt=""/>
+                                <Image src="/images/svg/tech/nodejs.svg" width={120} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/android.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/android.svg" alt=""/>
+                                <Image src="/images/svg/tech/android.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/flutter.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/flutter.svg" alt=""/>
+                                <Image src="/images/svg/tech/flutter.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/django.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/django.svg" alt=""/>
+                                <Image src="/images/svg/tech/django.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/firebase.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/firebase.svg" alt=""/>
+                                <Image src="/images/svg/tech/firebase.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/java.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/java.svg" alt=""/>
+                                <Image src="/images/svg/tech/java.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/kotlin.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/kotlin.svg" alt=""/>
+                                <Image src="/images/svg/tech/kotlin.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/mongodb.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/mongodb.svg" alt=""/>
+                                <Image src="/images/svg/tech/mongodb.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/mysql.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/mysql.svg" alt=""/>
+                                <Image src="/images/svg/tech/mysql.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/tailwind-css.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/tailwind-css.svg" alt=""/>
+                                <Image src="/images/svg/tech/tailwind-css.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                             <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/typescript.svg" width={96} height={120} objectfit="responsive" placeholder="blur" blurdataurl="/images/svg/tech/typescript.svg" alt=""/>
+                                <Image src="/images/svg/tech/typescript.svg" width={96} height={120} objectfit="responsive" alt=""/>
                             </div>
                         </div>
                     </div>
