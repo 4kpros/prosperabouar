@@ -17,17 +17,16 @@ export default function About({ router }){
                         <LazyMotion features={domAnimation}>
                             <m.div
                                 className="border border-my-orage-color"
-                                whileHover={{scale:1.025}}
                             >
-                                <Image className="w-full h-auto object-cover m-0 p-0 bg-my-footer-color" 
+                                <Image className="w-full h-auto object-cover" 
                                     width={1920} 
                                     height={1040} 
                                     layout="responsive" 
-                                    placeholder="blur" 
-                                    priority 
-                                    blurDataURL="/images/profile/setup_preload.webp" 
                                     src="/images/profile/setup.webp" 
+                                    placeholder="blur" 
+                                    blurDataURL="/images/profile/setup_preload.webp" 
                                     alt="my-setup"
+                                    priority 
                                 />
                             </m.div>
                         </LazyMotion>
