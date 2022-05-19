@@ -8,34 +8,41 @@ import Layout from '../../components/Layout'
 
 import 'react-toastify/dist/ReactToastify.css'
 
-const projectsCollectionRef = collection(db, "projects");
+const projectsCollectionRef = collection(db, "projects")
 const title = 'Portfolio'
 const subtitle = "Une sélection des projets récents sur lesquels j'ai travaillé."
 
 export default function Portfolio({projects}){
     
     const [isLoading, setIsLoading] = useState(false);
-    const [reloadedProjects, setReloadedProjects] = useState();
-    const [errors, setErrors] = useState();
-    const [projectUnvalidated, setProjectUnvalidated] = useState(false);;
+    const [reloadedProjects, setReloadedProjects] = useState()
+    const [errors, setErrors] = useState()
+    const [projectUnvalidated, setProjectUnvalidated] = useState(false)
+    const [selectedProject, setSelectedProject] = useState("Web")
     
     const getProjects = async (platform) => {
         setIsLoading(true)
         setReloadedProjects()
         setErrors()
         setProjectUnvalidated(true)
-        const q = query(projectsCollectionRef, where("platform", "==", platform));
+        setSelectedProject(platform)
+        const q = query(projectsCollectionRef, where("platform", "==", platform))
         const data = await getDocs(q)
         .catch(function (error) {
             setErrors("Une erreur est survenue ! Veillez actualiser la page.")
         });
-        const tempProjects = data.docs.map((doc) => ({...doc.data(), id: doc.id}));
+        const tempProjects = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
         if(tempProjects && tempProjects.length > 0)
             setReloadedProjects(tempProjects)
         setIsLoading(false)
     }
 
-    let loadingItems = [];
+    const projectsTitle = [
+        "Web",
+        "Mobile",
+        "UX-UI design"
+    ]
+    let loadingItems = []
     for (var i = 0; i < 6; i++) {
         loadingItems.push(
         <div className="w-full relative animate-pulse">
@@ -46,7 +53,7 @@ export default function Portfolio({projects}){
                 </div>
             </div>
         </div>
-        );
+        )
     }
 
     return (
@@ -58,20 +65,22 @@ export default function Portfolio({projects}){
                             Projets recents
                         </h2>
                         <div className="w-full flex flex-wrap md:flex-nowrap justify-start items-center mt-12">
-                        <label className="text-lg mr-2" htmlFor="select-filter-projects">
-                            Filter les projets
-                        </label>
-                        <select onChange={(e) => {getProjects(e.target.value)}} className="max-w-full appearance-none mx-2 form-select bg-black bg-clip-padding bg-no-repeat border border-solid border-neutral-700 text-white transition ease-in-out py-2 px-4" id="select-filter-projects" aria-label="Select projet platform">
-                            <option defaultValue value="Web" className="">
-                                Web
-                            </option>
-                            <option value="Mobile" className="">
-                                Mobile
-                            </option>
-                            <option value="UI-UX design" className="">
-                                UI-UX design
-                            </option>
-                        </select>
+                            <div className="w-full flex flex-wrap items-center">
+                                {
+                                    projectsTitle ?
+                                        projectsTitle.map((title, index) => {
+                                            return(
+                                                <div Key={index} className={selectedProject === title ? 'border border-my-orage-color text-lg mr-2 my-2 transition-all ease-in-out' : 'border border-my-gray-color text-lg mr-2 my-2 transition-all ease-in-out'}>
+                                                    <button onClick={() => getProjects(title)} className={selectedProject === title ? 'text-black font-bold bg-my-orage-color px-6 py-1.5 text-center transition-all ease-in-out' : 'text-my-gray-color font-bold bg-transparent px-6 py-1.5 text-center transition-all ease-in-out'}>
+                                                        {title}
+                                                    </button>
+                                                </div>
+                                            )
+                                        })
+                                    :
+                                        <p>Vide</p>
+                                }
+                            </div>
                         </div>
                         <div className="w-full mt-12">
                         {

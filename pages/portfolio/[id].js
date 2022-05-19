@@ -107,10 +107,9 @@ export async function getStaticProps ({params}) {
 export async function getStaticPaths () {
     const data = await getDocs(projectsCollectionRef)
     const projects = (data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-
     return {
         paths: projects.map( project => ({
-            params: {id: project.id.toString()}
+            params: {id: project && project.id ? project.id.toString() : -1}
         })),
         fallback: false
     }
