@@ -31,7 +31,9 @@ export default function Portfolio({projects}){
         .catch(function (error) {
             setErrors("Une erreur est survenue ! Veillez actualiser la page.")
         });
-        const tempProjects = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
+        let tempProjects
+        if(data && data.docs)
+            tempProjects = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
         if(tempProjects && tempProjects.length > 0)
             setReloadedProjects(tempProjects)
         setIsLoading(false)
