@@ -1,14 +1,11 @@
-import { useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
-import { collection, doc, getDoc, getDocs } from 'firebase/firestore/lite';
-
-import { db } from '../../components/configs/firebase.config'
 
 import Layout from '../../components/Layout'
 import ImageSwiper from '../../components/portfolio/ImageSwiper'
 
-const projectsCollectionRef = collection(db, "projects");
+import importedprojects from '../../components/data/projects.json'
+
 const title = 'Details du projet'
 const subtitle = "Page qui présente les détails sur un projet."
 
@@ -36,7 +33,9 @@ export default function Portfolio ({project}) {
                                             <h1>
                                                 {project.name}
                                             </h1>
-                                            <Image width={450} height={288} layout="responsive" placeholder="blur" blurDataURL={project.cover_art ? project.cover_art : '../../images/backgrounds/default-background_small.webp'}  src={project.cover_art ? project.cover_art : '../../images/backgrounds/default-background_small.webp'} alt={project.name} />
+                                            <div className="w-full not-prose">
+                                                <Image width={450} height={288} layout="responsive" placeholder="blur" blurDataURL={project.cover_art ? project.cover_art : '/images/backgrounds/default-background_small.webp'}  src={project.cover_art ? project.cover_art : '/images/backgrounds/default-background_small.webp'} alt={project.name} />
+                                            </div>
                                             <h3 className="">
                                                 {project.description1}
                                             </h3>
@@ -87,28 +86,21 @@ export default function Portfolio ({project}) {
 };
 
 export async function getStaticProps ({params}) {
-    const param = params
-    
-    const docRef = doc(db, "projects", param.id);
-    const docSnap = await getDoc(docRef);
-    let project
-    if (docSnap.exists()) {
-        project = docSnap.data()
-    }
+    let tempProjects = importedprojects.filter(item => {
+        return item.id === params.id
+    })
 
     return {
         props: {
-            project
+            project: tempProjects && tempProjects.length > 0 ? tempProjects[0] : []
         },
         revalidate: 86400
     }
 }
 
 export async function getStaticPaths () {
-    const data = await getDocs(projectsCollectionRef)
-    const projects = (data.docs.map((doc) => ({...doc.data(), id: doc.id})))
     return {
-        paths: projects.map( project => ({
+        paths: importedprojects.map( project => ({
             params: {id: project && project.id ? project.id.toString() : -1}
         })),
         fallback: false

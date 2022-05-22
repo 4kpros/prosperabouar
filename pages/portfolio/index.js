@@ -1,42 +1,32 @@
 
-import { useEffect, useState } from 'react'
-import { collection, getDocs, query, where } from 'firebase/firestore/lite'
+import { useState } from 'react'
 
-import { db } from '../../components/configs/firebase.config'
 import ProjectItem from '../../components/portfolio/ProjectItem'
 import Layout from '../../components/Layout'
 
 import 'react-toastify/dist/ReactToastify.css'
 
-const projectsCollectionRef = collection(db, "projects")
 const title = 'Portfolio'
 const subtitle = "Une sélection des projets récents sur lesquels j'ai travaillé."
 
-export default function Portfolio({projects}){
-    
-    const [isLoading, setIsLoading] = useState(false);
-    const [reloadedProjects, setReloadedProjects] = useState()
-    const [errors, setErrors] = useState()
-    const [projectUnvalidated, setProjectUnvalidated] = useState(false)
+import importedprojects from '../../components/data/projects.json'
+
+export default function Portfolio(){
+
+    const [projects, setProjects] = useState(
+        importedprojects.filter(item => {
+            return item.platform === "Web"
+        })
+    )
     const [selectedProject, setSelectedProject] = useState("Web")
     
     const getProjects = async (platform) => {
-        setIsLoading(true)
-        setReloadedProjects()
-        setErrors()
-        setProjectUnvalidated(true)
         setSelectedProject(platform)
-        const q = query(projectsCollectionRef, where("platform", "==", platform))
-        const data = await getDocs(q)
-        .catch(function (error) {
-            setErrors("Une erreur est survenue ! Veillez actualiser la page.")
-        });
-        let tempProjects
-        if(data && data.docs)
-            tempProjects = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
-        if(tempProjects && tempProjects.length > 0)
-            setReloadedProjects(tempProjects)
-        setIsLoading(false)
+        setProjects(
+            importedprojects.filter(item => {
+                return item.platform === platform
+            })
+        )
     }
 
     const projectsTitle = [
@@ -44,19 +34,6 @@ export default function Portfolio({projects}){
         "Mobile",
         "UX-UI design"
     ]
-    let loadingItems = []
-    for (var i = 0; i < 6; i++) {
-        loadingItems.push(
-        <div className="w-full relative animate-pulse">
-            <div className="w-full h-72 bg-[#ffffff03]">
-            </div>
-            <div className="absolute bottom-0 z-10 w-full p-4 bg-[#ffffff03]">
-                <div className="w-full h-16">
-                </div>
-            </div>
-        </div>
-        )
-    }
 
     return (
         <Layout title={title} description={subtitle}>
@@ -86,41 +63,20 @@ export default function Portfolio({projects}){
                         </div>
                         <div className="w-full mt-12">
                         {
-                            isLoading ?
+                            projects && projects.length > 0 ?
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
-                                    {loadingItems}
+                                    {
+                                        projects.map((project, index) => {
+                                            return(
+                                                <ProjectItem project={project} key={index}/>
+                                            )
+                                        })
+                                    }
                                 </div>
                             :
-                                reloadedProjects && reloadedProjects.length > 0?
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
-                                        {
-                                            reloadedProjects.map((project, index) => {
-                                                return(
-                                                    <ProjectItem project={project} key={index}/>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                :
-                                    !projectUnvalidated && projects && projects.length > 0 ?
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
-                                            {
-                                                projects.map((project, index) => {
-                                                    return(
-                                                        <ProjectItem project={project} key={index}/>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    :
-                                        errors ?
-                                            <p className="text-xl text-my-gray-color">
-                                                {errors}
-                                            </p>
-                                        :
-                                            <p className="text-xl text-my-gray-color">
-                                                Aucun projet pour cette plateforme !
-                                            </p>
+                                <p className="text-xl text-my-gray-color">
+                                    Aucun projet pour cette plateforme !
+                                </p>
                     }
                         </div>
                     </div>
@@ -129,17 +85,3 @@ export default function Portfolio({projects}){
         </Layout>
     );
 };
-
-export async function getStaticProps () {
-    const q = query(projectsCollectionRef, where("platform", "==", "Web"));
-    const data = await getDocs(q)
-    let projects
-    if(data)
-        projects = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
-    return {
-        props: {
-            projects
-        },
-        revalidate: 86400
-    }
-}
