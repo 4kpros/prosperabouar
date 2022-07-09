@@ -90,7 +90,7 @@ export default function Home({ router }) {
         <section className="w-full flex flex-row">
           <div className="w-full max-w-screen-xl mx-auto px-4">
             <div className="flex flex-col items-center lg:flex-row lg:space-x-8 pt-12">
-              <div className="bg-transparent w-3/4 h-3/4">
+              <div className="bg-transparent w-3/4 lg:w-3/5 h-3/4">
                 <LazyMotion features={domAnimation}>
                   <m.div
                     className="border border-my-orage-color"
