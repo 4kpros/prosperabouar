@@ -96,7 +96,7 @@ export default function Home({ router }) {
                     className="border border-my-orage-color"
                     whileHover={{scale:1.025}}
                   >
-                    <Image className="w-full h-full object-contain bg-my-footer-color" width={622} height={792} objectFit="cover" layout="responsive" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
+                    <Image className="w-full h-full object-contain bg-my-footer-color bg-top object-top" width={622} height={792} objectFit="cover" layout="responsive" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
                   </m.div>
                 </LazyMotion>
               </div>
@@ -142,10 +142,16 @@ export default function Home({ router }) {
               Liens utiles
             </h2>
             <p className="text-center text-xl mt-12">
-              Pour en savoir plus sur moi, veillez cliquer sur <Link href={`/about`} className="text-my-orage-color underline">ce lien.</Link>
+              Pour en savoir plus sur moi, veillez cliquer sur 
+              <Link href={`/about`}>
+                <a href="#" className="text-my-orage-color underline mx-2">ce lien.</a>
+                </Link>
             </p>
-            <p className="text-center text-xl mt-4">
-              Une page qui contient mes projets récents est disponible à <Link href={`/portfolio`} className="text-my-orage-color underline">cette adresse.</Link>
+            <p className="text-center text-xl mt-2 hidden">
+              Une page qui contient mes projets récents est disponible à
+              <Link href={`/portfolio`}>
+                <a href="#" className="text-my-orage-color underline mx-2">cette adresse.</a>
+                </Link>
             </p>
             <p className="text-center hidden text-xl mt-4">
               J ai également un mini blog qui contient mes publications concernant le développement d’applications et l entreprenariat. Pour voir mes publications, 

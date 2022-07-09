@@ -155,16 +155,13 @@ export default function About({ router }){
                         </h2>
                         <div className="w-full max-w-2xl mx-auto mt-12 flex flex-col items-center">
                             <h3 className="text-xl text-center">
-                                Jeux vidéo : je joue de temps en temps. Mes jeux préférés du moment : Candy Crush, PCM (Pro Cycling Manager) et ORI and the blind forest.
+                                Jeux vidéo : je joue de temps en temps. Mes jeux préférés du moment : ORI and the blind forest et Hollow Knight.
                             </h3>
                             <h3 className="text-xl text-center mt-4">
                                 Dessins (pixel art).
                             </h3>
                             <h3 className="text-xl text-center mt-4">
                                 Lecture sur Quora.
-                            </h3>
-                            <h3 className="text-xl text-center mt-4">
-                                Football.
                             </h3>
                         </div>
                     </div>

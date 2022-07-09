@@ -9,10 +9,10 @@ const links = [
         name: 'Accueil',
         href: '/',
     },
-    {
-        name: 'Portfolio',
-        href: '/portfolio',
-    },
+    // {
+    //     name: 'Portfolio',
+    //     href: '/portfolio',
+    // },
     {
         name: 'A propos',
         href: '/about',
