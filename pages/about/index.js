@@ -21,6 +21,8 @@ export default function About({ router }){
                                 <Image className="w-full h-auto object-cover" 
                                     width={1920} 
                                     height={1040} 
+                                    decoding="async" 
+                                    quality="100" 
                                     layout="responsive" 
                                     src="/images/profile/setup.webp" 
                                     placeholder="blur" 
@@ -44,15 +46,15 @@ export default function About({ router }){
                             </p>
                             <p className="text-xl font-bold mt-4">
                                 Bio : 
-                                <span className="font-normal"> Camerounais et passionné de geek, j ai toujours rêvé de créer des solutions dans le domaine du développement logiciel.</span>
+                                <span className="font-normal"> Camerounais et passionné de l&apos;informatique, j&apos;ai toujours rêvé de travailler dans le domaine du développement logiciel.</span>
                             </p>
                             <p className="text-xl font-bold mt-4">
                                 Etudes : 
-                                <span className="font-normal"> Licence Informatique en genie logiciel.</span>
+                                <span className="font-normal"> Licence Informatique en génie logiciel.</span>
                             </p>
                             <p className="text-xl font-bold mt-4">
                                 Compétences : 
-                                <span className="font-normal"> Ayant de solides compétences en développement mobile Android et web(Reactjs, node.js, Django et autres technos tout au tour), je dispose des savoir en gestion d’équipes virtuelles et de projets agiles, en communication et de connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
+                                <span className="font-normal"> Développement mobile Android et web(Reactjs, node.js, Django et autres technos tout au tour), je dispose des savoir en gestion d’équipes virtuelles et de projets agiles, en communication et de connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
                             </p>
                         </div>
                     </div>
@@ -120,7 +122,7 @@ export default function About({ router }){
                                     Design web
                                 </h3>
                                 <p className="text-xl text-center">
-                                    Réalisation de logos, de designs d applications web et mobile en utilisant les outils tels que Figma, Adobe Illustrator, Adobe Photoshop.
+                                    Réalisation de logos, de designs d&apos;applications web et mobile en utilisant les outils tels que Figma, Adobe Illustrator, Adobe Photoshop.
                                 </p>
                             </div>
                             <div className="w-full border-2 border-neutral-800 px-8 py-10 flex flex-col items-center transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">

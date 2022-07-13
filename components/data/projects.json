@@ -1,27 +1,2 @@
 [
-    {
-        "id": "1",
-        "platform": "Web",
-        "name": "Fluid music website"
-    },
-    {
-        "id": "2",
-        "platform": "Web",
-        "name": "One Pixel website"
-    },
-    {
-        "id": "3",
-        "platform": "Web",
-        "name": "Pensezy website"
-    },
-    {
-        "id": "4",
-        "platform": "Mobile",
-        "name": "Fluid music android app"
-    },
-    {
-        "id": "5",
-        "platform": "UX-UI design",
-        "name": "Fluid music design"
-    }
 ]

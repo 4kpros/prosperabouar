@@ -96,7 +96,7 @@ export default function Home({ router }) {
                     className="border border-my-orage-color"
                     whileHover={{scale:1.025}}
                   >
-                    <Image className="w-full h-full object-contain bg-my-footer-color bg-top object-top" width={622} height={792} objectFit="cover" layout="responsive" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
+                    <Image className="w-full h-full object-contain bg-my-footer-color bg-top object-top" width={449} height={600} objectFit="cover" layout="responsive" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
                   </m.div>
                 </LazyMotion>
               </div>
@@ -111,9 +111,6 @@ export default function Home({ router }) {
                   </p>
                   <p className="text-xl mt-2 text-center lg:text-justify">
                     Je suis principalement développeur front-end ayant de grosses connaissances en développement backend et mobile.
-                  </p>
-                  <p className="text-xl mt-2 text-center lg:text-justify">
-                    Contactez moi pour une collaboration.
                   </p>
                   <p className="text-my-orage-color break-all text-xl mt-8 text-center lg:text-left">
                     <a href="mailto: prosper.abouar@gmail.com" className="">
@@ -147,15 +144,11 @@ export default function Home({ router }) {
                 <a href="#" className="text-my-orage-color underline mx-2">ce lien.</a>
                 </Link>
             </p>
-            <p className="text-center text-xl mt-2 hidden">
+            <p className="text-center text-xl mt-2">
               Une page qui contient mes projets récents est disponible à
               <Link href={`/portfolio`}>
                 <a href="#" className="text-my-orage-color underline mx-2">cette adresse.</a>
                 </Link>
-            </p>
-            <p className="text-center hidden text-xl mt-4">
-              J ai également un mini blog qui contient mes publications concernant le développement d’applications et l entreprenariat. Pour voir mes publications, 
-                Veillez cliquer sur <Link href={`/blog`} className="text-my-orage-color underline">ce lien.</Link>
             </p>
           </div>
         </section>
