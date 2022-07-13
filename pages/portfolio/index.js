@@ -41,7 +41,7 @@ export default function Portfolio(){
                 <section className="w-full pt-20 min-h-screen">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
                         <h2 className="text-center text-3xl font-bold underline underline-offset-8">
-                            Projets recents
+                            Projets récents
                         </h2>
                         <div className="w-full flex flex-wrap md:flex-nowrap justify-start items-center mt-12">
                             <div className="w-full flex flex-wrap items-center">
@@ -75,7 +75,7 @@ export default function Portfolio(){
                                 </div>
                             :
                                 <p className="text-xl text-my-gray-color">
-                                    Aucun projet pour cette plateforme !
+                                    Site web en construction ! La liste de projets n&apos;a pas été mise a jour depuis le 15/10/2021
                                 </p>
                     }
                         </div>
