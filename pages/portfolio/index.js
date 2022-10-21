@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import 'react-toastify/dist/ReactToastify.css'
 
+import ProjectItem from '../../components/portfolio/ProjectItem'
+
 import Layout from '../../components/Layout'
 
 import projects from '../../components/data/projects.json'
