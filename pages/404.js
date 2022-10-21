@@ -26,7 +26,7 @@ export default function Custom404() {
                                 <div className="mt-12">
                                     <Link href="/">
                                         <button className="text-lg text-black font-bold bg-my-orage-color px-6 py-2 text-center focus:outline-none">
-                                            Page d accueil
+                                            Page d&apos;accueil
                                         </button>
                                     </Link>
                                 </div>

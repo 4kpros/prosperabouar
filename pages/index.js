@@ -6,7 +6,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import Layout from '../components/Layout'
 
 const title = 'Accueil'
-const subtitle = "Bienvenue sur mon site web personnel. Vous découvrirez ici qui je suis, mes compétences et les projets sur lesquels j'ai travaillé récemment. Si vous êtes intéressés par mes services, n'hésitez pas à me contacter. Merci pour votre temps de lecture et prenez soins de vous."
+const subtitle = "Bienvenue sur mon site web personnel. Vous découvrirez ici qui je suis, mes compétences et les projets sur lesquels j&apos;ai travaillé récemment. Si vous êtes intéressés par mes services, n'hésitez pas à me contacter. Merci pour votre temps de lecture et prenez soins de vous."
 
 export default function Home({ router }) {
 
@@ -33,13 +33,13 @@ export default function Home({ router }) {
                     <br/>Développeur .NET et Python
                   </h1>
                   <p className="text-xl mt-8 text-center lg:text-justify">
-                    Adepte de l’amélioration de l’expérience utilisateur et des performances dans le domaine du développement d&apos;applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
+                    Adepte de l&apos;amélioration de l&apos;expérience utilisateur et des performances dans le domaine du développement d&apos;applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
                   </p>
                   <p className="text-xl mt-2 text-center lg:text-justify">
                     Je suis principalement développeur backend ayant de grosses connaissances en développement frontend.
                   </p>
                   <p className="text-xl mt-8 text-center lg:text-justify">
-                    N'hesitez pas de me contacter ci-dessous.
+                    N&apos;hesitez pas de me contacter ci-dessous.
                   </p>
                   <p className="text-my-orage-color break-all text-xl mt-8 text-center lg:text-left">
                     <a href="mailto: prosper.abouar@gmail.com" className="">

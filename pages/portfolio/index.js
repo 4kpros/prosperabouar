@@ -2,12 +2,14 @@ import { useState } from 'react'
 
 import 'react-toastify/dist/ReactToastify.css'
 
+import ProjectItem from '../../components/portfolio/ProjectItem'
+
 import Layout from '../../components/Layout'
 
 import projects from '../../components/data/projects.json'
 
 const title = 'Portfolio'
-const subtitle = "Une sélection des projets récents sur lesquels j'ai travaillé."
+const subtitle = "Une sélection des projets récents sur lesquels j&apos;ai travaillé."
 
 export default function Portfolio(){
 
@@ -30,7 +32,7 @@ export default function Portfolio(){
                                     </div>
                                 :
                                     <p className="text-xl text-my-gray-color">
-                                        Site web en construction ! La liste de projets n&apos;a pas été mise a jour depuis le 15/10/2021
+                                        Aucun projet pour l&apos;instant !
                                     </p>
                             }
                         </div>
