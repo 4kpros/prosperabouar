@@ -9,7 +9,7 @@ const ProjectItem = (props) => {
         <div className='w-full bg-gradient-to-tl from-[#0c1214] to-transparent shadow-[0px_0px_6px_6px_rgba(212,233,255,0.09)]'>
             <div className='w-full text-[rgba(255,255,255,0.5)] text-lg'>
                 {
-                    <div className="w-full bg-project-default-background bg-cover bg-no-repeat">
+                    <div className="w-full">
                         <Image className="w-full h-auto object-cover object-top" 
                             width={450} 
                             height={300} 
