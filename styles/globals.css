@@ -10,5 +10,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 body{
-  background: rgb(20, 21, 22);
+  /* background: rgb(20, 21, 22); */
+  background: rgb(6, 8, 8);
+  /* background: url('/images/backgrounds/bg.png'); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -3,17 +3,14 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <footer className="w-full mt-20 bg-my-footer-color py-8 text-white">
+        <footer className="w-full py-8 text-white">
             <div className="w-full max-w-screen-xl mx-auto px-4">
-                <div className="w-full flex justify-center space-x-8">
+                <div className="w-full flex justify-center items-center space-x-8">
                     <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">
-                      <Image className="object-contain w-10" width={40} height={40} objectFit="contain" placeholder="blur" blurDataURL="/images/svg/socialmedia/bxl-linkedin-square.svg" src="/images/svg/socialmedia/bxl-linkedin-square.svg" alt="LinkedIn"/>
-                    </a>
-                    <a href="https://twitter.com/4kprosZ" className="" target="_blank" rel="noreferrer" >
-                      <Image className="object-contain w-10" width={40} height={40} objectFit="contain" placeholder="blur" blurDataURL="/images/svg/socialmedia/bxl-twitter.svg" src="/images/svg/socialmedia/bxl-twitter.svg" alt="Twitter"/>
+                        <Image src="/images/svg/others/linkedin.svg" width={35} height={35} objectFit="responsive" alt="linkedin"/>
                     </a>
                     <a href="https://github.com/4kpros" className="" target="_blank" rel="noreferrer" >
-                      <Image className="object-contain w-10" width={40} height={40} objectFit="contain" placeholder="blur" blurDataURL="/images/svg/socialmedia/bxl-github.svg" src="/images/svg/socialmedia/bxl-github.svg" alt="GitHub"/>
+                    <Image src="/images/svg/others/github.svg" width={35} height={35} objectFit="responsive" alt="github"/>
                     </a>
                 </div>
                 <div className="w-full flex justify-center mt-4">
