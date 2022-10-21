@@ -6,7 +6,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import Layout from '../components/Layout'
 
 const title = 'Accueil'
-const subtitle = "Bienvenue sur mon site web personnel. Vous découvrirez ici qui je suis, mes compétences et les projets sur lesquels j&apos;ai travaillé récemment. Si vous êtes intéressés par mes services, n'hésitez pas à me contacter. Merci pour votre temps de lecture et prenez soins de vous."
+const subtitle = "Bienvenue sur mon site web personnel. Vous découvrirez ici qui je suis, mes compétences et les projets sur lesquels j&apos;ai travaillé récemment. Si vous êtes intéressés par mes services, n&apos;hésitez pas à me contacter. Merci pour votre temps de lecture et prenez soins de vous."
 
 export default function Home({ router }) {
 
@@ -17,14 +17,9 @@ export default function Home({ router }) {
           <section className="w-full py-5">
             <div className="flex flex-col items-center lg:flex-row lg:space-x-8 pt-12">
               <div className="bg-transparent w-3/4 lg:w-3/5 h-3/4">
-                <LazyMotion features={domAnimation}>
-                  <m.div
-                    className="border border-my-orage-color"
-                    whileHover={{scale:1.025}}
-                  >
-                    <Image className="w-full h-full object-contain bg-my-footer-color bg-top object-top" width={449} height={600} objectFit="cover" layout="responsive" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
-                  </m.div>
-                </LazyMotion>
+                <div className="border border-my-orage-color">
+                    <Image className="w-full h-full object-contain bg-top object-top" width={449} height={600} objectFit="cover" layout="responsive" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/prosperabouar_preload.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
+                </div>
               </div>
               <div className="w-full flex flex-col items-center mt-10 lg:mt-0">
                 <div className="">
@@ -40,7 +35,7 @@ export default function Home({ router }) {
                   </p>
                 </div>
                 <div className="w-full h-auto flex flex-col">
-                  <div className="w-full mt-5 flex flex-wrap items-center justify-around md:justify-start md:space-x-12">
+                  <div className="w-full mt-5 flex flex-wrap items-center justify-around lg:justify-start lg:space-x-12">
                       <div className="w-auto flex items-center">
                           <div className="">
                               <Image src="/images/svg/others/location.svg" width={35} height={35} objectFit="responsive" alt=""/>
@@ -58,7 +53,7 @@ export default function Home({ router }) {
                           </p>
                       </a>
                   </div>
-                  <div className="w-full mt-5 flex flex-wrap items-center justify-around md:justify-start md:space-x-12">
+                  <div className="w-full mt-5 flex flex-wrap items-center justify-around lg:justify-start lg:space-x-12">
                       <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="w-auto" target="_blank" rel="noreferrer">
                           <div className="w-auto flex items-center">
                               <div className="">
@@ -124,6 +119,40 @@ export default function Home({ router }) {
                                     - Technique : ERPNext, GitLab, Python, Javascript, HTML, CSS, Bootstrap, Debian, XEN-Orchestra, Penpot, Inskape
                                     <br/>
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+          <section className="w-full py-5">
+            <div className="w-full">
+                <div className="w-full h-auto mt-8">
+                    <h3 className="opacity-50">
+                        Education
+                    </h3>
+                    <hr className="w-auto my-2 opacity-10"/>
+                    <div className="w-full mt-5 flex flex-col space-x-12">
+                        <div className="w-full flex flex-col">
+                            <div className="w-auto flex items-center">
+                                <div className="w-auto flex flex-col">
+                                    <h3 className="w-auto font-bold">
+                                        Licence en mathématiques et informatique (spécialité génie logiciel) - Université de Yaoundé 1
+                                    </h3>
+                                    <p className="w-auto opacity-50">
+                                        2020 - Yaoundé, Cameroun
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="w-auto flex items-center">
+                                <div className="w-auto flex flex-col">
+                                    <h3 className="w-auto font-bold">
+                                        Baccalauréat TI - Lycée Scientifique de Bertoua
+                                    </h3>
+                                    <p className="w-auto opacity-50">
+                                        2017 - Bertoua, Cameroun
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -204,6 +233,9 @@ export default function Home({ router }) {
                         <div className="w-auto block mr-2">
                             <Image src="/images/svg/tech/tailwindcss.svg" width={80} height={65} objectfit="responsive" alt="tailwindcss"/>
                         </div>
+                        <div className="w-auto block mr-2">
+                            <Image src="/images/svg/tech/unity.svg" width={80} height={65} objectfit="responsive" alt="unity"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -259,10 +291,10 @@ export default function Home({ router }) {
                     <hr className="w-auto my-2 opacity-10"/>
                     <div className="w-full flex flex-col mt-5">
                         <h3 className="">
-                            - Dessins
+                            - Dessiner
                         </h3>
                         <h3 className="">
-                            - Football
+                            - Regarder le football
                         </h3>
                     </div>
                 </div>
