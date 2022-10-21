@@ -76,10 +76,10 @@ export default function About({ router }){
                                             </div>
                                             <div className="w-auto flex flex-col ml-4">
                                                 <h3 className="w-auto">
-                                                    IREX - Institut du Retour d'EXperience
+                                                    IREX - Institut du Retour d&apos;EXperience
                                                 </h3>
                                                 <p className="w-auto opacity-50">
-                                                    Developpeur web - de Juillet 2021 jusqu'a present
+                                                    Developpeur web - de Juillet 2021 jusqu&apos;a present
                                                 </p>
                                             </div>
                                         </div>
