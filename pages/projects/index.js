@@ -19,7 +19,7 @@ export default function Projects(){
                 <div className="w-full px-4 md:px-8 pb-12 text-white text-xl ">
                     <section className="w-full py-5">
                         <div className='w-auto font-bold text-2xl mb-8'>
-                            Liste de quelques projets personnels et d'apprentissage
+                            Liste de quelques projets personnels et d&apos;apprentissage
                         </div>
                         {
                             projects && projects.length > 0 ?

@@ -79,7 +79,7 @@ const ProjectItem = (props) => {
                         <label className='mr-1 underline' htmlFor=''>
                             Code source : 
                         </label>
-                        <a href={project.github} target="_blank" className="">
+                        <a href={project.github} target="_blank" rel="noreferrer" className="">
                             {
                                 project && project.github ?
                                     project.github
@@ -92,7 +92,7 @@ const ProjectItem = (props) => {
                         <label className='mr-1 underline' htmlFor=''>
                             Lien : 
                         </label>
-                        <a href={project.link} target="_blank" className="">
+                        <a href={project.link} target="_blank" rel="noreferrer" className="">
                             {
                                 project && project.link ?
                                     project.link
