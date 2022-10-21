@@ -17,6 +17,10 @@ const links = [
         name: 'A propos',
         href: '/about',
     },
+    {
+        name: 'Contact',
+        href: '/contact',
+    },
 ]
 
 
@@ -25,8 +29,8 @@ const Nabar = () => {
     const router = useRouter()
     
     return (
-        <>
-            <div className="w-full max-w-screen-xl mx-auto px-4 text-white">
+        <div className="bg-my-footer-color">
+            <div className="w-full max-w-screen-xl mx-auto px-4 text-white ">
                 <nav className="w-full md:space-x-8 flex flex-wrap md:flex-nowrap justify-between items-center">
                     <Link href={`/`}>
                         <div className="cursor-pointer">
@@ -61,7 +65,7 @@ const Nabar = () => {
                     </div>
                 </nav>
             </div>
-        </>
+        </div>
     );
 };
 

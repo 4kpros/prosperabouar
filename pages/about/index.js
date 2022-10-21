@@ -11,160 +11,239 @@ const subtitle = "Page de détails me concernant tels que mon parcours scolaire,
 export default function About({ router }){
     return (
         <Layout title={title} description={subtitle}>
-            <div className="w-full text-white">
-                <section className="w-full mt-12">
+            <div className="w-full text-white text-xl font-bold">
+                <section className="w-full mt-10 py-5">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <LazyMotion features={domAnimation}>
-                            <m.div
-                                className="border border-my-orage-color"
-                            >
-                                <Image className="w-full h-auto object-cover" 
-                                    width={1920} 
-                                    height={1040} 
-                                    decoding="async" 
-                                    quality="100" 
-                                    layout="responsive" 
-                                    src="/images/profile/setup.webp" 
-                                    placeholder="blur" 
-                                    blurDataURL="/images/profile/setup_preload.webp" 
-                                    alt="my-setup"
-                                    priority 
-                                />
-                            </m.div>
-                        </LazyMotion>
-                    </div>
-                </section>
-                <section className="w-full pt-20">
-                    <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <h2 className="text-center text-3xl font-bold underline underline-offset-8">
-                            Profil
-                        </h2>
-                        <div className="w-full flex flex-col mt-12">
-                            <p className="text-xl font-bold">
-                                Nom complet : 
-                                <span className="font-normal"> Abouar Prosper</span>
-                            </p>
-                            <p className="text-xl font-bold mt-4">
-                                Bio : 
-                                <span className="font-normal"> Camerounais et passionné de l&apos;informatique, j&apos;ai toujours rêvé de travailler dans le domaine du développement logiciel.</span>
-                            </p>
-                            <p className="text-xl font-bold mt-4">
-                                Etudes : 
-                                <span className="font-normal"> Licence Informatique en génie logiciel.</span>
-                            </p>
-                            <p className="text-xl font-bold mt-4">
-                                Compétences : 
-                                <span className="font-normal"> Développement mobile Android et web(Reactjs, node.js, Django et autres technos tout au tour), je dispose des savoir en gestion d’équipes virtuelles et de projets agiles, en communication et de connaissances sur les solutions open source tels qu’ERPNext, Zimbra, Tuleap, Rocket.chat.</span>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <section className="w-full pt-20">
-                    <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <h2 className="text-center text-3xl font-bold underline underline-offset-8">
-                            Technologies
-                        </h2>
-                        <div className="w-full flex flex-wrap justify-center mt-12">
-                            <div className="rw-auto block m-4">
-                                <Image src="/images/svg/tech/react.svg" width={96} height={120} objectFit="responsive" alt=""/>
+                        <div className="w-full">
+                            <div className="w-full h-auto">
+                                <div className="w-full mt-5 flex flex-wrap items-end">
+                                    <div className="w-auto">
+                                        <Image className="w-auto bg-top object-top" src="/images/profile/portfolioprofile.webp" width={150} height={150} objectFit="cover" alt=""/>
+                                    </div>
+                                    <p className="w-auto text-5xl ml-4">
+                                        Abouar Prosper
+                                    </p>
+                                </div>
+                                <div className="w-full mt-5 flex flex-wrap space-x-12">
+                                    <div className="w-auto flex items-center">
+                                        <div className="">
+                                            <Image src="/images/svg/others/location.svg" width={35} height={35} objectFit="responsive" alt=""/>
+                                        </div>
+                                        <p className="w-auto ml-2">
+                                            Yaounde, Cameroun
+                                        </p>
+                                    </div>
+                                    <a href="mailto: prosper.abouar@gmail.com" className="w-auto flex items-center">
+                                        <div className="">
+                                            <Image src="/images/svg/others/gmail.svg" width={35} height={35} objectFit="responsive" alt=""/>
+                                        </div>
+                                        <p className="w-auto ml-2">
+                                            prosper.abouar@gmail.com
+                                        </p>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" target="_blank" rel="noreferrer">
+                                        <div className="w-auto flex items-center">
+                                            <div className="">
+                                                <Image src="/images/svg/others/linkedin.svg" width={35} height={35} objectFit="responsive" alt=""/>
+                                            </div>
+                                            <p className="w-auto ml-2">
+                                                4kpros
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="https://github.com/4kpros" target="_blank" rel="noreferrer">
+                                        <div className="w-auto flex items-center">
+                                            <div className="w-auto">
+                                                <Image src="/images/svg/others/github.svg" width={35} height={35} objectFit="responsive" alt=""/>
+                                            </div>
+                                            <p className="w-auto ml-2">
+                                                4kpros
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/next-js.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/nodejs.svg" width={120} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/android.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/flutter.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/django.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/firebase.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/java.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/kotlin.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/mongodb.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/mysql.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/tailwind-css.svg" width={96} height={120} objectfit="responsive" alt=""/>
-                            </div>
-                            <div className="w-auto block m-4">
-                                <Image src="/images/svg/tech/typescript.svg" width={96} height={120} objectfit="responsive" alt=""/>
+                            <div className="w-full h-auto mt-8">
+                                <h3 className="opacity-50">
+                                    Experiences
+                                </h3>
+                                <hr className="w-auto my-2 opacity-10"/>
+                                <div className="w-full mt-5 flex flex-col space-x-12">
+                                    <div className="w-full flex flex-col">
+                                        <div className="w-auto flex items-center">
+                                            <div className="">
+                                                <Image src="/images/svg/companies/IREX-Brand.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                            </div>
+                                            <div className="w-auto flex flex-col ml-4">
+                                                <h3 className="w-auto">
+                                                    IREX - Institut du Retour d'EXperience
+                                                </h3>
+                                                <p className="w-auto opacity-50">
+                                                    Developpeur web - de Juillet 2021 jusqu'a present
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="w-auto pl-24">
+                                            <p className="w-auto">
+                                                - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex magna, ultrices vitae diam sit amet, dignissim porttitor elit. Cras vel massa eget risus fermentum rutrum. Etiam ultricies enim sit amet massa ullamcorper consectetur. Nullam interdum metus a nulla tincidunt tincidunt. Donec sagittis ac augue sit amet pulvinar. Maecenas ac mauris leo. Maecenas hendrerit lorem eu bibendum fermentum. Praesent ornare vestibulum tellus, id suscipit massa dapibus sit amet. Donec tempus dui vel est facilisis, sed commodo magna vehicula. Duis at tortor finibus, consectetur massa vitae, molestie libero. Nulla eget arcu neque. Nulla posuere purus magna, sit amet placerat sem luctus a. Etiam accumsan ultricies nisi, et commodo magna sodales in. Nullam tincidunt eros et viverra sagittis. In laoreet urna quis semper elementum. 
+                                                <br/><br/>
+                                                - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex magna, ultrices vitae diam sit amet, dignissim porttitor elit. Cras vel massa eget risus fermentum rutrum. Etiam ultricies enim sit amet massa ullamcorper consectetur. Nullam interdum metus a nulla tincidunt tincidunt. Donec sagittis ac augue sit amet pulvinar. Maecenas ac mauris leo. Maecenas hendrerit lorem eu bibendum fermentum. Praesent ornare vestibulum tellus, id suscipit massa dapibus sit amet. Donec tempus dui vel est facilisis, sed commodo magna vehicula. Duis at tortor finibus, consectetur massa vitae, molestie libero. Nulla eget arcu neque. Nulla posuere purus magna, sit amet placerat sem luctus a. Etiam accumsan ultricies nisi, et commodo magna sodales in. Nullam tincidunt eros et viverra sagittis. In laoreet urna quis semper elementum.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="w-full">
+                <section className="w-full py-5">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                            <div className="w-full border-2 border-neutral-800 px-8 py-10 flex flex-col items-center transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
-                                <svg className="h-16 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M13.4 2.096a10.08 10.08 0 0 0-8.937 3.331A10.054 10.054 0 0 0 2.096 13.4c.53 3.894 3.458 7.207 7.285 8.246a9.982 9.982 0 0 0 2.618.354l.142-.001a3.001 3.001 0 0 0 2.516-1.426 2.989 2.989 0 0 0 .153-2.879l-.199-.416a1.919 1.919 0 0 1 .094-1.912 2.004 2.004 0 0 1 2.576-.755l.412.197c.412.198.85.299 1.301.299A3.022 3.022 0 0 0 22 12.14a9.935 9.935 0 0 0-.353-2.76c-1.04-3.826-4.353-6.754-8.247-7.284zm5.158 10.909-.412-.197c-1.828-.878-4.07-.198-5.135 1.494-.738 1.176-.813 2.576-.204 3.842l.199.416a.983.983 0 0 1-.051.961.992.992 0 0 1-.844.479h-.112a8.061 8.061 0 0 1-2.095-.283c-3.063-.831-5.403-3.479-5.826-6.586-.321-2.355.352-4.623 1.893-6.389a8.002 8.002 0 0 1 7.16-2.664c3.107.423 5.755 2.764 6.586 5.826.198.73.293 1.474.282 2.207-.012.807-.845 1.183-1.441.894z"/>
-                                    <circle cx="7.5" cy="14.5" r="1.5"/>
-                                    <circle cx="7.5" cy="10.5" r="1.5"/>
-                                    <circle cx="10.5" cy="7.5" r="1.5"/>
-                                    <circle cx="14.5" cy="7.5" r="1.5"/>
-                                </svg>
-                                <h3 className="text-justify text-2xl font-semibold my-2">
-                                    Design web
+                        <div className="w-full">
+                            <div className="w-full h-auto mt-8">
+                                <h3 className="opacity-50">
+                                    Langages de programmation
                                 </h3>
-                                <p className="text-xl text-center">
-                                    Réalisation de logos, de designs d&apos;applications web et mobile en utilisant les outils tels que Figma, Adobe Illustrator, Adobe Photoshop.
-                                </p>
-                            </div>
-                            <div className="w-full border-2 border-neutral-800 px-8 py-10 flex flex-col items-center transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
-                                <svg className="h-16 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 14V5h16l.002 9H4z"></path>
-                                </svg>
-                                <h3 className="text-justify text-2xl font-semibold my-2">
-                                    Developpement web
-                                </h3>
-                                <p className="text-xl text-center">
-                                    Développement front-end et backend de site web avec les technos tels que ReactJS, Node.js, Django, MongoDB, Firebase.
-                                </p>
-                            </div>
-                            <div className="w-full border-2 border-neutral-800 px-8 py-10 flex flex-col items-center transition-all ease-in-out hover:shadow-[rgba(255,255,255,0.08)_0px_0px_16px]">
-                                <svg className="h-16 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M17 2H7c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM7 16.999V5h10l.002 11.999H7z"></path>
-                                </svg>
-                                <h3 className="text-justify text-2xl font-semibold my-2">
-                                    Developpement mobile
-                                </h3>
-                                <p className="text-xl text-center">
-                                    Développement Android natif en Java et Kotlin en respectant les normes et bonnes pratiques.
-                                </p>
+                                <hr className="w-auto my-2 opacity-10"/>
+                                <div className="w-full flex flex-wrap mt-5">
+                                    <div className="rw-auto block mr-2 my-2">
+                                        <Image src="/images/svg/proglanguages/csharp.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/cpp.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/python.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/java.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/javascript.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/html.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/css.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/proglanguages/cobol.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="w-full pt-20">
+                <section className="w-full py-5">
                     <div className="w-full max-w-screen-xl mx-auto px-4">
-                        <h2 className="text-center text-3xl font-bold underline underline-offset-8">
-                            Centres d intérêts
-                        </h2>
-                        <div className="w-full max-w-2xl mx-auto mt-12 flex flex-col items-center">
-                            <h3 className="text-xl text-center">
-                                Jeux vidéo : je joue de temps en temps. Mes jeux préférés du moment : ORI and the blind forest et Hollow Knight.
-                            </h3>
-                            <h3 className="text-xl text-center mt-4">
-                                Dessins (pixel art).
-                            </h3>
-                            <h3 className="text-xl text-center mt-4">
-                                Lecture sur Quora.
-                            </h3>
+                        <div className="w-full">
+                            <div className="w-full h-auto mt-8">
+                                <h3 className="opacity-50">
+                                    Technologies
+                                </h3>
+                                <hr className="w-auto my-2 opacity-10"/>
+                                <div className="w-full flex flex-wrap mt-5">
+                                    <div className="rw-auto block mr-2 my-2">
+                                        <Image src="/images/svg/tech/dotnet.svg" width={80} height={65} objectFit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/django.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/reactjs.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/android.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/nodejs.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/firebase.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/azure.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/sqlserver.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/mongodb.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/mysql.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                    <div className="w-auto block m-2">
+                                        <Image src="/images/svg/tech/tailwindcss.svg" width={80} height={65} objectfit="responsive" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="w-full py-5">
+                    <div className="w-full max-w-screen-xl mx-auto px-4">
+                        <div className="w-full">
+                            <div className="w-full h-auto">
+                                <h3 className="opacity-50">
+                                    Qualites personnelles
+                                </h3>
+                                <hr className="w-auto my-2 opacity-10"/>
+                                <div className="w-full flex flex-col mt-5">
+                                    <h3 className="">
+                                        - Humilite
+                                    </h3>
+                                    <h3 className="">
+                                        - Capacite a travaillser en autonomie et en equipe
+                                    </h3>
+                                    <h3 className="">
+                                        - Apprendre rapidement
+                                    </h3>
+                                    <h3 className="">
+                                        - Bonne communication
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="w-full py-5">
+                    <div className="w-full max-w-screen-xl mx-auto px-4">
+                        <div className="w-full">
+                            <div className="w-full h-auto">
+                                <h3 className="opacity-50">
+                                    Langues
+                                </h3>
+                                <hr className="w-auto my-2 opacity-10"/>
+                                <div className="w-full flex flex-col mt-5">
+                                    <h3 className="">
+                                        - Francais courant
+                                    </h3>
+                                    <h3 className="">
+                                        - Anglais basique
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="w-full py-5">
+                    <div className="w-full max-w-screen-xl mx-auto px-4">
+                        <div className="w-full">
+                            <div className="w-full h-auto">
+                                <h3 className="opacity-50">
+                                    Centres d intérêts
+                                </h3>
+                                <hr className="w-auto my-2 opacity-10"/>
+                                <div className="w-full flex flex-col mt-5">
+                                    <h3 className="">
+                                        - Dessins (pixel art)
+                                    </h3>
+                                    <h3 className="">
+                                        - Football
+                                    </h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
