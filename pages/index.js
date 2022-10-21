@@ -33,7 +33,7 @@ export default function Home({ router }) {
                     <br/>Développeur .NET et Python
                   </h1>
                   <p className="text-xl mt-8 text-center lg:text-justify">
-                    Adepte de l’amélioration de l’expérience utilisateur et des performances dans le domaine du développement d&apos;applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
+                    Adepte de l&apos;amélioration de l&apos;expérience utilisateur et des performances dans le domaine du développement d&apos;applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
                   </p>
                   <p className="text-xl mt-2 text-center lg:text-justify">
                     Je suis principalement développeur backend ayant de grosses connaissances en développement frontend.
