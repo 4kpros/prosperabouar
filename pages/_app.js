@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps, router }) {
             },
             {
               rel: 'apple-touch-icon',
-              href: '/favicon.ico',
+              href: '/apple-touch-icon.png',
               sizes: '76x76'
             },
             {

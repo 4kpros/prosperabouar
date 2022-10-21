@@ -11,14 +11,14 @@ module.exports = {
     extend: {
       colors: {
         'my-footer-color': '#DFC1941A',
-        'my-orage-color': '#DFC194',
+        'my-orage-color': '#7fd2f5',
         'my-gray-color': '#8C8C8C',
       },
       fontFamily: {
         poppinsSans: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
-        // 'default-background': "url('/public/img/blog-background.jpg')",
+        'default-background': "url('/public/img/bg.jpg')",
       },
     },
   },

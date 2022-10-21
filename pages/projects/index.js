@@ -8,10 +8,10 @@ import Layout from '../../components/Layout'
 
 import projects from '../../components/data/projects.json'
 
-const title = 'Portfolio'
+const title = 'Projets'
 const subtitle = "Une sélection des projets récents sur lesquels j&apos;ai travaillé."
 
-export default function Portfolio(){
+export default function Projects(){
 
     return (
         <Layout title={title} description={subtitle}>
