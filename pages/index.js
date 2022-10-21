@@ -1,88 +1,14 @@
-import { useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
-import emailjs from '@emailjs/browser';
-import { isEmail, isEmpty } from 'validator'
-import { toast } from 'react-toastify';
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 
 import Layout from '../components/Layout'
-import LoadingSpinner from '../components/others/LoadingSpinner'
-
-import 'react-toastify/dist/ReactToastify.css';
 
 const title = 'Accueil'
 const subtitle = "Bienvenue sur mon site web personnel. Vous découvrirez ici qui je suis, mes compétences et les projets sur lesquels j'ai travaillé récemment. Si vous êtes intéressés par mes services, n'hésitez pas à me contacter. Merci pour votre temps de lecture et prenez soins de vous."
 
 export default function Home({ router }) {
-  const nextRouter = useRouter()
-  
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [message, setMessage] = useState()
-
-  const [nameError, setNameError] = useState()
-  const [emailError, setEmailError] = useState()
-  const [messageError, setMessageError] = useState()
-
-  const [loadingContact, setLoadingContact] = useState(false)
-
-  const notifySuccess = () => {
-    toast.success('Message envoyé.')
-  }
-  
-  const notifyError = () => {
-    toast.error('Erreur d\'envoie !')
-  }
-  const form = useRef()
-
-  const checkInputs = () => {
-    var result = false
-    if(name && !isEmpty(name) && name.length > 3){
-      setNameError()
-      result = true
-    }else{
-      setNameError("Veillez saisir un nom de 3 caractères minimum !")
-      result = false
-    }
-    if(email && !isEmpty(email) && isEmail(email)){
-      setEmailError()
-      result = true
-    }else{
-      setEmailError("Veillez saisir un email correct !")
-      result = false
-    }
-    if(message && message.length > 20){
-      setMessageError()
-      result = true
-    }else{
-      setMessageError("Veillez saisir un message de 20 caractères minimum !")
-      result = false
-    }
-    return result
-  }
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    if(checkInputs()){
-      setLoadingContact(true)
-      emailjs.sendForm(
-          process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID, // Service ID
-          process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID, // Template ID
-          form.current, 
-          process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY // Public Key
-        )
-        .then((result) => {
-            notifySuccess()
-            nextRouter.push('/congratulations')
-        }, (error) => {
-            notifyError()
-            setLoadingContact(false)
-        });
-    }
-  };
 
   return (
     <Layout title={title} description={subtitle}>
@@ -104,13 +30,16 @@ export default function Home({ router }) {
                 <div className="">
                   <h1 className="text-2xl md:text-3xl font-bold text-center lg:text-left">
                     Salut, Je suis <span className="font-extrabold text-my-orage-color text-3xl md:text-5xl ml-2">ABOUAR PROSPER</span>
-                    <br/>Développeur web
+                    <br/>Développeur .NET et Python
                   </h1>
                   <p className="text-xl mt-8 text-center lg:text-justify">
                     Adepte de l’amélioration de l’expérience utilisateur et des performances dans le domaine du développement d&apos;applications, ma passion pour ce secteur me pousse chaque jour à me surpasser.
                   </p>
                   <p className="text-xl mt-2 text-center lg:text-justify">
-                    Je suis principalement développeur front-end ayant de grosses connaissances en développement backend et mobile.
+                    Je suis principalement développeur backend ayant de grosses connaissances en développement frontend.
+                  </p>
+                  <p className="text-xl mt-8 text-center lg:text-justify">
+                    N'hesitez pas de me contacter ci-dessous.
                   </p>
                   <p className="text-my-orage-color break-all text-xl mt-8 text-center lg:text-left">
                     <a href="mailto: prosper.abouar@gmail.com" className="">
@@ -120,9 +49,6 @@ export default function Home({ router }) {
                   <div className="flex justify-center lg:justify-start mt-8 space-x-8">
                     <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">
                       <Image className="object-contain w-10" width={40} height={40} objectFit="contain" placeholder="blur" blurDataURL="/images/svg/socialmedia/bxl-linkedin-square.svg" src="/images/svg/socialmedia/bxl-linkedin-square.svg" alt="LinkedIn"/>
-                    </a>
-                    <a href="https://twitter.com/4kprosZ" className="" target="_blank" rel="noreferrer" >
-                      <Image className="object-contain w-10" width={40} height={40} objectFit="contain" placeholder="blur" blurDataURL="/images/svg/socialmedia/bxl-twitter.svg" src="/images/svg/socialmedia/bxl-twitter.svg" alt="Twitter"/>
                     </a>
                     <a href="https://github.com/4kpros" className="" target="_blank" rel="noreferrer" >
                       <Image className="object-contain w-10" width={40} height={40} objectFit="contain" placeholder="blur" blurDataURL="/images/svg/socialmedia/bxl-github.svg" src="/images/svg/socialmedia/bxl-github.svg" alt="GitHub"/>
@@ -150,61 +76,12 @@ export default function Home({ router }) {
                 <a href="#" className="text-my-orage-color underline mx-2">cette adresse.</a>
                 </Link>
             </p>
-          </div>
-        </section>
-        <section className="w-full pt-20">
-          <div className="w-full max-w-screen-xl mx-auto px-4">
-            <h2 className="text-center text-3xl font-bold underline underline-offset-8">
-              Contact
-            </h2>
-            <form ref={form} onSubmit={sendEmail} className="w-full mt-12 flex flex-col items-center">
-              
-              <div className="w-full lg:w-1/2  flex flex-col items-center mt-4">
-                <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
-                  Email
-                </label>
-                <input onChange={(e) => setEmail(e.target.value)} name="user_email" className="w-full mt-2 h-12 px-5 text-black text-xl" type="email" id="input-email"/>
-                <div className="w-full mt-2 text-red-400">
-                  {
-                    emailError
-                  }
-                </div>
-              </div>
-              <div className="w-full lg:w-1/2 flex flex-col mt-4">
-                <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
-                  Nom complet
-                </label>
-                <input onChange={(e) => setName(e.target.value)} name="user_name" className="w-full mt-2 h-12 px-5 text-black text-xl" type="name" id="input-name"/>
-                <div className="w-full mt-2 text-red-400">
-                  {
-                    nameError
-                  }
-                </div>
-              </div>
-              <div className="w-full lg:w-1/2  flex flex-col items-center mt-4">
-                <label className="w-full uppercase text-my-gray-color" htmlFor="input-name">
-                  Message
-                </label>
-                <textarea onChange={(e) => setMessage(e.target.value)} name="message" className="w-full mt-2 h-32 px-5 py-2 text-black text-xl" id="input-message"/>
-                <div className="w-full mt-2 text-red-400">
-                  {
-                    messageError
-                  }
-                </div>
-              </div>
-              <div className="w-full flex flex-col items-center mt-12">
-                {
-                  loadingContact ?
-                    <div>
-                      <LoadingSpinner/>
-                    </div>
-                  :
-                    <button type="submit" value="Send" className="text-lg text-black font-bold bg-my-orage-color px-6 py-2 text-center focus:outline-none">
-                      Envoyer
-                    </button>
-                }
-              </div>
-            </form>
+            <p className="text-center text-xl mt-2">
+              Vous voulez me contacter ? Veillez vous rendre a 
+              <Link href={`/contact`}>
+                <a href="#" className="text-my-orage-color underline mx-2">cette adresse.</a>
+                </Link>
+            </p>
           </div>
         </section>
       </div>
