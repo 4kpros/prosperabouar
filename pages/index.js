@@ -111,11 +111,11 @@ export default function Home({ router }) {
                                 <p className="w-auto">
                                     - Développement des modules et fonctionnalités spécifiques répondant aux besoins utilisateurs(Paiements, gestion des évènements, etc...)
                                     <br/>
-                                    - Réalisation des logos, des maquettes des pages web, d’illustrations et découpages vidéos
+                                    - Réalisation des logos, des maquettes des pages web, d&apos;illustrations et découpages vidéos
                                     <br/>
-                                    - Intégration des pages web et développement frontal d’interfaces spécifiques
+                                    - Intégration des pages web et développement frontal d&apos;interfaces spécifiques
                                     <br/>
-                                    - Contribution à l'évolution des applications tout en respectant/améliorant les performances et la sécurité
+                                    - Contribution à l&apos;évolution des applications tout en respectant/améliorant les performances et la sécurité
                                     <br/>
                                     - Documentation des fonctionnalités développées pour la mise en place des tests de validation utilisateur
                                     <br/>
