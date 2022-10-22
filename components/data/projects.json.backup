@@ -1,27 +1,62 @@
 [
     {
-        "id": "1",
-        "platform": "Web",
-        "name": "Fluid music website"
+        "name": "Fluid Music",
+        "cover_art": "/images/projects/fluidmusic.webp",
+        "type": "Site web",
+        "github": "https://github.com/4kpros/fluidmusic-website",
+        "link": "https://fluidmusic.vercel.app",
+        "technos": [
+            "ReactJS, TailwindCSS"
+        ]
     },
     {
-        "id": "2",
-        "platform": "Web",
-        "name": "One Pixel website"
+        "name": "DotNet full training",
+        "cover_art": "/images/projects/dotnetapi.webp",
+        "type": "API",
+        "github": "https://github.com/4kpros/dotnetapi",
+        "link": "https://prosperlearn-dotnetcrudapi.vercel.app",
+        "technos": [
+            ".NET, Blazor, Entity Framework, SQL Server"
+        ]
     },
     {
-        "id": "3",
-        "platform": "Web",
-        "name": "Pensezy website"
+        "name": "Pro-Chat",
+        "cover_art": "/images/projects/prochat.webp",
+        "type": "Site web",
+        "github": "https://github.com/4kpros/prochat",
+        "link": "https://prosperlearn-prochat.vercel.app",
+        "technos": [
+            ".NET, NextJS, TailwindCSS"
+        ]
     },
     {
-        "id": "4",
-        "platform": "Mobile",
-        "name": "Fluid music android app"
+        "name": "Site web personnel",
+        "cover_art": "/images/projects/prosperabouar.webp",
+        "type": "Site web",
+        "github": "https://github.com/4kpros/prosperabouar",
+        "link": "https://prosperabouar.vercel.app",
+        "technos": [
+            "NextJS, TailwindCSS"
+        ]
     },
     {
-        "id": "5",
-        "platform": "UX-UI design",
-        "name": "Fluid music design"
+        "name": "Devlog",
+        "cover_art": "/images/projects/devlog.webp",
+        "type": "Jeux video",
+        "github": "",
+        "link": "",
+        "technos": [
+            "Unity"
+        ]
+    },
+    {
+        "name": "GO Riders",
+        "cover_art": "/images/projects/goriders.webp",
+        "type": "Jeux video",
+        "github": "",
+        "link": "",
+        "technos": [
+            "Unity, PlayFab, Mirror"
+        ]
     }
 ]

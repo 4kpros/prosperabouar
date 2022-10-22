@@ -8,7 +8,7 @@ export default function Home({ router }) {
 
   return (
     <Layout title={title} description={subtitle}>
-      <div className="w-full max-w-screen-xl mx-auto p-8">
+      <div className="w-full max-w-screen-xl mx-auto p-8 min-h-[80vh]">
         <div className="w-full flex flex-col px-8 py-4 bg-gradient-to-tl from-[#0c1214] to-transparent text-white">
           <div className='w-full flex flex-col lg:flex-row lg:space-x-8'>
             <section className="w-full lg:w-auto py-4">

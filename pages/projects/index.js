@@ -11,7 +11,7 @@ export default function Projects(){
 
     return (
         <Layout title={title} description={subtitle}>
-            <div className="w-full max-w-screen-xl mx-auto p-8">
+            <div className="w-full max-w-screen-xl mx-auto p-8 min-h-[80vh]">
                 <div className="w-full text-white">
                     <section className="w-full py-4">
                         {
