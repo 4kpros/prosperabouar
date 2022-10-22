@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 
 import Layout from '../components/Layout'
@@ -23,11 +24,11 @@ export default function Custom404() {
                                     Cette page semble ne pas exister. Veillez retourner à la page d accueil.
                                 </p>
                                 <div className="mt-12">
-                                    <a href="/">
+                                    <Link href="/">
                                         <button className="text-black font-bold bg-my-orage-color px-6 py-2 text-center focus:outline-none">
                                             Page d&apos;accueil
                                         </button>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
