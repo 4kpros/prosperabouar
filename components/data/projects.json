@@ -2,7 +2,6 @@
     {
         "name": "Fluid Music",
         "cover_art": "/images/projects/fluidmusic.webp",
-        "platform": "Web",
         "type": "Site web",
         "github": "https://github.com/4kpros/fluidmusic-website",
         "link": "https://fluidmusic.vercel.app",
@@ -11,9 +10,8 @@
         ]
     },
     {
-        "name": ".NET - CRUD, API, Blazor training",
+        "name": "DotNet full training",
         "cover_art": "/images/projects/dotnetapi.webp",
-        "platform": "Web",
         "type": "API",
         "github": "https://github.com/4kpros/dotnetapi",
         "link": "https://prosperlearn-dotnetcrudapi.vercel.app",
@@ -22,20 +20,8 @@
         ]
     },
     {
-        "name": "Pro-Beauty",
-        "cover_art": "/images/projects/ebeauty.webp",
-        "platform": "Web",
-        "type": "Site web",
-        "github": "https://github.com/4kpros/ebeauty",
-        "link": "https://prosperlearn-ebeauty.vercel.app",
-        "technos": [
-            "NextJS, TailwindCSS"
-        ]
-    },
-    {
         "name": "Pro-Chat",
         "cover_art": "/images/projects/prochat.webp",
-        "platform": "Web",
         "type": "Site web",
         "github": "https://github.com/4kpros/prochat",
         "link": "https://prosperlearn-prochat.vercel.app",
@@ -46,7 +32,6 @@
     {
         "name": "Site web personnel",
         "cover_art": "/images/projects/prosperabouar.webp",
-        "platform": "Web",
         "type": "Site web",
         "github": "https://github.com/4kpros/prosperabouar",
         "link": "https://prosperabouar.vercel.app",
@@ -57,7 +42,6 @@
     {
         "name": "Devlog",
         "cover_art": "/images/projects/devlog.webp",
-        "platform": "PC, Switch",
         "type": "Jeux video",
         "github": "",
         "link": "",
@@ -68,7 +52,6 @@
     {
         "name": "GO Riders",
         "cover_art": "/images/projects/goriders.webp",
-        "platform": "Android, IOS",
         "type": "Jeux video",
         "github": "",
         "link": "",

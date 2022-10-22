@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="w-full max-w-screen-xl mx-auto px-4">
                 <div className="w-full flex justify-center items-center space-x-8">
                     <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">
-                        <Image src="/images/svg/others/linkedin.svg" width={35} height={35} objectFit="responsive" alt="linkedin"/>
+                        <Image src="/images/svg/others/linkedin.svg" width={24} height={24} objectFit="responsive" alt="linkedin"/>
                     </a>
                     <a href="https://github.com/4kpros" className="" target="_blank" rel="noreferrer" >
-                    <Image src="/images/svg/others/github.svg" width={35} height={35} objectFit="responsive" alt="github"/>
+                    <Image src="/images/svg/others/github.svg" width={24} height={24} objectFit="responsive" alt="github"/>
                     </a>
                 </div>
                 <div className="w-full flex justify-center mt-4">
