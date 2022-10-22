@@ -17,10 +17,6 @@ export default function Projects(){
                     <section className="w-full py-4">
                         <div className="w-full">
                             <div className="w-full h-auto">
-                                <h3 className="opacity-50 hidden">
-                                    Projets personnels et d'apprentissage
-                                </h3>
-                                <hr className="w-auto my-2 opacity-10 hidden"/>
                                 {
                                     projects && projects.length > 0 ?
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
