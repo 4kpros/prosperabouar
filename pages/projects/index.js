@@ -1,5 +1,6 @@
-import ProjectItem from '../../components/portfolio/ProjectItem'
+import Image from 'next/image'
 
+import ProjectItem from '../../components/portfolio/ProjectItem'
 import Layout from '../../components/Layout'
 
 import projects from '../../components/data/projects.json'
@@ -14,22 +15,30 @@ export default function Projects(){
             <div className="w-full max-w-screen-xl mx-auto p-8 min-h-[80vh]">
                 <div className="w-full text-white">
                     <section className="w-full py-4">
-                        {
-                            projects && projects.length > 0 ?
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
-                                    {
-                                        projects.map((project, index) => {
-                                            return(
-                                                <ProjectItem project={project} key={index}/>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            :
-                                <p className="text-my-gray-color">
-                                    Aucun projet pour l&apos;instant !
-                                </p>
-                        }
+                        <div className="w-full">
+                            <div className="w-full h-auto">
+                                <h3 className="opacity-50 hidden">
+                                    Projets personnels et d'apprentissage
+                                </h3>
+                                <hr className="w-auto my-2 opacity-10 hidden"/>
+                                {
+                                    projects && projects.length > 0 ?
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
+                                            {
+                                                projects.map((project, index) => {
+                                                    return(
+                                                        <ProjectItem project={project} key={index}/>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    :
+                                        <p className="text-my-gray-color">
+                                            Aucun projet pour l&apos;instant !
+                                        </p>
+                                }
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>

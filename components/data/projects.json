@@ -3,7 +3,7 @@
         "name": "Fluid Music",
         "cover_art": "/images/projects/fluidmusic.webp",
         "type": "Site web",
-        "github": "https://github.com/4kpros/fluidmusic-website",
+        "github": "https://github.com/4kpros/fluidmusic",
         "link": "https://fluidmusic.vercel.app",
         "technos": [
             "ReactJS, TailwindCSS"
