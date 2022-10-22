@@ -23,7 +23,7 @@ const Nabar = () => {
     return (
         <div className="">
             <div className="w-full max-w-screen-xl mx-auto">
-                <nav className="w-full flex flex-wrap items-center justify-center space-x-12 font-bold text-2xl text-white py-8">
+                <nav className="w-full flex flex-wrap items-center justify-center space-x-12 font-bold text-white py-8">
                     {
                         links.map((link, index) => {
                             return(
