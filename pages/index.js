@@ -33,9 +33,6 @@ export default function Home({ router }) {
                                 <p className="mt-2 text-justify">
                                     J&apos;a toujours aimé manipuler tout ce qui touche aux ordinateurs. C&apos;est de là que mon envie de travailler dans le domaine du développement logiciel est née. Bienvenue dans mon site personnel et j&apos;espère qu&apos;il vous plaira.
                                 </p>
-                                <p className="mt-2 text-justify">
-                                    Pourquoi j&apos;ai fait ce site de zéro ? Tout simplement parce que je suis ingénieur logiciel et le minimum à faire serait de coder un petit projet.
-                                </p>
                                 <div className="w-full flex flex-col lg:flex-row text-sm mt-4">
                                     <div className="w-auto flex items-center lg:mr-4">
                                         <div className="w-auto flex">
