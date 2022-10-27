@@ -21,10 +21,10 @@
     },
     {
         "name": "DotNet full app training",
-        "cover_art": "/images/projects/dotnetapi.svg",
+        "cover_art": "/images/projects/dotnetfulltraining.svg",
         "type": "Application web API",
-        "github": "https://github.com/4kpros/dotnetapi",
-        "link": "https://prosperlearn-dotnetcrudapi.vercel.app",
+        "github": "https://github.com/4kpros/dotnetfulltraining",
+        "link": "https://4kpros-dotnetfulltraining.vercel.app",
         "technos": [
             ".NET, Blazor, Entity Framework, SQL Server"
         ]
