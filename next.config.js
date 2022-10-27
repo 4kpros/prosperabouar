@@ -7,7 +7,7 @@ const nextConfig = {
   },
   i18n: {
     // providing the locales supported by your application
-   locales: ["fr-FR", "en-US"],
+   locales: ["fr-FR"],
    //  default locale used when the non-locale paths are visited
    defaultLocale: "fr-FR",
   },
