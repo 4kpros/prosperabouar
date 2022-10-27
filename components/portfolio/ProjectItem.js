@@ -57,7 +57,7 @@ const ProjectItem = (props) => {
                         <a href={project.link} target="_blank" rel="noreferrer" className="w-auto truncate ... underline">
                             {
                                 project && project.link ?
-                                    `Voir le projet`
+                                    `Visiter`
                                 :
                                     ``
                             }
