@@ -1,19 +1,24 @@
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
 import ProjectItem from '../../components/portfolio/ProjectItem'
 import Layout from '../../components/Layout'
 
 import projects from '../../components/data/projects.json'
 
-const title = 'Projets'
-const subtitle = "Une sélection des projets récents sur lesquels j&apos;ai travaillé."
 
 export default function Projects(){
+    const { t } = useTranslation('projects')
+  
+    const pageTile = t('pageTile')
+    const pageDescription = t('pageDescription')
+  
+    const noneProject = t('noneProject')
 
     return (
-        <Layout title={title} description={subtitle}>
+        <Layout title={pageTile} description={pageDescription}>
             <div className="w-full max-w-screen-xl mx-auto p-8 min-h-[80vh]">
-                <div className="w-full text-white">
+                <div className="w-full text-my-text-color">
                     <section className="w-full py-4">
                         <div className="w-full">
                             <div className="w-full h-auto">
@@ -30,7 +35,7 @@ export default function Projects(){
                                         </div>
                                     :
                                         <p className="text-my-gray-color">
-                                            Aucun projet pour l&apos;instant !
+                                            {noneProject}
                                         </p>
                                 }
                             </div>

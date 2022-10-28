@@ -21,7 +21,7 @@ export default function Layout({ children, title, description }){
                 animate="enter"
                 exit="exit"
                 variants={variants}
-                transition={{ type: 'linear', duration: 0.25 }}
+                transition={{ type: 'linear', duration: 0.15 }}
                 >
                 {children}
             </motion.main>

@@ -2,7 +2,7 @@
     {
         "name": "Fluid Music",
         "cover_art": "/images/projects/fluidmusic.webp",
-        "type": "Android, Site web",
+        "type": "Android, Web",
         "github": "https://github.com/4kpros/fluidmusic",
         "link": "https://fluidmusic.vercel.app",
         "technos": [
@@ -10,9 +10,9 @@
         ]
     },
     {
-        "name": "Site web personnel",
+        "name": "Portfolio",
         "cover_art": "/images/projects/prosperabouar.webp",
-        "type": "Site web",
+        "type": "Web",
         "github": "https://github.com/4kpros/prosperabouar",
         "link": "https://prosperabouar.vercel.app",
         "technos": [
@@ -22,7 +22,7 @@
     {
         "name": "DotNet full app training",
         "cover_art": "/images/projects/dotnetfulltraining.svg",
-        "type": "Application web API",
+        "type": "Web",
         "github": "https://github.com/4kpros/dotnetfulltraining",
         "link": "https://4kpros-dotnetfulltraining.vercel.app",
         "technos": [
