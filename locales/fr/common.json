@@ -1,0 +1,10 @@
+{
+    "link1": "Accueil",
+    "link1Href": "/",
+
+    "link2": "Projets",
+    "link2Href": "/projects",
+    
+    "visitProject": "Visiter",
+    "sourceCode": "Code source"
+}
