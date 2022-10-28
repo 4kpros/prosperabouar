@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['firebasestorage.googleapis.com'],
     formats: ['image/avif', 'image/webp'],
   },
   i18n: {
@@ -13,4 +12,7 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+const nextTranslate = require('next-translate')
+
+module.exports = nextTranslate()
+

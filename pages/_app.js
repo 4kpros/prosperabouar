@@ -49,13 +49,13 @@ function MyApp({ Component, pageProps, router }) {
           canonical={url}
       />
       <Navbar />
-      <AnimatePresence
+      <Component {...pageProps} canonical={url} key={url} />
+      {/* <AnimatePresence
         exitBeforeEnter
-        initial={false}
+        initial={true}
         onExitComplete={() => window.scrollTo(0, 0)}
         >
-          <Component {...pageProps} canonical={url} key={url} />
-      </AnimatePresence>
+      </AnimatePresence> */}
       <Footer />
     </>
   )

@@ -1,12 +1,16 @@
 import Image from 'next/image'
-import { LazyMotion, domAnimation, m } from 'framer-motion'
+import useTranslation from 'next-translate/useTranslation'
 
 const ProjectItem = (props) => {
-
     const {project} = props;
+    const { t } = useTranslation('common')
+
+    const visitProject = t('visitProject')
+    const sourceCode = t('sourceCode')
+
     
     return (
-        <div className='w-full bg-gradient-to-tl from-[#0c1214] to-transparent hover:shadow-[0px_0px_6px_6px_rgba(212,233,255,0.09)]'>
+        <div className='w-full bg-white shadow-[0px_0px_6px_6px_rgba(0,0,0,0.025)]'>
             <div className='w-full'>
                 {
                     <div className="w-full">
@@ -23,7 +27,7 @@ const ProjectItem = (props) => {
                 }
                 <div className='w-full flex flex-col p-4 text-sm'>
                     <div className="w-full">
-                        <p className="text-white font-bold">
+                        <p className="text-my-text-color font-bold">
                             {
                                 project && project.name ?
                                     `${project.name} 
@@ -31,11 +35,11 @@ const ProjectItem = (props) => {
                                         project && project.type ?
                                             project.type
                                         :
-                                            `Aucune catégorie !`
+                                            ``
                                     })
                                     `
                                 :
-                                    `Nom du projet !`
+                                    ``
                             }
                         </p>
                     </div>
@@ -49,25 +53,25 @@ const ProjectItem = (props) => {
                                         )
                                     })
                                 :
-                                    `Aucune techno !`
+                                    ``
                             }
                         </p>
                     </div>
                     <div className="w-full flex truncate ... pt-2">
-                        <a href={project.link} target="_blank" rel="noreferrer" className="w-auto truncate ... underline">
+                        <a href={project.link} target="_blank" rel="noreferrer" className="w-auto truncate ... underline hover:text-my-main-color">
                             {
                                 project && project.link ?
-                                    `Visiter`
+                                    `${visitProject}`
                                 :
                                     ``
                             }
                         </a>
                     </div>
                     <div className="w-full flex truncate ... pt-2">
-                        <a href={project.github} target="_blank" rel="noreferrer" className="w-auto truncate ... underline">
+                        <a href={project.github} target="_blank" rel="noreferrer" className="w-auto truncate ... underline hover:text-my-main-color">
                             {
                                 project && project.github ?
-                                    `Code source`
+                                    `${sourceCode}`
                                 :
                                     ``
                             }

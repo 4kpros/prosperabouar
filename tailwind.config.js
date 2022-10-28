@@ -10,9 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'my-footer-color': '#DFC1941A',
-        'my-orage-color': '#7fd2f5',
-        'my-gray-color': '#8C8C8C',
+        'my-main-color': '#ff8f4a',
+        
+        'my-text-color': '#555555',
+        'my-text-button-color': '#fff',
       },
       fontFamily: {
         poppinsSans: ['Poppins', 'sans-serif'],

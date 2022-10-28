@@ -1,8 +1,6 @@
 {
-    "name": "Abouar Prosper",
-    "short_name": "AP",
-    "description": ".NET and Android developer",
-    "start_url": "/",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
