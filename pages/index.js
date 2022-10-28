@@ -97,9 +97,6 @@ export default function Home({ router }) {
                                         <Image src="/images/svg/tech/dotnet.svg" width={50} height={40} objectFit="responsive" alt="dotnet"/>
                                     </div>
                                     <div className="w-auto block mr-2">
-                                        <Image src="/images/svg/tech/django.svg" width={50} height={40} objectfit="responsive" alt="django"/>
-                                    </div>
-                                    <div className="w-auto block mr-2">
                                         <Image src="/images/svg/tech/reactjs.svg" width={50} height={40} objectfit="responsive" alt="reactjs"/>
                                     </div>
                                     <div className="w-auto block mr-2">
@@ -107,6 +104,9 @@ export default function Home({ router }) {
                                     </div>
                                     <div className="w-auto block mr-2">
                                         <Image src="/images/svg/tech/nodejs.svg" width={50} height={40} objectfit="responsive" alt="nodejs"/>
+                                    </div>
+                                    <div className="w-auto block mr-2">
+                                        <Image src="/images/svg/tech/django.svg" width={50} height={40} objectfit="responsive" alt="django"/>
                                     </div>
                                     <div className="w-auto block mr-2">
                                         <Image src="/images/svg/tech/firebase.svg" width={50} height={40} objectfit="responsive" alt="firebase"/>
