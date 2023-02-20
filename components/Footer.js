@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <footer className="w-full pb-8 text-my-text-color">
+        <footer className="w-full text-my-text-color">
             <div className="w-full max-w-screen-xl mx-auto px-4">
                 <div className="w-full flex justify-center items-center space-x-8 mt-4">
                     <a href="https://www.linkedin.com/in/prosper-abouar-408089134/" className="" target="_blank" rel="noreferrer">

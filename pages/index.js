@@ -34,21 +34,10 @@ export default function Home() {
                     <div className='w-full flex flex-col lg:flex-row lg:space-x-8'>
                         <section className="w-full lg:w-auto py-4">
                             <div className="flex flex-col">
-                                <div className="bg-transparent w-full">
-                                    <motion.div
-                                    whileHover={{ scale: 1.025 }}
-                                    whileTap={{ scale: 1.0 }}
-                                    style={{ x: 0 }}
-                                        transition={{
-                                            type: "spring",
-                                            stiffness: 260,
-                                            damping: 20
-                                        }}
-                                        >
-                                        <div className="">
-                                            <Image className="w-full h-full object-contain bg-top object-top" width={550} height={800} objectFit="cover" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/blur/prosperabouar.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
-                                        </div>
-                                    </motion.div>
+                                <div className="w-full">
+                                    <div className="">
+                                        <Image className="w-full h-full object-contain bg-top object-top" width={550} height={800} objectFit="cover" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/blur/prosperabouar.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
+                                    </div>
                                 </div>
                             </div>
                         </section>
