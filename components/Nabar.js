@@ -33,7 +33,7 @@ const Nabar = () => {
                         </a>
                     </Link>
                     <Link href={link2Href} passHref scroll={false}>
-                        <a className={`flex flex-col relative ${link2Href === router.pathname ? ` text-my-main-color` : ` `}`}>
+                        <a className={`flex flex-col relative hidden ${link2Href === router.pathname ? ` text-my-main-color` : ` `}`}>
                             {link2}
                             {
                                 link2Href === router.pathname && (
