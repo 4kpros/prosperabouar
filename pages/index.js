@@ -29,14 +29,14 @@ export default function Home() {
 
     return (
         <Layout title={pageTile} description={pageDescription}>
-            <div className="w-full max-w-screen-xl mx-auto md:p-8 min-h-[80vh] text-my-text-color">
+            <div className="w-full max-w-screen-xl mx-auto md:p-8 text-my-text-color">
                 <div className="w-full flex flex-col px-8 py-4">
                     <div className='w-full flex flex-col lg:flex-row lg:space-x-8'>
                         <section className="w-full lg:w-auto py-4">
                             <div className="flex flex-col">
                                 <div className="w-full">
-                                    <div className="">
-                                        <Image className="w-full h-full object-contain bg-top object-top" width={550} height={800} objectFit="cover" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/blur/prosperabouar.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
+                                    <div className="border border-my-main-color">
+                                        <img className="w-full h-full object-contain bg-top object-top" width={550} height={800} objectFit="cover" decoding="async" quality="100" priority placeholder="blur" blurDataURL="/images/profile/blur/prosperabouar.webp" src="/images/profile/prosperabouar.webp" alt="Prosper Abouar"/>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@ export default function Home() {
                                                         <h3 className="w-auto font-bold">
                                                             {expCompany1}
                                                         </h3>
-                                                        <p className="w-auto opacity-50">
+                                                        <p className="w-auto">
                                                             {expDescription1}
                                                         </p>
                                                     </div>
@@ -147,16 +147,16 @@ export default function Home() {
                                                 <Image src="/images/svg/tech/dotnet.svg" width={50} height={40} objectFit="responsive" alt="dotnet"/>
                                             </div>
                                             <div className="w-auto block mr-2">
+                                                <Image src="/images/svg/tech/django.svg" width={50} height={40} objectfit="responsive" alt="django"/>
+                                            </div>
+                                            <div className="w-auto block mr-2">
                                                 <Image src="/images/svg/tech/reactjs.svg" width={50} height={40} objectfit="responsive" alt="reactjs"/>
                                             </div>
                                             <div className="w-auto block mr-2">
                                                 <Image src="/images/svg/tech/android.svg" width={50} height={40} objectfit="responsive" alt="android"/>
                                             </div>
-                                            <div className="w-auto block mr-2">
+                                            <div className="w-auto block mr-2 hidden">
                                                 <Image src="/images/svg/tech/nodejs.svg" width={50} height={40} objectfit="responsive" alt="nodejs"/>
-                                            </div>
-                                            <div className="w-auto block mr-2">
-                                                <Image src="/images/svg/tech/django.svg" width={50} height={40} objectfit="responsive" alt="django"/>
                                             </div>
                                             <div className="w-auto block mr-2">
                                                 <Image src="/images/svg/tech/firebase.svg" width={50} height={40} objectfit="responsive" alt="firebase"/>
@@ -164,10 +164,10 @@ export default function Home() {
                                             <div className="w-auto block mr-2">
                                                 <Image src="/images/svg/tech/azure.svg" width={50} height={40} objectfit="responsive" alt="azure"/>
                                             </div>
-                                            <div className="w-auto block mr-2">
+                                            <div className="w-auto block mr-2 hidden">
                                                 <Image src="/images/svg/tech/sqlserver.svg" width={50} height={40} objectfit="responsive" alt="sqlserver"/>
                                             </div>
-                                            <div className="w-auto block mr-2">
+                                            <div className="w-auto block mr-2 hidden">
                                                 <Image src="/images/svg/tech/mongodb.svg" width={50} height={40} objectfit="responsive" alt="mongodb"/>
                                             </div>
                                             <div className="w-auto block mr-2">

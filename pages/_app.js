@@ -48,15 +48,17 @@ function MyApp({ Component, pageProps, router }) {
           ]}
           canonical={url}
       />
-      <Navbar />
-      <Component {...pageProps} canonical={url} key={url} />
-      {/* <AnimatePresence
-        exitBeforeEnter
-        initial={true}
-        onExitComplete={() => window.scrollTo(0, 0)}
-        >
-      </AnimatePresence> */}
-      <Footer />
+      <div className='w-full min-h-screen flex flex-col justify-around'>
+        <Navbar />
+        <Component {...pageProps} canonical={url} key={url} />
+        {/* <AnimatePresence
+          exitBeforeEnter
+          initial={true}
+          onExitComplete={() => window.scrollTo(0, 0)}
+          >
+        </AnimatePresence> */}
+        <Footer />
+      </div>
     </>
   )
 }
