@@ -84,10 +84,10 @@ export default function Home() {
 
                         <div className='w-full h-screen absolute top-0 right-0 bottom-0 left-0 -z-10 my-translate-z-0'>
                             <div className="w-full max-w-screen-xl mx-auto px-8 py-10 xl:px-0 text-my-text-color">
-                                <h2 className="w-auto text-center mx-auto font-bold pb-6 text-my-main-color underline underline-offset-4">
+                                <h2 className="w-auto text-center mx-auto font-semibold pb-6 text-black/30 underline underline-offset-4">
                                     {pageTile}
                                 </h2>
-                                <div className='w-full grid grid-cols-1 md:grid-cols-6 gap-6'>
+                                <div className='w-full grid grid-cols-1 md:grid-cols-6 gap-6 mt-4'>
                                     <motion.div
                                         transition={{
                                             duration: 0.2,
@@ -123,7 +123,7 @@ export default function Home() {
                                                                     <motion.span
                                                                         key={char+ '-' + index}
                                                                         variants={letterAnim}
-                                                                        className='font-extrabold text-my-main-color uppercase'
+                                                                        className='font-extrabold text-black/30 uppercase'
                                                                         >
                                                                         {char}
                                                                     </motion.span>
@@ -253,7 +253,7 @@ export default function Home() {
                                                     initial={{ scale: 1}}
                                                     whileHover={{ scale: 1.2}}
                                                     whileTap={{ scale: 0.1 }}
-                                                    className='block mr-2'
+                                                    className='block mr-2 hidden'
                                                     >
                                                     <Image 
                                                         src="/images/svg/proglanguages/cpp.svg" 
@@ -414,7 +414,7 @@ export default function Home() {
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
                                                         whileTap={{ scale: 0.1 }}
-                                                        className='block mr-2'
+                                                        className='block mr-2 hidden'
                                                         >
                                                         <Image 
                                                             src="/images/svg/tech/mysql.svg" 
@@ -452,7 +452,7 @@ export default function Home() {
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
                                                         whileTap={{ scale: 0.1 }}
-                                                        className='block mr-2'
+                                                        className='block mr-2 hidden'
                                                         >
                                                         <Image 
                                                             src="/images/svg/tech/sqlserver.svg" 
@@ -470,12 +470,12 @@ export default function Home() {
                                 </div>
                                 
                                 <div className="w-full mt-16">
-                                    <h2 className="w-auto text-center mx-auto font-bold pb-6 text-my-main-color underline underline-offset-4">
+                                    <h2 className="w-auto text-center mx-auto font-semibold pb-6 text-black/30 underline underline-offset-4">
                                         {projectsTitle}
                                     </h2>
                                     {
                                         projectsCount > 0 ?
-                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40">
+                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40 mt-4">
                                                 {
                                                     [...Array(projectsCount)].map(
                                                         (x, index) => 
@@ -484,7 +484,7 @@ export default function Home() {
                                                 }
                                             </div>
                                         :
-                                            <p className="text-my-gray-color">
+                                            <p className="text-my-gray-color mt-4">
                                                 {noneProject}
                                             </p>
                                     }
