@@ -22,7 +22,15 @@ export default function Custom404() {
                         <div className="w-full min-h-[70vh] flex items-center justify-center">
                             <div className="w-auto flex flex-col items-center m-auto">
                                 <div className="w-128 h-128">
-                                    <Image width={128} height={128} objectFit="scale-down" placeholder="blur" priority blurDataURL="/images/svg/alerts/warn.webp" src="/images/svg/alerts/warn.webp" alt=""/>
+                                    <Image 
+                                        width={128} 
+                                        height={128} 
+                                        placeholder="blur" 
+                                        blurDataURL="/images/svg/alerts/warn.webp" 
+                                        src="/images/svg/alerts/warn.webp" 
+                                        alt="404-img"
+                                        className='object-contain'
+                                        />
                                 </div>
                                 <h3 className="text-center font-semibold">
                                     {error}
@@ -31,10 +39,11 @@ export default function Custom404() {
                                     {errorMessage}
                                 </p>
                                 <div className="mt-12">
-                                    <Link href="/">
-                                        <button className="text-my-text-button-color font-bold bg-my-main-color rounded-lg px-6 py-2 text-center focus:outline-none">
-                                            {homePage}
-                                        </button>
+                                    <Link 
+                                        href={'/'}
+                                        className="text-my-text-button-color font-bold bg-my-main-color rounded-lg px-6 py-2 text-center focus:outline-none"
+                                        >
+                                        {homePage}
                                     </Link>
                                 </div>
                             </div>

@@ -3,9 +3,6 @@ import { DefaultSeo } from 'next-seo'
 
 import { AnimatePresence } from 'framer-motion'
 
-import Footer from '../components/Footer';
-import Navbar from '../components/Nabar';
-
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps, router }) {
@@ -18,10 +15,10 @@ function MyApp({ Component, pageProps, router }) {
           <meta name="theme-color" content="#141516"/>
       </Head>
       <DefaultSeo
-          titleTemplate="%s - Abouar Prosper"
+          titleTemplate="Abouar Prosper"
           openGraph={{
               type: 'website',
-              locale: 'fr_CM',
+              locale: 'fr_FR',
               url,
               description: 'Le site web d\'Abouar Prosper, developpeur web et mobile',
               site_name: 'prosperabouar.vercel.app',
@@ -48,15 +45,18 @@ function MyApp({ Component, pageProps, router }) {
           ]}
           canonical={url}
       />
-      <Navbar />
-      <Component {...pageProps} canonical={url} key={url} />
-      {/* <AnimatePresence
-        exitBeforeEnter
-        initial={true}
-        onExitComplete={() => window.scrollTo(0, 0)}
-        >
-      </AnimatePresence> */}
-      <Footer />
+      <div className='w-full min-h-screen flex flex-col justify-between text-lg lg:text-lg'>
+        <AnimatePresence
+          transition={{
+              duration: 0.25,
+              delay: 0.2,
+          }}
+          exitBeforeEnter
+          initial={true}
+          >
+          <Component {...pageProps} canonical={url} key={url} />
+        </AnimatePresence>
+      </div>
     </>
   )
 }

@@ -6,5 +6,38 @@
     "link2Href": "/projects",
     
     "visitProject": "Visit",
-    "sourceCode": "Source code"
+    
+    "moreDetails": "more Details",
+    
+    "close": "Close",
+
+    "projectsList": [
+        {
+            "name": "IREX",
+            "thumb": "/images/projects/irex-thumb-en.webp",
+            "cover_art": "/images/projects/irex-en.webp",
+            "type": "Web",
+            "link": "https://www.irex.aretex.ca/",
+            "tools": "ERPNext, Python, Git, Orchestra(VM management), Penpot, Debian",
+            "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, front-end integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead new developers."
+        },
+        {
+            "name": "Fluid Music",
+            "thumb": "/images/projects/fluidmusic-thumb-en.webp",
+            "cover_art": "/images/projects/fluidmusic-en.webp",
+            "type": "Android, Web",
+            "link": "https://fluidmusic-website.vercel.app",
+            "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
+            "content": "Personal web project started when I was learning Java. It includes a website and a demo for an Android mobile application. I had to learn advanced concepts such as threads and coroutines, services and AIDL, Android auto(for support on vehicles, WearOS(for support on Android connected watches), Motion(animation system) and many others..."
+        },
+        {
+            "name": "Portfolio",
+            "thumb": "/images/projects/portfolio-thumb-en.webp",
+            "cover_art": "/images/projects/portfolio-en.webp",
+            "type": "Web",
+            "link": "https://prosperabouar.vercel.app",
+            "tools": "NextJS, TailwindCSS",
+            "content": "Personal website presenting my services and achievements as a software developer. You'll find my detailed profile, the tools I use and contact addresses."
+        }
+    ]
 }
