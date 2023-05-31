@@ -10,8 +10,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'my-main-color': '#b6b6b6',
-        
         'my-text-color': '#000',
         'my-text-button-color': '#fff',
       },
