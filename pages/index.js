@@ -539,8 +539,8 @@ export default function Home() {
                                     <AnimatePresence
                                     >
                                     <Image 
-                                        width={1000} 
-                                        height={500} 
+                                        width={800} 
+                                        height={400} 
                                         placeholder="blur" 
                                         blurDataURL={t('common:projectsList.' + currentProject + '.cover_art')} 
                                         src={t('common:projectsList.' + currentProject + '.cover_art')} 
