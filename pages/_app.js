@@ -18,10 +18,10 @@ function MyApp({ Component, pageProps, router }) {
           <meta name="theme-color" content="#141516"/>
       </Head>
       <DefaultSeo
-          titleTemplate="%s - Abouar Prosper"
+          titleTemplate="Abouar Prosper"
           openGraph={{
               type: 'website',
-              locale: 'fr_CM',
+              locale: 'fr_FR',
               url,
               description: 'Le site web d\'Abouar Prosper, developpeur web et mobile',
               site_name: 'prosperabouar.vercel.app',
@@ -48,16 +48,18 @@ function MyApp({ Component, pageProps, router }) {
           ]}
           canonical={url}
       />
-      <div className='w-full min-h-screen flex flex-col justify-around'>
-        <Navbar />
-        <Component {...pageProps} canonical={url} key={url} />
-        {/* <AnimatePresence
+      <div className='w-full min-h-screen flex flex-col justify-between text-lg lg:text-lg'>
+        <AnimatePresence
+          transition={{
+              duration: 0.25,
+              delay: 0.2,
+          }}
           exitBeforeEnter
           initial={true}
-          onExitComplete={() => window.scrollTo(0, 0)}
+          // onExitComplete={() => window.scrollTo(0, 0)}
           >
-        </AnimatePresence> */}
-        <Footer />
+          <Component {...pageProps} canonical={url} key={url} />
+        </AnimatePresence>
       </div>
     </>
   )

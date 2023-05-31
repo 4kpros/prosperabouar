@@ -2,20 +2,21 @@
     "pageTile": "Home",
     "pageDescription": "Abouar Proser",
     
-    "salutation": "Hi, I am",
-    "profile": "Software developer with Python, .NET and ReactJS",
+    "profile": "Software developer",
 
     "heroTitle": "I have always liked to manipulate everything related to computers. That's where my desire to work in the field of software development was born. Welcome to my personal website, I hope you will enjoy it.",
 
     "city": "Yaounde",
     "country": "Cameroon",
 
-    "experience": "Experience",
+    "experiences": "Experiences",
     
-    "expCompany1": "IREX - Institut du Retour d'EXpérience",
+    "expCompany1": "IREX - Institut de Retour d'EXpérience",
     "expDescription1": "Web developer",
     
     "programmingLanguages": "Programming languages",
     
-    "technos": "Technologies"
+    "technos": "Technologies",
+
+    "projectsTitle": "Projets"
 }

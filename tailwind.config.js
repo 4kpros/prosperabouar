@@ -10,16 +10,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'my-main-color': '#ff8f4a',
+        'my-main-color': '#b6b6b6',
         
-        'my-text-color': '#555555',
+        'my-text-color': '#000',
         'my-text-button-color': '#fff',
       },
       fontFamily: {
         poppinsSans: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
-        'project-default-background': "url('/images/backgrounds/default-background_small.webp')",
+        'bodybackground': "url('/images/backgrounds/body-background.webp')",
+        'prosperabouar': "url('/images/profile/prosperabouar.webp')",
       },
     },
   },

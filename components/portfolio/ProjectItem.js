@@ -1,85 +1,85 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
+import Link from 'next/link';
+import { motion } from 'framer-motion'
 
-const ProjectItem = (props) => {
-    const {project} = props;
+const ProjectItem = ({ index, openModal }) => {
     const { t } = useTranslation('common')
 
     const visitProject = t('visitProject')
-    const sourceCode = t('sourceCode')
+    const moreDetails = t('moreDetails')
 
-    
+    function onOpenModal(){
+        openModal(index)
+    }
+
     return (
-        <div className='w-full bg-white shadow-[0px_0px_6px_6px_rgba(0,0,0,0.025)]'>
-            <div className='w-full'>
-                {
-                    <div className="w-full">
-                        <Image className="w-full h-auto object-cover object-top" 
-                            width={450} 
-                            height={300} 
-                            layout="responsive" 
-                            placeholder="blur" 
-                            blurDataURL={project.cover_art ? project.cover_art : "/images/backgrounds/default-background_small.webp"} 
-                            src={project.cover_art ? project.cover_art : "/images/backgrounds/default-background_small.webp"} 
-                            alt={project.name ? project.name : `default-project-name`}
-                        />
-                    </div>
-                }
-                <div className='w-full flex flex-col p-4 text-sm'>
-                    <div className="w-full">
-                        <p className="text-my-text-color font-bold">
-                            {
-                                project && project.name ?
-                                    `${project.name} 
-                                    (${
-                                        project && project.type ?
-                                            project.type
-                                        :
-                                            ``
-                                    })
-                                    `
-                                :
-                                    ``
-                            }
-                        </p>
-                    </div>
-                    <div className="w-full flex flex-wrap">
-                        <p className="w-auto opacity-70">
-                            {
-                                project && project.technos && project.technos.length > 0 ?
-                                    project.technos.map((techno, index) => {
-                                        return(
-                                                index > 0 ? `, ${techno}` : `${techno}`
-                                        )
-                                    })
-                                :
-                                    ``
-                            }
-                        </p>
-                    </div>
-                    <div className="w-full flex truncate ... pt-2">
-                        <a href={project.link} target="_blank" rel="noreferrer" className="w-auto truncate ... underline hover:text-my-main-color">
-                            {
-                                project && project.link ?
-                                    `${visitProject}`
-                                :
-                                    ``
-                            }
-                        </a>
-                    </div>
-                    <div className="w-full flex truncate ... pt-2">
-                        <a href={project.github} target="_blank" rel="noreferrer" className="w-auto truncate ... underline hover:text-my-main-color">
-                            {
-                                project && project.github ?
-                                    `${sourceCode}`
-                                :
-                                    ``
-                            }
-                        </a>
-                    </div>
+        <motion.div
+            transition={{
+                duration: 0.2,
+                ease: [0.5, 0.71, 1, 1.5],
+            }}
+            initial={{ scale: 1, boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.05)"}}
+            exit={{ opacity: 0, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.025}}
+            whileTap={{ scale: 1.02 }}
+            className='w-full h-max bg-white group'
+        >
+            <Image 
+                width={450} 
+                height={300} 
+                placeholder="blur" 
+                blurDataURL={t('projectsList.' + index + '.thumb')} 
+                src={t('projectsList.' + index + '.thumb')} 
+                alt={t('projectsList.' + index + '.name')}
+                className="w-full h-52 object-cover object-top shadow-md saturate-0 group-hover:saturate-100 transition-all" 
+            />
+            <div className='w-full flex flex-col p-4 text-sm'>
+                <div className="w-full">
+                    <p className="truncate ... text-my-text-color font-bold">
+                        {
+                            t('projectsList.' + index + '.name') ?
+                                `${t('projectsList.' + index + '.name')} 
+                                (
+                                    ${t('projectsList.' + index + '.type')} 
+                                )
+                                `
+                            :
+                                ``
+                        }
+                    </p>
+                </div>
+                <div className="w-full">
+                    <p className="truncate ... w-auto opacity-70">
+                        {
+                            t('projectsList.' + index + '.tools')
+                        }
+                    </p>
+                </div>
+                <div className='truncate ... w-full opacity-50 mt-4 '>
+                    {
+                        t('projectsList.' + index + '.description')
+                    }
+                </div>
+                <div className="w-full flex flex-wrap mt-2">
+                    <button 
+                        type='button' 
+                        onClick={() => onOpenModal()}
+                        className='truncate ... underline hover:text-my-main-color mr-4'
+                        >
+                        {moreDetails}
+                    </button>
+                    <Link href={t('projectsList.' + index + '.link') ? t('projectsList.' + index + '.link') : '#'} target="_blank" rel="noreferrer" className="w-auto hidden truncate ... underline hover:text-my-main-color mr-4">
+                        {
+                            t('projectsList.' + index + '.link') ?
+                                `${visitProject}`
+                            :
+                                ``
+                        }
+                    </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -31,10 +31,11 @@ export default function Custom404() {
                                     {errorMessage}
                                 </p>
                                 <div className="mt-12">
-                                    <Link href="/">
-                                        <button className="text-my-text-button-color font-bold bg-my-main-color rounded-lg px-6 py-2 text-center focus:outline-none">
-                                            {homePage}
-                                        </button>
+                                    <Link 
+                                        href={'/'}
+                                        className="text-my-text-button-color font-bold bg-my-main-color rounded-lg px-6 py-2 text-center focus:outline-none"
+                                        >
+                                        {homePage}
                                     </Link>
                                 </div>
                             </div>
