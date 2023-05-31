@@ -545,7 +545,7 @@ export default function Home() {
                                         blurDataURL={t('common:projectsList.' + currentProject + '.cover_art')} 
                                         src={t('common:projectsList.' + currentProject + '.cover_art')} 
                                         alt={t('common:projectsList.' + currentProject + '.name')}
-                                        className="w-full object-fill object-top shadow-md mt-4" 
+                                        className="w-full h-fill object-cover object-top shadow-md mt-4" 
                                     />
                                     </AnimatePresence>
                                     <div className="w-full mt-4">
