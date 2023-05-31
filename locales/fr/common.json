@@ -19,7 +19,7 @@
             "type": "Web",
             "link": "https://www.irex.aretex.ca/",
             "tools": "ERPNext, Python, Git, Orchestra(Management des VM), Penpot, Debian",
-            "content": "Développeur web à l'IREX, j'ai eu à travailler sur plusieurs projets en interne. Sur ce projet, j'ai eu à concevoir les maquettes des pages web jusqu'à la maintenance en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader les nouveaux développeurs."
+            "content": "Développeur web à l'IREX, j'ai travaillé sur plusieurs projets en interne. Sur ce projet, j'ai été amené à concevoir des maquettes de pages web jusqu'à la maintenance; en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader les nouveaux développeurs."
         },
         {
             "name": "Fluid Music",

@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
@@ -72,11 +72,16 @@ export default function Home() {
         setCurrentProject(index)
       setIsOpen(true)
     }
-    
+
+    const inputReference = useRef(null);
+
+    useEffect(() => {
+        inputReference.current.focus();
+    }, []);
     return (
         <Layout title={pageTile} description={pageDescription}>
             <>
-                <div className='w-full overflow-y-auto overflow-x-hidden my-perspective'>
+                <div ref={inputReference} className='w-full overflow-y-auto overflow-x-hidden my-perspective'>
                     <div className='w-full h-screen relative z-10 transition-transform duration-500 my-transform-perspective'>
                         <div className='w-full h-screen absolute top-0 right-0 bottom-0 left-0 -z-20 bg-bodybackground bg-no-repeat bg-cover bg-center my-translate-z-300'>
                             <div className='w-full h-full bg-gradient-to-b from-white/0 to-white'></div>
