@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, router }) {
               type: 'website',
               locale: 'fr_FR',
               url,
-              description: 'Le site web d\'Abouar Prosper, developpeur web et mobile',
+              description: 'Abouar Prosper, developpeur logiciel',
               site_name: 'prosperabouar.vercel.app',
               images: []
           }}
