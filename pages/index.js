@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Dialog, Transition } from '@headlessui/react'
 
 import Layout from '../components/Layout'
-import ProjectItem from '../components/portfolio/ProjectItem'
+import ProjectItem from '../components/cards/ProjectItem'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -552,7 +552,7 @@ export default function Home() {
                                     </div>
                                     <div className='w-full mt-4 opacity-50'>
                                         {
-                                            t('common:projectsList.' + currentProject + '.description')
+                                            t('common:projectsList.' + currentProject + '.content')
                                         }
                                     </div>
                                     <div className="w-full flex flex-wrap justify-between mt-2">

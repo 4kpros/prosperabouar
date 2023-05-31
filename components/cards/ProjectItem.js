@@ -58,7 +58,7 @@ const ProjectItem = ({ index, openModal }) => {
                 </div>
                 <div className='truncate ... w-full opacity-50 mt-4 '>
                     {
-                        t('projectsList.' + index + '.description')
+                        t('projectsList.' + index + '.content')
                     }
                 </div>
                 <div className="w-full flex flex-wrap mt-2">

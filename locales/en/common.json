@@ -19,7 +19,7 @@
             "type": "Web",
             "link": "https://www.irex.aretex.ca/",
             "tools": "ERPNext, Python, Git, Orchestra(VM management), Penpot, Debian",
-            "description": "On this project I had to work as lead developer initially. From the design of web page mock-ups, front-end integration, maintenance and deployments (in Dev and UAT). All in an agile environment. I also developed backend functionalities (e.g. event management), wrote deployment scripts and test cases."
+            "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, front-end integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead new developers."
         },
         {
             "name": "Fluid Music",
@@ -28,7 +28,7 @@
             "type": "Android, Web",
             "link": "https://fluidmusic-website.vercel.app",
             "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
-            "description": "Personal web project started when I was learning Java. It includes a website and a demo for an Android mobile application. I had to learn advanced concepts such as threads and coroutines, services and AIDL, Android auto(for support on vehicles, WearOS(for support on Android connected watches), Motion(animation system) and many others..."
+            "content": "Personal web project started when I was learning Java. It includes a website and a demo for an Android mobile application. I had to learn advanced concepts such as threads and coroutines, services and AIDL, Android auto(for support on vehicles, WearOS(for support on Android connected watches), Motion(animation system) and many others..."
         },
         {
             "name": "Portfolio",
@@ -37,7 +37,7 @@
             "type": "Web",
             "link": "https://prosperabouar.vercel.app",
             "tools": "NextJS, TailwindCSS",
-            "description": "Personal website presenting my services and achievements as a software developer. You'll find my detailed profile, the tools I use and contact addresses."
+            "content": "Personal website presenting my services and achievements as a software developer. You'll find my detailed profile, the tools I use and contact addresses."
         }
     ]
 }

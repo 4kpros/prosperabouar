@@ -19,7 +19,7 @@
             "type": "Web",
             "link": "https://www.irex.aretex.ca/",
             "tools": "ERPNext, Python, Git, Orchestra(Management des VM), Penpot, Debian",
-            "description": "Sur ce projet j'ai eu à travailler en tant que développeur principal dans un premier temps. De la conception des maquettes des pages web, l'intégration frontend, la maintenance et les déploiements(en Dev et UAT). Le tout dans un environnement agile. J'ai également développé des fonctionnalités backend(exemple: gestion des événements), écrit des scripts de déploiement et rédige des cas de tests."
+            "content": "Développeur web à l'IREX, j'ai eu à travailler sur plusieurs projets en interne. Sur ce projet, j'ai eu à concevoir les maquettes des pages web jusqu'à la maintenance en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader les nouveaux développeurs."
         },
         {
             "name": "Fluid Music",
@@ -28,7 +28,7 @@
             "type": "Android, Web",
             "link": "https://fluidmusic-website.vercel.app",
             "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
-            "description": "Projet web personnel débuté lors de mon apprentissage du Java. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre les concepts avancés tels que les threads et coroutines, les services et AIDL, Android auto(pour le support sur les véhicules, WearOS(pour le support sur les montres connectées Android), Motion(système d'animation) et plein d'autres..."
+            "content": "Projet web personnel débuté lors de mon apprentissage du Java. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre les concepts avancés tels que les threads et coroutines, les services et AIDL, Android auto(pour le support sur les véhicules, WearOS(pour le support sur les montres connectées Android), Motion(système d'animation) et plein d'autres..."
         },
         {
             "name": "Portfolio",
@@ -37,7 +37,7 @@
             "type": "Web",
             "link": "https://prosperabouar.vercel.app",
             "tools": "NextJS, TailwindCSS",
-            "description": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que je maîtrise et des adresses de contact."
+            "content": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que je maîtrise et des adresses de contact."
         }
     ]
 }
