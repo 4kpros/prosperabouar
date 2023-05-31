@@ -1,8 +1,8 @@
 {
     "pageTile": "Error 404",
-    "pageDescription": "This page does not exist !",
+    "pageDescription": "Page not found !",
 
     "error": "Error 404",
-    "errorMessage": "This page does not seem to exist",
+    "errorMessage": "Page not found !",
     "homePage": "Home page"
 }
