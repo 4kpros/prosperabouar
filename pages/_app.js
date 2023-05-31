@@ -3,9 +3,6 @@ import { DefaultSeo } from 'next-seo'
 
 import { AnimatePresence } from 'framer-motion'
 
-import Footer from '../components/Footer';
-import Navbar from '../components/Nabar';
-
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps, router }) {
@@ -56,7 +53,6 @@ function MyApp({ Component, pageProps, router }) {
           }}
           exitBeforeEnter
           initial={true}
-          // onExitComplete={() => window.scrollTo(0, 0)}
           >
           <Component {...pageProps} canonical={url} key={url} />
         </AnimatePresence>
