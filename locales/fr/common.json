@@ -19,7 +19,7 @@
             "type": "Web",
             "link": "https://www.irex.aretex.ca/",
             "tools": "ERPNext, Python, Git, Orchestra(Management des VM), Penpot, Debian",
-            "content": "Développeur web à l'IREX, j'ai travaillé sur plusieurs projets en interne. Sur ce projet, j'ai été amené à concevoir des maquettes de pages web jusqu'à la maintenance; en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader les nouveaux développeurs."
+            "content": "Développeur web à l'IREX, j'ai travaillé sur plusieurs projets en interne. Sur ce projet, j'ai été amené à concevoir des maquettes de pages web jusqu'à la maintenance; en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader de nouveaux développeurs."
         },
         {
             "name": "Fluid Music",
@@ -27,8 +27,8 @@
             "cover_art": "/images/projects/fluidmusic-fr.webp",
             "type": "Android, Web",
             "link": "https://fluidmusic-website.vercel.app",
-            "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
-            "content": "Projet web personnel débuté lors de mon apprentissage du Java. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre les concepts avancés tels que les threads et coroutines, les services et AIDL, Android auto(pour le support sur les véhicules, WearOS(pour le support sur les montres connectées Android), Motion(système d'animation) et plein d'autres..."
+            "tools": "Kotlin, Room database, MVVM, Android Auto, WearOS, NextJs, Tailwind CSS",
+            "content": "Projet web personnel débuté lors de mon apprentissage du Java et Kotlin. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre les concepts modernes et intermédiaires/avancés en Kotlin et Java tels que les coroutines, workmanagers, les services et AIDL, Android auto, WearOS, l'ORM Room database, DataBiding. Sans oublier l'optimisation du chargement et d'ajout de filtres sur les images tout en utilisant très peu de mémoire. Et enfin le cycle de vie géré par les Live Data du MVVM."
         },
         {
             "name": "Portfolio",
@@ -37,7 +37,7 @@
             "type": "Web",
             "link": "https://prosperabouar.vercel.app",
             "tools": "NextJS, TailwindCSS",
-            "content": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que je maîtrise et des adresses de contact."
+            "content": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que j'utilise' et mon adresse de contact."
         }
     ]
 }
