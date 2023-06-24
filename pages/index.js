@@ -547,7 +547,7 @@ export default function Home() {
                                                 height={435}
                                                 quality={100}
                                                 placeholder="blur" 
-                                                blurDataURL={t('common:projectsList.' + currentProject + '.cover_art')} 
+                                                blurDataURL={t('common:projectsList.' + currentProject + '.thumb')} 
                                                 src={t('common:projectsList.' + currentProject + '.cover_art')} 
                                                 alt={t('common:projectsList.' + currentProject + '.name')}
                                                 className="w-full h-fill object-cover object-top shadow-md mt-4" 

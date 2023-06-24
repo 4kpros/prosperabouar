@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
   i18n: {
     // providing the locales supported by your application
