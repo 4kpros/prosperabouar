@@ -18,7 +18,7 @@
             "cover_art_small": "/images/projects/fr/irex-small.jpg",
             "cover_art": "/images/projects/fr/irex.jpg",
             "type": "Web",
-            "link": "https://www.irex.aretex.ca/",
+            "link": "https://www.irex.aretex.ca",
             "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
             "content": "Développeur web à l'IREX, j'ai travaillé sur plusieurs projets en interne. Sur ce projet, j'ai été amené à concevoir des maquettes de pages web jusqu'à la maintenance; en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader de nouveaux développeurs."
         },
@@ -28,7 +28,7 @@
             "cover_art_small": "/images/projects/fr/fluidmusic-small.jpg",
             "cover_art": "/images/projects/fr/fluidmusic.jpg",
             "type": "Android, Web",
-            "link": "https://fluidmusic-website.vercel.app",
+            "link": "https://fluidmusic.vercel.app",
             "tools": "Kotlin, Room database, MVVM, Android Auto, WearOS, NextJs, Tailwind CSS",
             "content": "Projet web personnel débuté lors de mon apprentissage du Java et Kotlin. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre des concepts modernes et intermédiaires/avancés en Kotlin et Java tels que les threads(Java), coroutines(Kotlin), workmanagers, les services et AIDL, Room database, DataBiding, Cycle de vie avec les Live Data du MVVM, Android auto, WearOS, ... Le chargement et l'application des filtres(blur) rapide d'images en utilisant peu de mémoire(méthodes personnalisées de chargement d'images et de nettoyage manuel des bitmaps en mémoire). Et enfin les tests et l'evaluation des performances(fuites mémoires, utilisation du CPU, ...) générales de l'application grâce aux outils de profiling."
         },

@@ -18,7 +18,7 @@
             "cover_art_small": "/images/projects/en/irex-small.jpg",
             "cover_art": "/images/projects/en/irex.jpg",
             "type": "Web",
-            "link": "https://www.irex.aretex.ca/",
+            "link": "https://www.irex.aretex.ca",
             "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
             "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, frontend integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead some new developers."
         },
@@ -28,7 +28,7 @@
             "cover_art_small": "/images/projects/en/fluidmusic-small.jpg",
             "cover_art": "/images/projects/en/fluidmusic.jpg",
             "type": "Android, Web",
-            "link": "https://fluidmusic-website.vercel.app",
+            "link": "https://fluidmusic.vercel.app",
             "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
             "content": "Personal web project started when I was learning Java and Kotlin. It includes a website and a demo for an Android mobile application. I had to learn modern and intermediate/advanced concepts in Kotlin and Java such as threads(Java), coroutines(Kotlin), workmanagers, services and AIDL, Room database, DataBiding, Lifecycle with MVVM Live Data, Android auto, WearOS, ... Fast image loading and blurring using little memory (custom image loading methods and manual bitmap cleaning in memory). And finally, profiling tools for testing and evaluating overall application performance (memory leaks, CPU usage, ...)."
         },
