@@ -14,19 +14,19 @@
     "projectsList": [
         {
             "name": "IREX",
-            "thumb": "/images/projects/irex-en-thumb.jpg",
-            "cover_art_small": "/images/projects/irex-en-small.jpg",
-            "cover_art": "/images/projects/irex-en.jpg",
+            "blur": "/images/projects/blur/blur/irex.jpg",
+            "cover_art_small": "/images/projects/en/irex-small.jpg",
+            "cover_art": "/images/projects/en/irex.jpg",
             "type": "Web",
             "link": "https://www.irex.aretex.ca/",
             "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
-            "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, front-end integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead some new developers."
+            "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, frontend integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead some new developers."
         },
         {
             "name": "Fluid Music",
-            "thumb": "/images/projects/fluidmusic-en-thumb.jpg",
-            "cover_art_small": "/images/projects/fluidmusic-en-small.jpg",
-            "cover_art": "/images/projects/fluidmusic-en.jpg",
+            "blur": "/images/projects/blur/fluidmusic.jpg",
+            "cover_art_small": "/images/projects/en/fluidmusic-small.jpg",
+            "cover_art": "/images/projects/en/fluidmusic.jpg",
             "type": "Android, Web",
             "link": "https://fluidmusic-website.vercel.app",
             "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
@@ -34,9 +34,9 @@
         },
         {
             "name": "Portfolio",
-            "thumb": "/images/projects/portfolio-en-thumb.jpg",
-            "cover_art_small": "/images/projects/portfolio-en-small.jpg",
-            "cover_art": "/images/projects/portfolio-en.jpg",
+            "blur": "/images/projects/blur/portfolio.jpg",
+            "cover_art_small": "/images/projects/en/portfolio-small.jpg",
+            "cover_art": "/images/projects/en/portfolio.jpg",
             "type": "Web",
             "link": "https://prosperabouar.vercel.app",
             "tools": "NextJS, TailwindCSS",
