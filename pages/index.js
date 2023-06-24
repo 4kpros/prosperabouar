@@ -41,7 +41,7 @@ export default function Home() {
     //For text animation
     const sentenseAnim = {
         hidden: { 
-            opacity: 1
+            opacity: 1,
         },
         visible: {
             opacity: 1,
@@ -54,11 +54,9 @@ export default function Home() {
     const letterAnim = {
         hidden: { 
             opacity: 0, 
-            y: 50 
         },
         visible: {
             opacity: 1,
-            y: 0,
         },
     }
 
@@ -83,9 +81,18 @@ export default function Home() {
             <>
                 <div ref={inputReference} className='w-full overflow-y-auto overflow-x-hidden my-perspective'>
                     <div className='w-full h-screen relative z-10 transition-transform duration-500 my-transform-perspective'>
-                        <div className='w-full h-screen absolute top-0 right-0 bottom-0 left-0 -z-20 bg-bodybackground bg-no-repeat bg-cover bg-center my-translate-z-300'>
-                            <div className='w-full h-full bg-gradient-to-b from-white/0 to-white'></div>
-                        </div>
+                        <AnimatePresence
+                            initial={true}
+                        >
+                            <motion.div 
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1, duration: 0.1, }}
+                                exit={{ opacity: 0 }}
+                                className='w-full h-screen absolute top-0 right-0 bottom-0 left-0 -z-20 bg-bodybackground bg-no-repeat bg-cover bg-center my-translate-z-300'
+                            >
+                                <div className='w-full h-full bg-gradient-to-b from-white/0 to-white'></div>
+                            </motion.div>
+                        </AnimatePresence>
 
                         <div className='w-full h-screen absolute top-0 right-0 bottom-0 left-0 -z-10 my-translate-z-0'>
                             <div className="w-full max-w-screen-xl mx-auto px-8 py-10 xl:px-0 text-my-text-color">
@@ -93,25 +100,29 @@ export default function Home() {
                                     {pageTile}
                                 </h2>
                                 <div className='w-full grid grid-cols-1 md:grid-cols-6 gap-6 mt-4'>
-                                    <motion.div
-                                        transition={{
-                                            duration: 0.2,
-                                            delay: 0.0,
-                                            ease: [0.5, 0.71, 1, 1.5],
-                                        }}
-                                        initial={{ 
-                                            scale: 1, 
-                                            boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.1)",
-                                        }}
-                                        whileHover={{ 
-                                            scale: 1.025,
-                                        }}
-                                        whileTap={{ 
-                                            scale: 1.01,
-                                        }}
-                                        className='w-full h-[500px] xs:h-[720px] md:h-full bg-black/5 border border-my-main-color bg-prosperabouar bg-no-repeat bg-cover bg-center col-span-6 md:col-span-3 lg:col-span-2'
-                                        >
-                                    </motion.div>
+                                    <AnimatePresence
+                                        initial={true}
+                                    >
+                                        <motion.div
+                                            transition={{
+                                                duration: 0.2,
+                                                ease: "easeInOut",
+                                            }}
+                                            initial={{ 
+                                                opacity: 0,
+                                                boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.1)",
+                                            }}
+                                            animate={{ opacity: 1, }}
+                                            whileHover={{ 
+                                                scale: 1.025,
+                                            }}
+                                            whileTap={{ 
+                                                scale: 1.01,
+                                            }}
+                                            className='w-full h-[500px] xs:h-[720px] md:h-full bg-black/5 border border-my-main-color bg-prosperabouar bg-no-repeat bg-cover bg-center col-span-6 md:col-span-3 lg:col-span-2'
+                                            >
+                                        </motion.div>
+                                    </AnimatePresence>
                                     <div className='w-full flex flex-col col-span-6 md:col-span-3 lg:col-span-4'>
                                         <div className="w-full">
                                             <div className="w-full flex flex-col mt-10 lg:mt-0">
@@ -234,7 +245,7 @@ export default function Home() {
                                                 <motion.div
                                                     transition={{
                                                         duration: 0.2,
-                                                        delay: 0.0,
+                                                        ease: "easeInOut",
                                                     }}
                                                     initial={{ scale: 1}}
                                                     whileHover={{ scale: 1.2}}
@@ -253,26 +264,7 @@ export default function Home() {
                                                 <motion.div
                                                     transition={{
                                                         duration: 0.2,
-                                                        delay: 0.0,
-                                                    }}
-                                                    initial={{ scale: 1}}
-                                                    whileHover={{ scale: 1.2}}
-                                                    whileTap={{ scale: 0.1 }}
-                                                    className='block mr-2 hidden'
-                                                    >
-                                                    <Image 
-                                                        src="/images/svg/proglanguages/cpp.svg" 
-                                                        alt="cpp"
-                                                        width={50} 
-                                                        height={40} 
-                                                        style={{height: '40px'}}
-                                                        className='object-contain'
-                                                        />
-                                                </motion.div>
-                                                <motion.div
-                                                    transition={{
-                                                        duration: 0.2,
-                                                        delay: 0.0,
+                                                        ease: "easeInOut",
                                                     }}
                                                     initial={{ scale: 1}}
                                                     whileHover={{ scale: 1.2}}
@@ -291,7 +283,7 @@ export default function Home() {
                                                 <motion.div
                                                     transition={{
                                                         duration: 0.2,
-                                                        delay: 0.0,
+                                                        ease: "easeInOut",
                                                     }}
                                                     initial={{ scale: 1}}
                                                     whileHover={{ scale: 1.2}}
@@ -299,8 +291,8 @@ export default function Home() {
                                                     className='block mr-2'
                                                     >
                                                     <Image 
-                                                        src="/images/svg/proglanguages/java-vertical.svg" 
-                                                        alt="java-vertical"
+                                                        src="/images/svg/proglanguages/java.svg" 
+                                                        alt="java"
                                                         width={50} 
                                                         height={40} 
                                                         style={{height: '40px'}}
@@ -310,7 +302,7 @@ export default function Home() {
                                                 <motion.div
                                                     transition={{
                                                         duration: 0.2,
-                                                        delay: 0.0,
+                                                        ease: "easeInOut"
                                                     }}
                                                     initial={{ scale: 1}}
                                                     whileHover={{ scale: 1.2}}
@@ -338,45 +330,7 @@ export default function Home() {
                                                     <motion.div
                                                         transition={{
                                                             duration: 0.2,
-                                                            delay: 0.0,
-                                                        }}
-                                                        initial={{ scale: 1}}
-                                                        whileHover={{ scale: 1.2}}
-                                                        whileTap={{ scale: 0.1 }}
-                                                        className='block mr-2'
-                                                        >
-                                                        <Image 
-                                                            src="/images/svg/tech/reactjs.svg" 
-                                                            alt="reactjs"
-                                                            width={50} 
-                                                            height={40} 
-                                                            style={{height: '40px'}}
-                                                            className='object-contain'
-                                                            />
-                                                    </motion.div>
-                                                    <motion.div
-                                                        transition={{
-                                                            duration: 0.2,
-                                                            delay: 0.0,
-                                                        }}
-                                                        initial={{ scale: 1}}
-                                                        whileHover={{ scale: 1.2}}
-                                                        whileTap={{ scale: 0.1 }}
-                                                        className='block mr-2'
-                                                        >
-                                                        <Image 
-                                                            src="/images/svg/tech/android.svg" 
-                                                            alt="android"
-                                                            width={50} 
-                                                            height={40} 
-                                                            style={{height: '40px'}}
-                                                            className='object-contain'
-                                                            />
-                                                    </motion.div>
-                                                    <motion.div
-                                                        transition={{
-                                                            duration: 0.2,
-                                                            delay: 0.0,
+                                                            ease: "easeInOut",
                                                         }}
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
@@ -395,7 +349,7 @@ export default function Home() {
                                                     <motion.div
                                                         transition={{
                                                             duration: 0.2,
-                                                            delay: 0.0,
+                                                            ease: "easeInOut",
                                                         }}
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
@@ -414,16 +368,16 @@ export default function Home() {
                                                     <motion.div
                                                         transition={{
                                                             duration: 0.2,
-                                                            delay: 0.0,
+                                                            ease: "easeInOut",
                                                         }}
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
                                                         whileTap={{ scale: 0.1 }}
-                                                        className='block mr-2 hidden'
+                                                        className='block mr-2'
                                                         >
                                                         <Image 
-                                                            src="/images/svg/tech/mysql.svg" 
-                                                            alt="mysql"
+                                                            src="/images/svg/tech/android.svg" 
+                                                            alt="android"
                                                             width={50} 
                                                             height={40} 
                                                             style={{height: '40px'}}
@@ -433,7 +387,45 @@ export default function Home() {
                                                     <motion.div
                                                         transition={{
                                                             duration: 0.2,
-                                                            delay: 0.0,
+                                                            ease: "easeInOut",
+                                                        }}
+                                                        initial={{ scale: 1}}
+                                                        whileHover={{ scale: 1.2}}
+                                                        whileTap={{ scale: 0.1 }}
+                                                        className='block mr-2'
+                                                        >
+                                                        <Image 
+                                                            src="/images/svg/tech/reactjs.svg" 
+                                                            alt="reactjs"
+                                                            width={50} 
+                                                            height={40} 
+                                                            style={{height: '40px'}}
+                                                            className='object-contain'
+                                                            />
+                                                    </motion.div>
+                                                    <motion.div
+                                                        transition={{
+                                                            duration: 0.2,
+                                                            ease: "easeInOut",
+                                                        }}
+                                                        initial={{ scale: 1}}
+                                                        whileHover={{ scale: 1.2}}
+                                                        whileTap={{ scale: 0.1 }}
+                                                        className='block mr-2'
+                                                        >
+                                                        <Image 
+                                                            src="/images/svg/tech/jenkins.svg" 
+                                                            alt="jenkins"
+                                                            width={50} 
+                                                            height={40} 
+                                                            style={{height: '40px'}}
+                                                            className='object-contain'
+                                                            />
+                                                    </motion.div>
+                                                    <motion.div
+                                                        transition={{
+                                                            duration: 0.2,
+                                                            ease: "easeInOut",
                                                         }}
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
@@ -452,16 +444,16 @@ export default function Home() {
                                                     <motion.div
                                                         transition={{
                                                             duration: 0.2,
-                                                            delay: 0.0,
+                                                            ease: "easeInOut",
                                                         }}
                                                         initial={{ scale: 1}}
                                                         whileHover={{ scale: 1.2}}
                                                         whileTap={{ scale: 0.1 }}
-                                                        className='block mr-2 hidden'
+                                                        className='block mr-2'
                                                         >
                                                         <Image 
-                                                            src="/images/svg/tech/sqlserver.svg" 
-                                                            alt="sqlserver"
+                                                            src="/images/svg/tech/postgresql.svg" 
+                                                            alt="postgresql"
                                                             width={50} 
                                                             height={40} 
                                                             style={{height: '40px'}}
@@ -537,16 +529,30 @@ export default function Home() {
                                 </Dialog.Title>
                                 <div className='w-auto'>
                                     <AnimatePresence
+                                        initial={true}
                                     >
-                                    <Image 
-                                        width={800} 
-                                        height={400} 
-                                        placeholder="blur" 
-                                        blurDataURL={t('common:projectsList.' + currentProject + '.cover_art')} 
-                                        src={t('common:projectsList.' + currentProject + '.cover_art')} 
-                                        alt={t('common:projectsList.' + currentProject + '.name')}
-                                        className="w-full h-fill object-cover object-top shadow-md mt-4" 
-                                    />
+                                        <motion.div
+                                            transition={{
+                                                duration: 0.2,
+                                                // ease: "easeInOut",
+                                                // ease: [0.5, 0.71, 1, 1.5],
+                                                ease: [0.17, 0.67, 0.83, 0.67],
+                                            }}
+                                            initial={{ scale: .75, y: -25, opacity: 0, }}
+                                            animate={{ scale: 1, y: 0, opacity: 1, }}
+                                            exit={{ scale: .75, y: 25, opacity: 0, }}
+                                        >
+                                            <Image 
+                                                width={800} 
+                                                height={435}
+                                                quality={100}
+                                                placeholder="blur" 
+                                                blurDataURL={t('common:projectsList.' + currentProject + '.cover_art')} 
+                                                src={t('common:projectsList.' + currentProject + '.cover_art')} 
+                                                alt={t('common:projectsList.' + currentProject + '.name')}
+                                                className="w-full h-fill object-cover object-top shadow-md mt-4" 
+                                            />
+                                        </motion.div>
                                     </AnimatePresence>
                                     <div className="w-full mt-4">
                                         <p className="w-auto opacity-70">

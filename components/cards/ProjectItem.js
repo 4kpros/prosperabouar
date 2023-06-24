@@ -17,7 +17,7 @@ const ProjectItem = ({ index, openModal }) => {
         <motion.div
             transition={{
                 duration: 0.2,
-                ease: [0.5, 0.71, 1, 1.5],
+                ease: "easeInOut",
             }}
             initial={{ scale: 1, boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.05)"}}
             exit={{ opacity: 0, transition: { duration: 0.2 } }}
@@ -27,10 +27,11 @@ const ProjectItem = ({ index, openModal }) => {
         >
             <Image 
                 width={450} 
-                height={300} 
+                height={300}
+                quality={100}
                 placeholder="blur" 
                 blurDataURL={t('projectsList.' + index + '.thumb')} 
-                src={t('projectsList.' + index + '.thumb')} 
+                src={t('projectsList.' + index + '.cover_art_small')} 
                 alt={t('projectsList.' + index + '.name')}
                 className="w-full h-52 object-cover object-top shadow-md saturate-0 group-hover:saturate-100 transition-all" 
             />
