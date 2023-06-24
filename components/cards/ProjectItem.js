@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import useTranslation from 'next-translate/useTranslation'
 import Link from 'next/link';
 import { motion } from 'framer-motion'
@@ -26,11 +26,11 @@ const ProjectItem = ({ index, openModal }) => {
             className='w-full h-max bg-white group'
         >
             <Image 
-                width={450} 
-                height={300}
-                quality={100}
+                width={400} 
+                height={200}
+                quality={75}
                 placeholder="blur" 
-                blurDataURL={t('projectsList.' + index + '.thumb')} 
+                blurDataURL={t('projectsList.' + index + '.blur')} 
                 src={t('projectsList.' + index + '.cover_art_small')} 
                 alt={t('projectsList.' + index + '.name')}
                 className="w-full h-52 object-cover object-top shadow-md saturate-0 group-hover:saturate-100 transition-all" 
