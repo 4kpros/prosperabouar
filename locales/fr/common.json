@@ -14,30 +14,33 @@
     "projectsList": [
         {
             "name": "IREX",
-            "thumb": "/images/projects/irex-thumb-fr.webp",
-            "cover_art": "/images/projects/irex-fr.webp",
+            "thumb": "/images/projects/irex-fr-thumb.jpg",
+            "cover_art_small": "/images/projects/irex-fr-small.jpg",
+            "cover_art": "/images/projects/irex-fr.jpg",
             "type": "Web",
             "link": "https://www.irex.aretex.ca/",
-            "tools": "ERPNext, Python, Git, Orchestra(Management des VM), Penpot, Debian",
+            "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
             "content": "Développeur web à l'IREX, j'ai travaillé sur plusieurs projets en interne. Sur ce projet, j'ai été amené à concevoir des maquettes de pages web jusqu'à la maintenance; en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader de nouveaux développeurs."
         },
         {
             "name": "Fluid Music",
-            "thumb": "/images/projects/fluidmusic-thumb-fr.webp",
-            "cover_art": "/images/projects/fluidmusic-fr.webp",
+            "thumb": "/images/projects/fluidmusic-fr-thumb.jpg",
+            "cover_art_small": "/images/projects/fluidmusic-fr-small.jpg",
+            "cover_art": "/images/projects/fluidmusic-fr.jpg",
             "type": "Android, Web",
             "link": "https://fluidmusic-website.vercel.app",
             "tools": "Kotlin, Room database, MVVM, Android Auto, WearOS, NextJs, Tailwind CSS",
-            "content": "Projet web personnel débuté lors de mon apprentissage du Java et Kotlin. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre les concepts modernes et intermédiaires/avancés en Kotlin et Java tels que les coroutines, workmanagers, les services et AIDL, Android auto, WearOS, l'ORM Room database, DataBiding. Sans oublier l'optimisation du chargement et d'ajout de filtres sur les images tout en utilisant très peu de mémoire. Et enfin le cycle de vie géré par les Live Data du MVVM."
+            "content": "Projet web personnel débuté lors de mon apprentissage du Java et Kotlin. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre des concepts modernes et intermédiaires/avancés en Kotlin et Java tels que les threads(Java), coroutines(Kotlin), workmanagers, les services et AIDL, Room database, DataBiding, Cycle de vie avec les Live Data du MVVM, Android auto, WearOS, ... Le chargement et l'application des filtres(blur) rapide d'images en utilisant peu de mémoire(méthodes personnalisées de chargement d'images et de nettoyage manuel des bitmaps en mémoire). Et enfin les tests et l'evaluation des performances(fuites mémoires, utilisation du CPU, ...) générales de l'application grâce aux outils de profiling."
         },
         {
             "name": "Portfolio",
-            "thumb": "/images/projects/portfolio-thumb-fr.webp",
-            "cover_art": "/images/projects/portfolio-fr.webp",
+            "thumb": "/images/projects/portfolio-fr-thumb.jpg",
+            "cover_art_small": "/images/projects/portfolio-fr-small.jpg",
+            "cover_art": "/images/projects/portfolio-fr.jpg",
             "type": "Web",
             "link": "https://prosperabouar.vercel.app",
             "tools": "NextJS, TailwindCSS",
-            "content": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que j'utilise' et mon adresse de contact."
+            "content": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que j'utilise et mon adresse de contact."
         }
     ]
 }
