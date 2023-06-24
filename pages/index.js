@@ -528,32 +528,16 @@ export default function Home() {
                                     {t('common:projectsList.' + currentProject + '.name')}
                                 </Dialog.Title>
                                 <div className='w-auto'>
-                                    <AnimatePresence
-                                        initial={true}
-                                    >
-                                        <motion.div
-                                            transition={{
-                                                duration: 0.2,
-                                                // ease: "easeInOut",
-                                                // ease: [0.5, 0.71, 1, 1.5],
-                                                ease: [0.17, 0.67, 0.83, 0.67],
-                                            }}
-                                            initial={{ scale: .75, y: -25, opacity: 0, }}
-                                            animate={{ scale: 1, y: 0, opacity: 1, }}
-                                            exit={{ scale: .75, y: 25, opacity: 0, }}
-                                        >
-                                            <Image 
-                                                width={800} 
-                                                height={435}
-                                                quality={100}
-                                                placeholder="blur" 
-                                                blurDataURL={t('common:projectsList.' + currentProject + '.blur')} 
-                                                src={t('common:projectsList.' + currentProject + '.cover_art')} 
-                                                alt={t('common:projectsList.' + currentProject + '.name')}
-                                                className="w-full h-fill object-cover object-top shadow-md mt-4" 
-                                            />
-                                        </motion.div>
-                                    </AnimatePresence>
+                                    <Image 
+                                        width={800} 
+                                        height={435}
+                                        quality={100}
+                                        placeholder="blur" 
+                                        blurDataURL={t('common:projectsList.' + currentProject + '.blur')} 
+                                        src={t('common:projectsList.' + currentProject + '.cover_art')} 
+                                        alt={t('common:projectsList.' + currentProject + '.name')}
+                                        className="w-full h-fill object-cover object-top shadow-md mt-4" 
+                                    />
                                     <div className="w-full mt-4">
                                         <p className="w-auto opacity-70">
                                             {
