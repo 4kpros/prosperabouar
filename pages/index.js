@@ -22,11 +22,6 @@ export default function Home() {
 
     const city = t('city')
     const country = t('country')
-    
-    const experiences = t('experiences')
-
-    const expCompany1 = t('expCompany1')
-    const expDescription1 = t('expDescription1')
 
     const programmingLanguages = t('programmingLanguages')
   
@@ -36,7 +31,7 @@ export default function Home() {
 
     const projectsTitle = t('projectsTitle')
     
-    const projectsCount = 3
+    const projectsCount = 2
 
     //For text animation
     const sentenseAnim = {
@@ -71,11 +66,12 @@ export default function Home() {
       setIsOpen(true)
     }
 
-    const inputReference = useRef(null);
+    const inputReference = useRef(null)
 
     useEffect(() => {
-        inputReference.current.focus();
-    }, []);
+        inputReference.current.focus()
+    }, [])
+
     return (
         <Layout title={pageTile} description={pageDescription}>
             <>
@@ -202,37 +198,6 @@ export default function Home() {
                                                             prosper.abouar@gmail.com
                                                         </p>
                                                     </Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="w-full pt-4">
-                                            <div className="w-full h-auto">
-                                                <h3 className="opacity-50">
-                                                    {experiences}
-                                                </h3>
-                                                <hr className="w-auto my-2 opacity-10 border-my-text-color"/>
-                                                <div className="w-full flex flex-col">
-                                                    <div className="w-full flex flex-col">
-                                                        <div className="w-auto flex items-center">
-                                                            <div className="">
-                                                                <Image 
-                                                                    src="/images/svg/companies/IREX-Brand.svg" 
-                                                                    alt="IREX-Brand"
-                                                                    width={50} 
-                                                                    height={40} 
-                                                                    style={{height: '40px'}}
-                                                                    />
-                                                            </div>
-                                                            <div className="w-auto flex flex-col ml-2">
-                                                                <h3 className="w-auto font-bold">
-                                                                    {expCompany1}
-                                                                </h3>
-                                                                <p className="w-auto">
-                                                                    {expDescription1}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
