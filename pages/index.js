@@ -84,7 +84,7 @@ export default function Home() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1, duration: 0.1, }}
                                 exit={{ opacity: 0 }}
-                                className='w-full h-screen absolute top-0 right-0 bottom-0 left-0 -z-20 bg-bodybackground bg-no-repeat bg-cover bg-center my-translate-z-300'
+                                className='w-full h-screen absolute hidden top-0 right-0 bottom-0 left-0 -z-20 bg-bodybackground bg-no-repeat bg-cover bg-center my-translate-z-300'
                             >
                                 <div className='w-full h-full bg-gradient-to-b from-white/0 to-white'></div>
                             </motion.div>
@@ -95,31 +95,11 @@ export default function Home() {
                                 <h2 className="w-auto text-center mx-auto font-semibold pb-6 text-black/30 underline underline-offset-4">
                                     {pageTile}
                                 </h2>
-                                <div className='w-full grid grid-cols-1 md:grid-cols-6 gap-6 mt-4'>
-                                    <AnimatePresence
-                                        initial={true}
-                                    >
-                                        <motion.div
-                                            transition={{
-                                                duration: 0.2,
-                                                ease: "easeInOut",
-                                            }}
-                                            initial={{ 
-                                                opacity: 0,
-                                                boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.1)",
-                                            }}
-                                            animate={{ opacity: 1, }}
-                                            whileHover={{ 
-                                                scale: 1.025,
-                                            }}
-                                            whileTap={{ 
-                                                scale: 1.01,
-                                            }}
-                                            className='w-full h-[500px] xs:h-[720px] md:h-full bg-black/5 border border-my-main-color bg-prosperabouar bg-no-repeat bg-cover bg-center col-span-6 md:col-span-3 lg:col-span-2'
-                                            >
-                                        </motion.div>
-                                    </AnimatePresence>
-                                    <div className='w-full flex flex-col col-span-6 md:col-span-3 lg:col-span-4'>
+                                <div className='w-full flex flex-col md:flex-row justify-center gap-6 mt-4'>
+                                    <div 
+                                        className='w-full max-w-md h-[500px] bg-black/5 border border-my-main-color bg-prosperabouar bg-no-repeat bg-cover bg-center col-span-6 md:col-span-3 lg:col-span-2'
+                                    ></div>
+                                    <div className='w-full max-w-md flex flex-col col-span-6 md:col-span-3 lg:col-span-4'>
                                         <div className="w-full">
                                             <div className="w-full flex flex-col mt-10 lg:mt-0">
                                                 <div className="w-full text-xl font-bold">
@@ -430,29 +410,8 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div className="w-full mt-16">
-                                    <h2 className="w-auto text-center mx-auto font-semibold pb-6 text-black/30 underline underline-offset-4">
-                                        {projectsTitle}
-                                    </h2>
-                                    {
-                                        projectsCount > 0 ?
-                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-40 mt-4">
-                                                {
-                                                    [...Array(projectsCount)].map(
-                                                        (x, index) => 
-                                                            <ProjectItem key={index} index={index} openModal={openModal}/>
-                                                    )
-                                                }
-                                            </div>
-                                        :
-                                            <p className="text-my-gray-color mt-4">
-                                                {noneProject}
-                                            </p>
-                                    }
-                                </div>
                                 <div className="w-full relative my-translate-z-0">
-                                    <div className='w-full absolute -z-10 -bottom-36 lg:-bottom-72'>
+                                    <div className='w-full absolute -z-10 -bottom-36 lg:-bottom-60'>
                                         <Footer />
                                     </div>
                                 </div>
@@ -460,85 +419,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <Transition appear show={isOpen} as={Fragment}>
-                    <Dialog as="div" className="relative z-10" onClose={() => closeModal()}>
-                    <Transition.Child
-                        as={Fragment}
-                        enter="ease-out duration-300"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
-                        leave="ease-in duration-200"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                    >
-                        <div className="fixed inset-0 bg-black bg-opacity-25" />
-                    </Transition.Child>
-
-                    <div className="fixed inset-0 overflow-y-auto">
-                        <div className="flex min-h-full items-center justify-center p-4 text-center">
-                        <Transition.Child
-                            as={Fragment}
-                            enter="ease-out duration-200"
-                            enterFrom="opacity-0 scale-95 top-100"
-                            enterTo="opacity-100 scale-100 top-0"
-                            leave="ease-in duration-100"
-                            leaveFrom="opacity-100 scale-100"
-                            leaveTo="opacity-0 scale-95"
-                        >
-                            <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                <Dialog.Title
-                                    as="h3"
-                                    className="text-lg text-center font-bold leading-6 text-gray-900"
-                                >
-                                    {t('common:projectsList.' + currentProject + '.name')}
-                                </Dialog.Title>
-                                <div className='w-auto'>
-                                    <Image 
-                                        width={800} 
-                                        height={435}
-                                        quality={100}
-                                        placeholder="blur" 
-                                        blurDataURL={t('common:projectsList.' + currentProject + '.blur')} 
-                                        src={t('common:projectsList.' + currentProject + '.cover_art')} 
-                                        alt={t('common:projectsList.' + currentProject + '.name')}
-                                        className="w-full h-fill object-cover object-top shadow-md mt-4" 
-                                    />
-                                    <div className="w-full mt-4">
-                                        <p className="w-auto opacity-70">
-                                            {
-                                                t('common:projectsList.' + currentProject + '.tools')
-                                            }
-                                        </p>
-                                    </div>
-                                    <div className='w-full mt-4 opacity-50'>
-                                        {
-                                            t('common:projectsList.' + currentProject + '.content')
-                                        }
-                                    </div>
-                                    <div className="w-full flex flex-wrap justify-between mt-2">
-                                        <Link href={t('common:projectsList.' + currentProject + '.link') ? t('common:projectsList.' + currentProject + '.link') : '#'} target="_blank" rel="noreferrer" className="w-auto truncate ... underline hover:text-my-main-color mr-4">
-                                            {
-                                                t('common:projectsList.' + currentProject + '.link') ?
-                                                    t('common:visitProject')
-                                                :
-                                                    ``
-                                            }
-                                        </Link>
-                                        <button 
-                                            type='button' 
-                                            onClick={() => closeModal()}
-                                            className='truncate ... underline hover:text-my-main-color'
-                                            >
-                                            {t('common:close')}
-                                        </button>
-                                    </div>
-                                </div>
-                            </Dialog.Panel>
-                        </Transition.Child>
-                        </div>
-                    </div>
-                    </Dialog>
-                </Transition>
             </>
         </Layout>
     )
