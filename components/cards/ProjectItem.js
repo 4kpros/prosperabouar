@@ -19,15 +19,15 @@ const ProjectItem = ({ index, openModal }) => {
                 duration: 0.2,
                 ease: "easeInOut",
             }}
-            initial={{ scale: 1, boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.05)"}}
+            initial={{ scale: 1, boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.1)"}}
             exit={{ opacity: 0, transition: { duration: 0.2 } }}
             whileHover={{ scale: 1.025}}
             whileTap={{ scale: 1.02 }}
             className='w-full h-max bg-white group'
         >
             <Image 
-                width={400} 
-                height={200}
+                width={300} 
+                height={170}
                 quality={75}
                 placeholder="blur" 
                 blurDataURL={t('projectsList.' + index + '.blur')} 
