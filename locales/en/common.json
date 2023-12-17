@@ -1,36 +1,56 @@
 {
-  "link1": "Home",
-  "link1Href": "/",
+    "link1": "Home",
+    "link1Href": "/",
 
-  "link2": "Projects",
-  "link2Href": "/projects",
+    "link2": "Projects",
+    "link2Href": "/projects",
+    
+    "visitProject": "Visit",
+    
+    "moreDetails": "more Details",
+    
+    "close": "Close",
 
-  "visitProject": "Visit",
-
-  "moreDetails": "more Details",
-
-  "close": "Close",
-
-  "projectsList": [
-    {
-      "name": "Portfolio",
-      "blur": "/images/projects/blur/portfolio.jpg",
-      "cover_art_small": "/images/projects/en/portfolio-small.jpg",
-      "cover_art": "/images/projects/en/portfolio.jpg",
-      "type": "Web",
-      "link": "https://prosperabouar.vercel.app",
-      "tools": "NextJS, TailwindCSS",
-      "content": "Personal website presenting my services and achievements as a software developer. You'll find my detailed profile, the tools I use and my contact address."
-    },
-    {
-      "name": "Fluid Music",
-      "blur": "/images/projects/blur/fluidmusic.jpg",
-      "cover_art_small": "/images/projects/en/fluidmusic-small.jpg",
-      "cover_art": "/images/projects/en/fluidmusic.jpg",
-      "type": "Android, Web",
-      "link": "https://fluidmusic.vercel.app",
-      "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
-      "content": "Personal web project started when I was learning Java and Kotlin. It includes a website and a demo for an Android mobile application. I had to learn modern and intermediate/advanced concepts in Kotlin and Java such as threads(Java), coroutines(Kotlin), workmanagers, services and AIDL, Room database, DataBiding, Lifecycle with MVVM Live Data, Android auto, WearOS, ... Fast image loading and blurring using little memory (custom image loading methods and manual bitmap cleaning in memory). And finally, profiling tools for testing and evaluating overall application performance (memory leaks, CPU usage, ...)."
-    }
-  ]
+    "projectsList": [
+        {
+            "name": "Portfolio",
+            "blur": "/images/projects/blur/portfolio.jpg",
+            "cover_art_small": "/images/projects/en/portfolio-small.jpg",
+            "cover_art": "/images/projects/en/portfolio.jpg",
+            "type": "Web",
+            "link": "https://prosperabouar.vercel.app",
+            "tools": "NextJS, TailwindCSS",
+            "content": "Personal website presenting my services and achievements as a software developer. You'll find my detailed profile, the tools I use and my contact address."
+        },
+        {
+            "name": "Fluid Music",
+            "blur": "/images/projects/blur/fluidmusic.jpg",
+            "cover_art_small": "/images/projects/en/fluidmusic-small.jpg",
+            "cover_art": "/images/projects/en/fluidmusic.jpg",
+            "type": "Android, Web",
+            "link": "https://fluidmusic.vercel.app",
+            "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
+            "content": "Personal web project started when I was learning Java and Kotlin. It includes a website and a demo for an Android mobile application. I had to learn modern and intermediate/advanced concepts in Kotlin and Java such as threads(Java), coroutines(Kotlin), workmanagers, services and AIDL, Room database, DataBiding, Lifecycle with MVVM Live Data, Android auto, WearOS, ... Fast image loading and blurring using little memory (custom image loading methods and manual bitmap cleaning in memory). And finally, profiling tools for testing and evaluating overall application performance (memory leaks, CPU usage, ...)."
+        },
+        {
+            "name": "IREX",
+            "blur": "/images/projects/blur/blur/irex.jpg",
+            "cover_art_small": "/images/projects/en/irex-small.jpg",
+            "cover_art": "/images/projects/en/irex.jpg",
+            "type": "Web",
+            "link": "https://www.irex.aretex.ca",
+            "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
+            "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, frontend integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead some new developers."
+        },
+        {
+            "name": "6ringo",
+            "blur": "/images/projects/blur/blur/6ringo.jpg",
+            "cover_art_small": "/images/projects/en/6ringo-small.jpg",
+            "cover_art": "/images/projects/en/6ringo.jpg",
+            "type": "Web",
+            "link": "https://www.6ringo.com",
+            "tools": "NodeJs, NextJs, NextAuth, MongoDB, GitLab & GitHub, Jenkins, Figma",
+            "content": "Project for an American client, I worked as a frontend developer at first, then as a full-stack developer. My work consisted of creating the mockups, integrating them, and implementing the frontend logic, taking into account authentication, middleware redirections, and the payment API. As a full-stack developer, I worked on the API, which is based on Node.js and MongoDB."
+        }
+    ]
 }
