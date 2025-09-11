@@ -23,7 +23,7 @@ const ProjectItem = ({ index, openModal }) => {
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
       whileHover={{ scale: 1.025 }}
       whileTap={{ scale: 1.02 }}
-      className="w-full h-max bg-white group"
+      className="w-full h-max group"
     >
       <Image
         width={300}
@@ -33,7 +33,7 @@ const ProjectItem = ({ index, openModal }) => {
         blurDataURL={t("projectsList." + index + ".blur")}
         src={t("projectsList." + index + ".cover_art_small")}
         alt={t("projectsList." + index + ".name")}
-        className="w-full h-52 object-cover object-top shadow-md saturate-0 group-hover:saturate-100 transition-all"
+        className="w-full h-52 bg-black/10 object-cover object-top shadow-md saturate-0 group-hover:saturate-100 transition-all"
       />
       <div className="w-full flex flex-col p-4 text-sm">
         <div className="w-full">
