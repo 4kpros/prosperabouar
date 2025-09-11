@@ -14,7 +14,7 @@
   "projectsList": [
     {
       "name": "Digitcore",
-      "blur": "/images/projects/blur/blur/digitcore.jpg",
+      "blur": "/images/projects/blur/digitcore.jpg",
       "cover_art_small": "/images/projects/fr/digitcore-small.jpg",
       "cover_art": "/images/projects/fr/digitcore.jpg",
       "type": "Web",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Fyta",
-      "blur": "/images/projects/blur/blur/fyta.jpg",
+      "blur": "/images/projects/blur/fyta.jpg",
       "cover_art_small": "/images/projects/fr/fyta-small.jpg",
       "cover_art": "/images/projects/fr/fyta.jpg",
       "type": "Android",
@@ -34,7 +34,7 @@
     },
     {
       "name": "IREX",
-      "blur": "/images/projects/blur/blur/irex.jpg",
+      "blur": "/images/projects/blur/irex.jpg",
       "cover_art_small": "/images/projects/fr/irex-small.jpg",
       "cover_art": "/images/projects/fr/irex.jpg",
       "type": "Web",
@@ -44,7 +44,7 @@
     },
     {
       "name": "OneSi",
-      "blur": "/images/projects/blur/blur/onesi.jpg",
+      "blur": "/images/projects/blur/onesi.jpg",
       "cover_art_small": "/images/projects/fr/onesi-small.jpg",
       "cover_art": "/images/projects/fr/onesi.jpg",
       "type": "Web",
