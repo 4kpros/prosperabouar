@@ -1,56 +1,66 @@
 {
-    "link1": "Home",
-    "link1Href": "/",
+  "link1": "Home",
+  "link1Href": "/",
 
-    "link2": "Projects",
-    "link2Href": "/projects",
-    
-    "visitProject": "Visit",
-    
-    "moreDetails": "more Details",
-    
-    "close": "Close",
+  "link2": "Projects",
+  "link2Href": "/projects",
 
-    "projectsList": [
-        {
-            "name": "Portfolio",
-            "blur": "/images/projects/blur/portfolio.jpg",
-            "cover_art_small": "/images/projects/en/portfolio-small.jpg",
-            "cover_art": "/images/projects/en/portfolio.jpg",
-            "type": "Web",
-            "link": "https://prosperabouar.vercel.app",
-            "tools": "NextJS, TailwindCSS",
-            "content": "Personal website presenting my services and achievements as a software developer. You'll find my detailed profile, the tools I use and my contact address."
-        },
-        {
-            "name": "Fluid Music",
-            "blur": "/images/projects/blur/fluidmusic.jpg",
-            "cover_art_small": "/images/projects/en/fluidmusic-small.jpg",
-            "cover_art": "/images/projects/en/fluidmusic.jpg",
-            "type": "Android, Web",
-            "link": "https://fluidmusic.vercel.app",
-            "tools": "Kotlin, Roon database, MVVM, NextJs, Tailwind CSS",
-            "content": "Personal web project started when I was learning Java and Kotlin. It includes a website and a demo for an Android mobile application. I had to learn modern and intermediate/advanced concepts in Kotlin and Java such as threads(Java), coroutines(Kotlin), workmanagers, services and AIDL, Room database, DataBiding, Lifecycle with MVVM Live Data, Android auto, WearOS, ... Fast image loading and blurring using little memory (custom image loading methods and manual bitmap cleaning in memory). And finally, profiling tools for testing and evaluating overall application performance (memory leaks, CPU usage, ...)."
-        },
-        {
-            "name": "IREX",
-            "blur": "/images/projects/blur/blur/irex.jpg",
-            "cover_art_small": "/images/projects/en/irex-small.jpg",
-            "cover_art": "/images/projects/en/irex.jpg",
-            "type": "Web",
-            "link": "https://www.irex.aretex.ca",
-            "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
-            "content": "As a web developer at IREX, I've worked on several internal projects. On this project, I had to design web page mock-ups, frontend integration, deployments (Dev and UAT) and tests (integration), right through to maintenance. All in an agile environment. I also had to develop backend functionalities (e.g. event management, PayPal payments, etc.), orchestrate virtual machines (CloudOps), write scripts for deployment and automatic configuration of environments, and lead some new developers."
-        },
-        {
-            "name": "6ringo",
-            "blur": "/images/projects/blur/blur/6ringo.jpg",
-            "cover_art_small": "/images/projects/en/6ringo-small.jpg",
-            "cover_art": "/images/projects/en/6ringo.jpg",
-            "type": "Web",
-            "link": "https://www.6ringo.com",
-            "tools": "NodeJs, NextJs, NextAuth, MongoDB, GitLab & GitHub, Jenkins, Figma",
-            "content": "Project for an American client, I worked as a frontend developer at first, then as a full-stack developer. My work consisted of creating the mockups, integrating them, and implementing the frontend logic, taking into account authentication, middleware redirections, and the payment API. As a full-stack developer, I worked on the API, which is based on Node.js and MongoDB."
-        }
-    ]
+  "visitProject": "Visit",
+
+  "moreDetails": "more Details",
+
+  "close": "Close",
+
+  "projectsList": [
+    {
+      "name": "Digitcore",
+      "blur": "/images/projects/blur/blur/digitcore.jpg",
+      "cover_art_small": "/images/projects/en/digitcore-small.jpg",
+      "cover_art": "/images/projects/en/digitcore.jpg",
+      "type": "Web",
+      "link": "https://www.digitcore.cm/en",
+      "tools": "Golang, NextJs, PostgreSQL, Redis, GitLab & GitHub, Docker, Kubernetes",
+      "content": "For Digitcore, I was fully responsible for the design and development of the platform, building the backend in Golang, the frontend in Next.js, and the database in PostgreSQL, with deployment on Kubernetes using a K3s cluster. I integrated Redis to synchronize WebSockets and ensure real-time data consistency, and implemented a pub-sub system for synchronous message delivery via WhatsApp and Telegram, allowing schools to be deployed and managed independently."
+    },
+    {
+      "name": "Fyta",
+      "blur": "/images/projects/blur/blur/fyta.jpg",
+      "cover_art_small": "/images/projects/en/fyta-small.jpg",
+      "cover_art": "/images/projects/en/fyta.jpg",
+      "type": "Android",
+      "link": "https://fyta.de",
+      "tools": "Android Jetpack Compose, BLE, GitHub",
+      "content": "As the lead Android developer on Fyta, a German connected plant monitoring application, I designed and implemented numerous features from development through to Play Store deployment. This included migrating interfaces from Android Views to Jetpack Compose, progressively improving the codebase with Clean Architecture, and integrating Bluetooth Low Energy (BLE) for hub connectivity, all while collaborating internationally with the German team in a structured development process."
+    },
+    {
+      "name": "IREX",
+      "blur": "/images/projects/blur/blur/irex.jpg",
+      "cover_art_small": "/images/projects/en/irex-small.jpg",
+      "cover_art": "/images/projects/en/irex.jpg",
+      "type": "Web",
+      "link": "https://www.irex.aretex.ca",
+      "tools": "ERPNext, Python, GitLab, Orchestra (VM management), Jenkins, Penpot, Debian",
+      "content": "As a web developer at IREX, I worked on several internal projects. On this project, I designed web page mock-ups, handled frontend integration, managed deployments (Dev and UAT) and integration testing, right through to maintenance, all within an agile environment. I also developed backend features (e.g., event management, PayPal payments), orchestrated virtual machines (CloudOps), wrote scripts for automated deployment and environment configuration, and mentored new developers."
+    },
+    {
+      "name": "OneSi",
+      "blur": "/images/projects/blur/blur/onesi.jpg",
+      "cover_art_small": "/images/projects/en/onesi-small.jpg",
+      "cover_art": "/images/projects/en/onesi.jpg",
+      "type": "Web",
+      "link": "https://www.onesi.ca",
+      "tools": "ERPNext, Python, GitLab, Penpot",
+      "content": "On the OneSI project, I worked as a web integrator, creating mock-ups with Penpot and integrating them into Frappe ERPNext, ensuring a consistent, ergonomic, and design-faithful interface, while collaborating closely with the product team to enhance user experience."
+    },
+    {
+      "name": "Fluid Music",
+      "blur": "/images/projects/blur/fluidmusic.jpg",
+      "cover_art_small": "/images/projects/en/fluidmusic-small.jpg",
+      "cover_art": "/images/projects/en/fluidmusic.jpg",
+      "type": "Android, Web",
+      "link": "https://fluidmusic.vercel.app",
+      "tools": "Kotlin, Room database, MVVM, NextJs, Tailwind CSS",
+      "content": "Personal web project started when I was learning Java and Kotlin. It includes a website and a demo Android mobile app. I learned modern and intermediate/advanced concepts in Kotlin and Java such as threads (Java), coroutines (Kotlin), WorkManager, services and AIDL, Room database, DataBinding, Lifecycle with MVVM LiveData, Android Auto, and WearOS. It also included fast image loading and blurring with minimal memory usage (custom image loading methods and manual bitmap cleanup), as well as profiling tools for testing and evaluating overall app performance (memory leaks, CPU usage, etc.)."
+    }
+  ]
 }

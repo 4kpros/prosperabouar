@@ -5,25 +5,22 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
       colors: {
-        'my-text-color': '#000',
-        'my-text-button-color': '#fff',
+        "my-text-color": "#000",
+        "my-text-button-color": "#fff",
       },
       fontFamily: {
-        poppinsSans: ['Poppins', 'sans-serif'],
+        poppinsSans: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        'bodybackground': "url('/images/backgrounds/body-background.webp')",
-        'prosperabouar': "url('/images/profile/prosperabouar.webp')",
+        bodybackground: "url('/images/backgrounds/body-background.webp')",
+        prosperabouar: "url('/images/profile/prosperabouar.webp')",
       },
     },
   },
-  plugins: [
-    require('flowbite/plugin'),
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
+};

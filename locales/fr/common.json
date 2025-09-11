@@ -1,56 +1,66 @@
 {
-    "link1": "Accueil",
-    "link1Href": "/",
+  "link1": "Accueil",
+  "link1Href": "/",
 
-    "link2": "Projets",
-    "link2Href": "/projects",
-    
-    "visitProject": "Visiter",
-    
-    "moreDetails": "Plus de details",
-    
-    "close": "Fermer",
+  "link2": "Projets",
+  "link2Href": "/projects",
 
-    "projectsList": [
-        {
-            "name": "Portfolio",
-            "blur": "/images/projects/blur/portfolio.jpg",
-            "cover_art_small": "/images/projects/fr/portfolio-small.jpg",
-            "cover_art": "/images/projects/fr/portfolio.jpg",
-            "type": "Web",
-            "link": "https://prosperabouar.vercel.app",
-            "tools": "NextJS, TailwindCSS",
-            "content": "Site web personnel qui présente mes services et ce que j'ai réalisé en tant que développeur logiciel. Vous trouverez mon profil détaillé, les outils que j'utilise et mon adresse de contact."
-        },
-        {
-            "name": "Fluid Music",
-            "blur": "/images/projects/blur/fluidmusic.jpg",
-            "cover_art_small": "/images/projects/fr/fluidmusic-small.jpg",
-            "cover_art": "/images/projects/fr/fluidmusic.jpg",
-            "type": "Android, Web",
-            "link": "https://fluidmusic.vercel.app",
-            "tools": "Kotlin, Room database, MVVM, Android Auto, WearOS, NextJs, Tailwind CSS",
-            "content": "Projet web personnel débuté lors de mon apprentissage du Java et Kotlin. Il regroupe un site web et une démo vers une application mobile Android. J'ai eu à apprendre des concepts modernes et intermédiaires/avancés en Kotlin et Java tels que les threads(Java), coroutines(Kotlin), workmanagers, les services et AIDL, Room database, DataBiding, Cycle de vie avec les Live Data du MVVM, Android auto, WearOS, ... Le chargement et l'application des filtres(blur) rapide d'images en utilisant peu de mémoire(méthodes personnalisées de chargement d'images et de nettoyage manuel des bitmaps en mémoire). Et enfin les tests et l'evaluation des performances(fuites mémoires, utilisation du CPU, ...) générales de l'application grâce aux outils de profiling."
-        },
-        {
-            "name": "IREX",
-            "blur": "/images/projects/blur/irex.jpg",
-            "cover_art_small": "/images/projects/fr/irex-small.jpg",
-            "cover_art": "/images/projects/fr/irex.jpg",
-            "type": "Web",
-            "link": "https://www.irex.aretex.ca",
-            "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
-            "content": "Développeur web à l'IREX, j'ai travaillé sur plusieurs projets en interne. Sur ce projet, j'ai été amené à concevoir des maquettes de pages web jusqu'à la maintenance; en passant par l'intégration frontend, les déploiements(en Dev et UAT) et tests(d'intégrations). Le tout dans un environnement agile. J'ai également eu à développer des fonctionnalités backend(exemple: gestion des événements, Paiements PayPal, etc...), orchestrer des machines virtuelles(CloudOps), écrire des scripts de déploiement et de configuration automatique des environnements et leader de nouveaux développeurs."
-        },
-        {
-            "name": "6ringo",
-            "blur": "/images/projects/blur/blur/6ringo.jpg",
-            "cover_art_small": "/images/projects/en/6ringo-small.jpg",
-            "cover_art": "/images/projects/en/6ringo.jpg",
-            "type": "Web",
-            "link": "https://www.6ringo.com",
-            "tools": "NodeJs, NextJs, NextAuth, MongoDB, GitLab & GitHub, Jenkins, Figma",
-            "content": "Projet pour un client américain, j'ai travaillé en tant que développeur frontend dans un premier temps, puis en tant que développeur fullstack. Mon travail consistait à réaliser les maquettes, les intégrer et à implémenter la logique frontend, en prenant en compte l'authentification, les redirections avec le middleware et l'API de paiement. En tant que développeur fullstack, j'ai travaillé sur l'API, qui est basée sur Node.js et MongoDB."
-        }
-    ]
+  "visitProject": "Visiter",
+
+  "moreDetails": "Plus de details",
+
+  "close": "Fermer",
+
+  "projectsList": [
+    {
+      "name": "Digitcore",
+      "blur": "/images/projects/blur/blur/digitcore.jpg",
+      "cover_art_small": "/images/projects/fr/digitcore-small.jpg",
+      "cover_art": "/images/projects/fr/digitcore.jpg",
+      "type": "Web",
+      "link": "https://www.digitcore.cm/fr",
+      "tools": "Golang, NextJs, PostgreSQL, Redis, GitLab & GitHub, Docker, Kubernetes",
+      "content": "Pour Digitcore, j'ai été entièrement responsable de la conception et du développement de la plateforme, réalisant le backend en Golang, le frontend en Next.js et la base de données en PostgreSQL, avec un déploiement sur Kubernetes via un cluster K3s, l'intégration de Redis pour synchroniser les WebSockets et garantir la cohérence des données en temps réel, ainsi que la mise en place d'un système d'envoi de messages synchrones sur WhatsApp et Telegram via un modèle pub-sub, afin de permettre le déploiement et la gestion indépendante d'écoles."
+    },
+    {
+      "name": "Fyta",
+      "blur": "/images/projects/blur/blur/fyta.jpg",
+      "cover_art_small": "/images/projects/fr/fyta-small.jpg",
+      "cover_art": "/images/projects/fr/fyta.jpg",
+      "type": "Android",
+      "link": "https://fyta.de",
+      "tools": "Android Jetpack compose, BLE, GitHub",
+      "content": "En tant que développeur Android principal sur Fyta, une application allemande de suivi des plantes connectées, j'ai conçu et implémenté de nombreuses fonctionnalités, depuis le développement jusqu'au déploiement sur le Play Store, avec notamment la migration des interfaces Android Views vers Jetpack Compose, l'amélioration progressive de la structure du code grâce à la Clean Architecture, ainsi que l'intégration du Bluetooth Low Energy (BLE) pour la connexion au hub, le tout en collaboration internationale avec l'équipe allemande au sein d'un processus structuré."
+    },
+    {
+      "name": "IREX",
+      "blur": "/images/projects/blur/blur/irex.jpg",
+      "cover_art_small": "/images/projects/fr/irex-small.jpg",
+      "cover_art": "/images/projects/fr/irex.jpg",
+      "type": "Web",
+      "link": "https://www.irex.aretex.ca",
+      "tools": "ERPNext, Python, GitLab, Orchestra(VM management), Jenkins, Penpot, Debian",
+      "content": "En tant que développeur web chez IREX, j'ai travaillé sur plusieurs projets internes. Pour ce projet, j'ai dû concevoir des maquettes de pages web, réaliser l'intégration frontend, gérer les déploiements (Dev et UAT) ainsi que les tests d'intégration, jusqu'à la maintenance, le tout dans un environnement agile. J'ai également développé des fonctionnalités backend (par ex. gestion d’événements, paiements PayPal), orchestré des machines virtuelles (CloudOps), écrit des scripts pour le déploiement et la configuration automatique des environnements, et encadré certains nouveaux développeurs."
+    },
+    {
+      "name": "OneSi",
+      "blur": "/images/projects/blur/blur/onesi.jpg",
+      "cover_art_small": "/images/projects/fr/onesi-small.jpg",
+      "cover_art": "/images/projects/fr/onesi.jpg",
+      "type": "Web",
+      "link": "https://www.onesi.ca",
+      "tools": "ERPNext, Python, GitLab, Penpot",
+      "content": "Sur le projet OneSI, j'ai travaillé en tant qu'intégrateur web en prenant en charge la conception des maquettes avec Penpot et leur intégration dans Frappe ERPNext, en veillant à offrir une interface cohérente, ergonomique et fidèle au design attendu, tout en collaborant étroitement avec l'équipe produit pour améliorer l'expérience utilisateur."
+    },
+    {
+      "name": "Fluid Music",
+      "blur": "/images/projects/blur/fluidmusic.jpg",
+      "cover_art_small": "/images/projects/fr/fluidmusic-small.jpg",
+      "cover_art": "/images/projects/fr/fluidmusic.jpg",
+      "type": "Android, Web",
+      "link": "https://fluidmusic.vercel.app",
+      "tools": "Kotlin, Base de données Room, MVVM, NextJs, Tailwind CSS",
+      "content": "Projet web personnel commencé lorsque j'apprenais Java et Kotlin. Il inclut un site web et une démo pour une application mobile Android. J'ai dû apprendre des concepts modernes et intermédiaires/avancés en Kotlin et Java tels que les threads (Java), coroutines (Kotlin), WorkManager, services et AIDL, base de données Room, DataBinding, Lifecycle avec MVVM LiveData, Android Auto, WearOS, etc. Le projet inclut également un chargement rapide d'images avec effet de flou en utilisant très peu de mémoire (méthodes personnalisées de chargement d'images et nettoyage manuel des bitmaps en mémoire), ainsi que des outils de profiling pour tester et évaluer les performances globales de l'application (fuites de mémoire, utilisation CPU, etc.)."
+    }
+  ]
 }
