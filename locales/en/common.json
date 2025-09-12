@@ -20,7 +20,7 @@
       "type": "Web",
       "link": "https://www.digitcore.cm/en",
       "tools": "Golang, NextJs, PostgreSQL, Redis, GitLab & GitHub, Docker, Kubernetes",
-      "content": "For Digitcore, I was fully responsible for the design and development of the platform, building the backend in Golang, the frontend in Next.js, and the database in PostgreSQL, with deployment on Kubernetes using a K3s cluster. I integrated Redis to synchronize WebSockets and ensure real-time data consistency, and implemented a pub-sub system for synchronous message delivery via WhatsApp and Telegram, allowing schools to be deployed and managed independently."
+      "content": "I was fully responsible for the design and development of the platform, building the backend in Golang, the frontend in Next.js, and the database in PostgreSQL, with deployment on Kubernetes using a K3s cluster. I integrated Redis to synchronize WebSockets and ensure real-time data consistency, and implemented a pub-sub system for synchronous message delivery via WhatsApp and Telegram, allowing schools to be deployed and managed independently."
     },
     {
       "name": "Fyta",
@@ -50,7 +50,7 @@
       "type": "Web",
       "link": "https://www.onesi.ca",
       "tools": "ERPNext, Python, GitLab, Penpot",
-      "content": "On the OneSI project, I worked as a web integrator, creating mock-ups with Penpot and integrating them into Frappe ERPNext, ensuring a consistent, ergonomic, and design-faithful interface, while collaborating closely with the product team to enhance user experience."
+      "content": "I worked as a web integrator, creating mock-ups with Penpot and integrating them into Frappe ERPNext, ensuring a consistent, ergonomic, and design-faithful interface, while collaborating closely with the product team to enhance user experience."
     },
     {
       "name": "Fluid Music",

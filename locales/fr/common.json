@@ -20,7 +20,7 @@
       "type": "Web",
       "link": "https://www.digitcore.cm/fr",
       "tools": "Golang, NextJs, PostgreSQL, Redis, GitLab & GitHub, Docker, Kubernetes",
-      "content": "Pour Digitcore, j'ai été entièrement responsable de la conception et du développement de la plateforme, réalisant le backend en Golang, le frontend en Next.js et la base de données en PostgreSQL, avec un déploiement sur Kubernetes via un cluster K3s, l'intégration de Redis pour synchroniser les WebSockets et garantir la cohérence des données en temps réel, ainsi que la mise en place d'un système d'envoi de messages synchrones sur WhatsApp et Telegram via un modèle pub-sub, afin de permettre le déploiement et la gestion indépendante d'écoles."
+      "content": "J'ai été entièrement responsable de la conception et du développement de la plateforme, réalisant le backend en Golang, le frontend en Next.js et la base de données en PostgreSQL, avec un déploiement sur Kubernetes via un cluster K3s, l'intégration de Redis pour synchroniser les WebSockets et garantir la cohérence des données en temps réel, ainsi que la mise en place d'un système d'envoi de messages synchrones sur WhatsApp et Telegram via un modèle pub-sub, afin de permettre le déploiement et la gestion indépendante d'écoles."
     },
     {
       "name": "Fyta",
@@ -50,7 +50,7 @@
       "type": "Web",
       "link": "https://www.onesi.ca",
       "tools": "ERPNext, Python, GitLab, Penpot",
-      "content": "Sur le projet OneSI, j'ai travaillé en tant qu'intégrateur web en prenant en charge la conception des maquettes avec Penpot et leur intégration dans Frappe ERPNext, en veillant à offrir une interface cohérente, ergonomique et fidèle au design attendu, tout en collaborant étroitement avec l'équipe produit pour améliorer l'expérience utilisateur."
+      "content": "J'ai travaillé en tant qu'intégrateur web en prenant en charge la conception des maquettes avec Penpot et leur intégration dans Frappe ERPNext, en veillant à offrir une interface cohérente, ergonomique et fidèle au design attendu, tout en collaborant étroitement avec l'équipe produit pour améliorer l'expérience utilisateur."
     },
     {
       "name": "Fluid Music",
