@@ -28,7 +28,7 @@
       "cover_art_small": "/images/projects/fr/fyta-small.jpg",
       "cover_art": "/images/projects/fr/fyta.jpg",
       "type": "Android",
-      "link": "https://fyta.de",
+      "link": "https://play.google.com/store/apps/details?id=vao.fyta",
       "tools": "Android Jetpack compose, BLE, GitHub",
       "content": "En tant que développeur Android principal sur Fyta, une application allemande de suivi des plantes connectées, j'ai conçu et implémenté de nombreuses fonctionnalités, depuis le développement jusqu'au déploiement sur le Play Store, avec notamment la migration des interfaces Android Views vers Jetpack Compose, l'amélioration progressive de la structure du code grâce à la Clean Architecture, ainsi que l'intégration du Bluetooth Low Energy (BLE) pour la connexion au hub, le tout en collaboration internationale avec l'équipe allemande au sein d'un processus structuré."
     },
